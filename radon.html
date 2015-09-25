@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>抽奖雏形</title>
+    <style type="text/css">
+        .warp{height: 800px; }
+        .main{ height: 500px; width: 500px;
+                position: relative;
+                    top:50%; margin-top: -250px; left: 50%;margin-left: -250px;
+                            border: 2px solid black;
+                            -webkit-border-radius: 250px;
+        }
+        #btn{ position: relative; height: 50px; width: 50px; top: 50%; margin-top: -25px; left: 50%; margin-left: -25px; background: gray;
+                -webkit-border-radius: 25px;
+
+        }
+        .slice{ width: 250px; height: 2px; position: absolute;top: 50%; left: 50%; background: black;
+                transform-origin:left;
+        }
+        #slice_select{ position:absolute;width: 200px; height: 4px; background: red; top: 50%; left: 50%;
+                            transform-origin:left;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var radon=function(){
+                var oS=document.getElementById("slice_select");
+                var i= 0,k= 0,r=0;
+                var ratate=function(){
+                    oS.style.transform='rotate('+i+'deg)';
+                    i++;
+                    if(i>360&&k<9){
+                        i=i%360;
+                        clearInterval(fn[k]);
+                        k++
+                    }
+                    if(k==9){
+                        if(r==0) {
+                            r=parseInt(Math.random()*360)+i;
+                            console.log("r: "+r);
+                        }
+                        if(i==r){
+                            clearInterval(fn[k]);
+                        }
+                    }
+
+                };
+                var fn=[];
+                for(var j=0;j<10;j++){
+                    fn[j]=setInterval(ratate,1)
+                }
+            };
+           var st=document.getElementById('start');
+           st.onclick=function(){
+               radon();
+           }
+        }
+    </script>
+</head>
+<body>
+    <div class="warp">
+        <div id="start">点击开始</div>
+        <div class="main">
+            <div id="btn">
+
+            </div>
+            <div id="slice_select" style="transform: rotate(15deg);">
+
+            </div>
+            <div class="slice" style="transform: rotate(0deg);">
+            </div>
+            <div class="slice" style="transform: rotate(30deg);">
+            </div>
+            <div class="slice" style="transform: rotate(60deg);" >
+            </div>
+            <div class="slice" style="transform: rotate(120deg);" >
+            </div>
+            <div class="slice" style="transform: rotate(180deg);" >
+            </div>
+            <div class="slice" style="transform: rotate(240deg);" >
+            </div>
+        </div>
+    </div>
+</body>
+</html>
