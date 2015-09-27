@@ -1,6 +1,7 @@
 function Builder(){
     var oD=document.getElementById("wrap");
     this.init.apply(this,arguments);
+    this.click.call(this);
 
 }
 
@@ -34,10 +35,30 @@ Builder.prototype={
         var dl=document.getElementsByTagName("dl");
         for(var i= 0,len=dl.length;i<len;i++){
             (function(){
-                dl[i].onclick=function(){
-                    var n=dl[i].getElementsByTagName("dd").length;
-                    var oH=31+26*n;
 
+                dl[i].onclick=function(){
+                    //dl[0]=>有值
+                    //dl[i]=undefine =>
+                    //为啥这里的i并没有值呢？for循环括号里的 域属于哪里？@问题
+                    var n=this.getElementsByTagName("dd").length;
+                    var oH=31+26*n;
+                    var ct=26*n;
+                    var that=this;//
+                    var num=1;
+                    var x=this.style.height.match(/\d{}/);
+                    console.log(x);
+                    function animate(){
+                        if(ct==0){
+                            clearInterval(fn);
+                        }
+                        var xh=that.style.height;
+                            xh=xh.slice(0,xh.length-2);
+                            xh=xh-0+num+"px";
+                            that.style.height=xh;
+                            //console.log(xh);
+                            ct--;
+                    }
+                    var fn=setInterval(animate,10)
                 }
             })()
         }
