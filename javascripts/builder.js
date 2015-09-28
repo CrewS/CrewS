@@ -40,6 +40,9 @@ Builder.prototype={
                     //dl[0]=>有值
                     //dl[i]=undefine =>
                     //为啥这里的i并没有值呢？for循环括号里的 域属于哪里？@问题
+                    //解决办法:给这个立即执行函数设置变量 然后在后面带入参数
+                    //没解决的问题 i为啥不显示
+                    //console.log(i);
                     var n=this.getElementsByTagName("dd").length;
                     var oH=31+26*n;
                     var ct=26*n;
