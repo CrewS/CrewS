@@ -35,7 +35,6 @@ Builder.prototype={
         var dl=document.getElementsByTagName("dl");
         for(var i= 0,len=dl.length;i<len;i++){
             (function(){
-
                 dl[i].onclick=function(){
                     //dl[0]=>有值
                     //dl[i]=undefine =>
@@ -48,7 +47,7 @@ Builder.prototype={
                     var ct=26*n;
                     var that=this;//
                     var num=1;
-                    var x=this.style.height.match(/\d{}/);
+                    //var x=this.style.height.match(/\d{}/);
                     console.log(x);
                     function animate(){
                         if(ct==0){

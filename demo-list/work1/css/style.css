@@ -4,12 +4,13 @@ body {
     padding: 0;
     font: 12px "Microsoft YaHei", "SimSun", "Arial Narrow", HELVETICA;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: url("../image/body_bg.gif ") repeat left top;
 }
 li{ list-style: none;}
 a{ text-decoration: none;}
 a,a:hover{color: #333;}
 a:hover{text-decoration: underline;}
-.wrap{ margin: 0 auto; width: 960px;}
+.wrap{ margin: 0 auto; width: 960px; background: #fff; padding: 0 35px;}
     #banner{width: 960px; overflow: hidden;}
         #banner img{ width: 960px;}
     #container{ padding: 30px 0;}
