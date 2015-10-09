@@ -7,7 +7,8 @@ li{list-style: none;}
         .header-content{width: 1080px;margin: 0 auto;position: relative;}
             #logo{ position: absolute;display: block;width: 105px; height: 84px; background:url("../image/logo.png") no-repeat;}
             .down-icon{display: block;width: 103px;height: 29px; padding: 0 5px;text-align: center; background: #4e4e4e; float: right;
-                        color: #fff;margin-right: 15px;border-radius: 20px; margin-top: 28px;line-height: 29px; font-size: 14px;}
+                        color: #fff;margin-right: 15px;border-radius: 20px;line-height: 29px; font-size: 14px;margin-top:27px;}
+            .down-icon:hover{background: #454545}
     .container{ background: url("../image/bg.jpg") no-repeat; height: 862px; background-position: center center;}
         .main{width: 1080px;margin: 0 auto; height: 762px; padding-top: 102px;}
             #phone{width: 417px; height: 760px; background: url("../image/phone.png") no-repeat; margin-left:30px;position: relative; float: left;overflow: hidden;}
@@ -27,8 +28,9 @@ li{list-style: none;}
                         .rcode{float: left;margin-left: 40px; margin-right: 20px;}
                         .app-title{font-size: 42px;color: #333;font-weight: bold;}
                         .app-text{font-size: 30px;color: #555;}
-                    .app-footer{font-size:18px;color:#fff;height: 56px;width: 360px;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;background: #f73a49;line-height: 56px;text-align: center;}
+                    .app-footer{font-size:18px;color:#fff;height: 56px;width: 360px;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;background: #e13e3f;line-height: 56px;text-align: center;}
                         .app-footer a{color: #fff;font-size: 18px; margin: 0 10px;}
+                        .app-footer a:hover{text-decoration: underline;}
 
 
     .footer{height: 37px;background: #051e1d; padding: 50px 0;}
