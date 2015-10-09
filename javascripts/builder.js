@@ -6,6 +6,7 @@ function Builder(){
 }
 
 Builder.prototype={
+    message:[],
     init:function(oData){
         var oE,oD,oF;
         oF=document.createDocumentFragment();
@@ -35,7 +36,8 @@ Builder.prototype={
         var dl=document.getElementsByTagName("dl");
         for(var i= 0,len=dl.length;i<len;i++){
             (function(){
-                dl[i].onclick=function(){
+                dl[i].onclick=function(e){
+                    console.log(e.target.tagName);
                     //dl[0]=>有值
                     //dl[i]=undefine =>
                     //为啥这里的i并没有值呢？for循环括号里的 域属于哪里？@问题
@@ -44,19 +46,40 @@ Builder.prototype={
                     //console.log(i);
                     var n=this.getElementsByTagName("dd").length;
                     var that=this;
-                    console.log(this.doMove)
+                    if(e.target.tagName!="DT")return;//判断事件源是否是DT点击
+                    var arg=Builder.prototype.message.pop();
+                    console.log(arg);
+                    if(this.className=="active"){
+                        //console.log(arg[0],arg[1]);
+                        Builder.prototype.doMove(arg[0],arg[1]);
+                        this.className="";
+                        return 0;
+                    }else{
+                        //var arg=Builder.prototype.message.pop();
+                        if(arg){
+                            Builder.prototype.doMove(arg[0],arg[1]);
+                            arg[1].className="";
+                        }
+                        Builder.prototype.doMove(n,that);
+                        this.className="active";
+                        Builder.prototype.message.push([n,that])
+                    }
+
                 }
             })()
         }
     },
-    doMove: function (len){
+    doMove: function (len,dom){
         var n=len;
         var oH=31+26*n;
-        var ct=26*n;
-        //var that=this;//
-        var num=1;
-        //var x=this.style.height.match(/\d{}/);
-        console.log(x);
+        var ct=50;
+        var num=-(2*(26*n/100));
+        //console.log();
+        var now=dom.style.height.match(/\d{1,}/)[0];
+        //if(oH==31)return;
+        if(now<oH){
+            num=2*(26*n/100);
+        }
         function animates(){
             if(ct==0){
                 clearInterval(fn);
@@ -65,11 +88,9 @@ Builder.prototype={
             xh=xh.slice(0,xh.length-2);
             xh=xh-0+num+"px";
             dom.style.height=xh;
-            //console.log(xh);
             ct--;
         }
         var fn=setInterval(animates,10)
     }
-        
-
 };
+//原型内部 各种变量的使用技巧 ，堆栈设置
