@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="wrap">
+            <div class="header">
+                <div class="header-content">
+                    <a href="http://www.biketo.com/" id="logo"></a>
+                    <a href="#" class="down-icon">兔子APP下载</a>
+                    <a href="#" class="down-icon">美骑APP下载</a>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="main">
+                    <div id="phone">
+                        <div class="phone-img">
+                            <ul class="img-list clearfix">
+                                <li class="active"><img src="image/01.jpg"></li>
+                                <li><img src="image/02.jpg"></li>
+                                <li><img src="image/03.jpg"></li>
+                                <li><img src="image/04.jpg"></li>
+                                <li><img src="image/05.jpg"></li>
+                                <li><img src="image/06.jpg"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar">
+                        <div class="word-content">
+                            <ul class="word-list">
+                                <li class="word-show">
+                                    <span class="title">专业资讯 权威评测</span><br>
+                                    <span class="text">囊括国内外各项赛事，新品评测</span><br>
+                                    <span class="text">骑旅攻略等一手单车资讯</span>
+                                </li>
+                                <li>
+                                    <span class="title">美骑产品库装入口袋</span><br>
+                                    <span class="text">找车询价，车友经验交流</span><br>
+                                    <span class="text">给你最靠谱的参考</span>
+                                </li>
+                                <li>
+                                    <span class="title">车友论坛 轻松互动</span><br>
+                                    <span class="text">56万车友论坛，精选十大专题热帖</span><br>
+                                    <span class="text">与车界大咖牛人，随时互动</span>
+                                </li>
+                                <li>
+                                    <span class="title">找店购车 专业指导</span><br>
+                                    <span class="text">GPS定位附近车店，骑行活动</span><br>
+                                    <span class="text">店铺促销，随时掌握</span>
+                                </li>
+                                <li>
+                                    <span class="title">美骑易购 服务到家</span><br>
+                                    <span class="text">足不出户，上万品牌任你挑选</span><br>
+                                    <span class="text">热门活动，天天促销天天闪购</span>
+                                </li>
+                                <li>
+                                    <span class="title">骑行服务 贴心助手</span><br>
+                                    <span class="text">骑行保险，一键购买</span><br>
+                                    <span class="text">6毛6保15万，小投入，大安心</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="down-app">
+                            <div class="app-head">
+                                <img class="rcode" src="image/rcode.jpg">
+                                <span class="app-title">美骑APP</span><br>
+                                <span class="app-text">私人骑行助手</span>
+                            </div>
+                            <div class="app-footer">
+                                <a href="#">iPhone下载 > </a>
+                                <span>|</span>
+                                <a href="#">Android下载 > </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>©2002- 2015 <a href="http://www.biketo.com/">BIKETO美骑网</a>.ALL RIGHTS RESERVED</p>
+                <p>服务热线：020-85697255 | 地址：广州市天河区车陂路黄洲工业区8栋4楼</p>
+            </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var imgDom=$(".phone-img li");
+            var wordDom=$(".word-list li");
+            var index=0;
+            var len=imgDom.length;
+            setInterval(scroll,4000);
+            function scroll(){
+                var oldindex=index;
+                if(index==len-1){index=0;}
+                    else{index+=1}
+                imgDom.eq(index).stop(true, false).animate({ "left": "372px"}, 0,function(){
+                    $(this).addClass("active");
+                });
+                wordDom.eq(index).stop(true, false).animate({ "left": "550px","opacity":"1"}, 0,function(){
+                    $(this).addClass("word-show");
+                });
+                imgDom.eq(index).animate({"left":"0"},600);
+                wordDom.eq(index).animate({"left":"0"},600);
+                imgDom.eq(oldindex).animate({"left":"-372px"},600,function(){
+                    $(this).removeClass("active");
+                });
+                wordDom.eq(oldindex).animate({"opacity":"0"},600,function(){
+                    $(this).removeClass("active");
+                });
+            }
+        })
+    </script>
+</body>
+</html>

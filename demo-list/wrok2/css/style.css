@@ -1,0 +1,46 @@
+*{ margin: 0;padding: 0;}
+a{text-decoration: none;}
+body{font: 12px "Microsoft YaHei", "SimSun", "Arial Narrow", HELVETICA;}
+li{list-style: none;}
+.wrap{}
+    .header{height: 78px; background: #051e1d;position: relative;}
+        .header-content{width: 1080px;margin: 0 auto;position: relative;}
+            #logo{ position: absolute;display: block;width: 105px; height: 84px; background:url("../image/logo.png") no-repeat;}
+            .down-icon{display: block;width: 103px;height: 29px; padding: 0 5px;text-align: center; background: #4e4e4e; float: right;
+                        color: #fff;margin-right: 15px;border-radius: 20px; margin-top: 28px;line-height: 29px; font-size: 14px;}
+    .container{ background: url("../image/bg.jpg") no-repeat; height: 862px; background-position: center center;}
+        .main{width: 1080px;margin: 0 auto; height: 762px; padding-top: 102px;}
+            #phone{width: 417px; height: 760px; background: url("../image/phone.png") no-repeat; margin-left:30px;position: relative; float: left;overflow: hidden;}
+                .phone-img{width:372px;height: 662px; position:absolute;bottom:0;left: 22px;overflow: hidden;}
+                    .img-list{width: 800px;position: relative;height: 662px;}
+                        .img-list li{width: 372px;height: 662px;position:absolute;display: none;top: 0;left: 0;}
+                        .img-list li.active{display: block;}
+            .sidebar{width: 550px; height: 488px; float: left; margin-left: 82px;margin-top: 90px;}
+                .word-content{}
+                    .word-list{position: relative;height: 160px;overflow: hidden;}
+                        .word-list li{height: 160px;width:550px; display:none;position: absolute;top: 0;left: 0; float: left;}
+                        .word-list li.word-show{display: block;}
+                            .title{font-size: 50px;font-weight: bold;color: #333;}
+                            .text{font-size: 36px;color: #555;}
+                .down-app{height: 207px;width: 360px; margin-top: 100px;}
+                    .app-head{ height: 85px;width: 360px;padding: 26px 0 40px 0;background: #fff;border-top-right-radius: 15px;border-top-left-radius: 15px;}
+                        .rcode{float: left;margin-left: 40px; margin-right: 20px;}
+                        .app-title{font-size: 42px;color: #333;font-weight: bold;}
+                        .app-text{font-size: 30px;color: #555;}
+                    .app-footer{font-size:18px;color:#fff;height: 56px;width: 360px;border-bottom-left-radius: 15px;border-bottom-right-radius: 15px;background: #f73a49;line-height: 56px;text-align: center;}
+                        .app-footer a{color: #fff;font-size: 18px; margin: 0 10px;}
+
+
+    .footer{height: 37px;background: #051e1d; padding: 50px 0;}
+        .footer p{ text-align: center;color: #555;}
+            .footer p a{color: #555;}
+            .footer p a:hover{text-decoration: underline;}
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
