@@ -6,7 +6,7 @@ li{list-style: none;}
     .header{height: 78px; background: #051e1d;position: relative;}
         .header-content{width: 1080px;margin: 0 auto;position: relative;}
             #logo{ position: absolute;display: block;width: 105px; height: 84px; background:url("../image/logo.png") no-repeat;}
-            .down-icon{display: block;width: 103px;height: 29px; padding: 0 5px;text-align: center; background: #4e4e4e; float: right;
+            .down-icon{display: block;width: 83px;height: 29px; padding: 0 5px;text-align: center; background: #4e4e4e; float: right;
                         color: #fff;margin-right: 15px;border-radius: 20px;line-height: 29px; font-size: 14px;margin-top:27px;}
             .down-icon:hover{background: #454545}
     .container{ background: url("../image/bg.jpg") no-repeat; height: 862px; background-position: center center;}

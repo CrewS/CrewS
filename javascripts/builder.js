@@ -43,26 +43,33 @@ Builder.prototype={
                     //没解决的问题 i为啥不显示
                     //console.log(i);
                     var n=this.getElementsByTagName("dd").length;
-                    var oH=31+26*n;
-                    var ct=26*n;
-                    var that=this;//
-                    var num=1;
-                    //var x=this.style.height.match(/\d{}/);
-                    console.log(x);
-                    function animate(){
-                        if(ct==0){
-                            clearInterval(fn);
-                        }
-                        var xh=that.style.height;
-                            xh=xh.slice(0,xh.length-2);
-                            xh=xh-0+num+"px";
-                            that.style.height=xh;
-                            //console.log(xh);
-                            ct--;
-                    }
-                    var fn=setInterval(animate,10)
+                    var that=this;
+                    console.log(this.doMove)
                 }
             })()
         }
+    },
+    doMove: function (len){
+        var n=len;
+        var oH=31+26*n;
+        var ct=26*n;
+        //var that=this;//
+        var num=1;
+        //var x=this.style.height.match(/\d{}/);
+        console.log(x);
+        function animates(){
+            if(ct==0){
+                clearInterval(fn);
+            }
+            var xh=dom.style.height;
+            xh=xh.slice(0,xh.length-2);
+            xh=xh-0+num+"px";
+            dom.style.height=xh;
+            //console.log(xh);
+            ct--;
+        }
+        var fn=setInterval(animates,10)
     }
+        
+
 };
