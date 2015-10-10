@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom查询</title>
+    <style type="text/css">
+        .wrap{width: 300px;height: 500px; margin: 0 auto;padding-top: 100px;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="id-box">ID我是一个前端()</div><input type="button" id="btn1" value="id获取方式">
+        <input type="text" id="text1" value=""><br><br><br>
+        <div class="c-box">Class我是一个前端()</div><input type="button" id="btn2" value="class获取方式">
+        <input type="text" id="text2" value="">
+    </div>
+    <script type="text/javascript">
+        (function(){
+            window.onload=function(){
+                var d1=document.getElementById("id-box");
+                var t1=document.getElementById("text1");
+                var btn1=document.getElementById("btn1");
+                var d2=document.getElementsByClassName("c-box");
+                var t2=document.getElementById("text2");
+                var btn2=document.getElementById("btn2");
+                btn1.onclick=function(){
+                    t1.value=d1.innerHTML;
+                    console.log(d1);
+                };
+                btn2.onclick=function(){
+                    t2.value=d2[0].innerHTML;
+                    console.log(d2[0]);
+                };
+                //ID直接范围 DOM
+                //class查询 范围一个数组
+
+
+            }
+        })()
+    </script>
+</body>
+</html>

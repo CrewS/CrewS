@@ -2,9 +2,7 @@ function Builder(){
     var oD=document.getElementById("wrap");
     this.init.apply(this,arguments);
     this.click.call(this);
-
 }
-
 Builder.prototype={
     message:[],
     init:function(oData){
@@ -50,12 +48,10 @@ Builder.prototype={
                     var arg=Builder.prototype.message.pop();
                     console.log(arg);
                     if(this.className=="active"){
-                        //console.log(arg[0],arg[1]);
                         Builder.prototype.doMove(arg[0],arg[1]);
                         this.className="";
                         return 0;
                     }else{
-                        //var arg=Builder.prototype.message.pop();
                         if(arg){
                             Builder.prototype.doMove(arg[0],arg[1]);
                             arg[1].className="";
@@ -74,9 +70,7 @@ Builder.prototype={
         var oH=31+26*n;
         var ct=50;
         var num=-(2*(26*n/100));
-        //console.log();
         var now=dom.style.height.match(/\d{1,}/)[0];
-        //if(oH==31)return;
         if(now<oH){
             num=2*(26*n/100);
         }
