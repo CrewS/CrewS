@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素属性</title>
+    <style type="text/css">
+        .wrap{ height: 300px;width: 300px;border-radius: 300px;background: #333;
+            position:absolute;top: 50%;margin-top: -150px;left: 50%;margin-left: -150px;
+            text-align: center;line-height: 300px;color: #fff;
+        }
+            .wrap a{color: #fff; text-decoration: none;}
+            .wrap a:hover{text-decoration: underline;}
+            #message{ background: #3399cc;min-height: 30px; position: relative;bottom: -2%;color: #333; line-height: 30px;}
+    </style>
+</head>
+<body>
+    <div class="wrap" id="box" alt="123" cc="human" name="king">
+        <a id="btn" href="javscript:void(0)">点我获取元素属性</a>
+        <div id="message">属性列表</div>
+    </div>
+    <script type="text/javascript">
+        (function(){
+            window.onload=function(){
+                var mes=document.getElementById("message");
+                var wrap=document.getElementById("box");
+                var btn=document.getElementById("btn");
+                btn.onclick=function(){
+                    var id=wrap.getAttribute("id");
+                    var alt=wrap.getAttribute("alt");
+                    var type_=wrap.getAttribute("cc");
+                    var name = wrap.getAttribute("name");
+                    //console.log(id,alt,type_,name)
+                    //console.log(mes.innerHTML.toString()!="属性列表");
+                    if(mes.innerHTML.toString()!="属性列表"){
+                        mes.innerHTML="属性列表";
+                        btn.innerHTML="点我获取元素属性";
+                        return ;
+                    }
+                    mes.innerHTML="属性列表<br>"+"id :"+id+"<br>  "+"alt :"+alt+" <br> "+"type: "+type_+" <br> "+"name: "+name;
+                    btn.innerHTML="点我隐藏元素属性";
+
+
+                }
+            }
+        })()
+    </script>
+</body>
+</html>
