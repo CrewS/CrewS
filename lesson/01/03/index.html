@@ -33,6 +33,7 @@
                     len = tarBox.getElementsByTagName("li").length+1;
                 nli.innerHTML="我是第"+len+"行";
                 tarBox.appendChild(nli);
+                if(data.length){data.pop()}
             };
             reset.onclick=function(){
                 if(data.length){
