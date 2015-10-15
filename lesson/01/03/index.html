@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{}
+        li{list-style: none;}
+        .wrap{ height: 500px; width: 500px; margin: 0 auto;padding-top: 100px;}
+        #target-box li{width: 100px; cursor:pointer;  margin-bottom: 3px;}
+        #target-box li:hover{background: #D5E1D0;}
+        .red{color: red;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <input id="btn" type="button" value="点击">
+        <input id="reset" type="button" value="reset">
+        <ul id="target-box">
+           <li>我是第1行</li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        window.onload=function(){
+            var data=[];
+            document.onselectstart = new Function("return false");
+            var btn = document.getElementById("btn"),
+                tarBox = document.getElementById("target-box"),
+                reset = document.getElementById("reset");
+
+            btn.onclick=function(){
+                var nli = document.createElement("li"),
+                    len = tarBox.getElementsByTagName("li").length+1;
+                nli.innerHTML="我是第"+len+"行";
+                tarBox.appendChild(nli);
+            };
+            reset.onclick=function(){
+                if(data.length){
+                    tarBox.innerHTML=data.pop();
+                }else{
+                    data.push([tarBox.innerHTML]);
+                    tarBox.innerHTML="<li>我是第1行</li>";
+                }
+
+            };
+            tarBox.onclick=function(e){
+                if(e.target.tagName!="LI")return 0;
+                var hasSpan=e.target.getElementsByTagName("span");
+                if(hasSpan.length){
+                    hasSpan[0].parentNode.removeChild(hasSpan[0]);
+                }else{
+                    var tip=document.createElement("span");
+                    tip.innerHTML="√";
+                    tip.className="red";
+                    e.target.appendChild(tip);
+                }
+            }
+        };
+        // 常见错误dom操作问题: getElementsByTagName =>获得的是一个数组 所以就算是只有一个元素
+        // 也应该用 result[0]=>这个才是节点对象
+        //
+    </script>
+</body>
+</html>
