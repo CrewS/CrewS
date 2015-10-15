@@ -21,6 +21,7 @@
     <script src="javascripts/builder.js"></script>
     <script type="text/javascript">
         window.onload=function(){
+            document.onselectstart = new Function("return false");
             new Builder([
                     {item:[ {"text":"javascript-dom操作"},
                         {"text":"id查询与类查询DOM元素","href":"lesson/01/01"},

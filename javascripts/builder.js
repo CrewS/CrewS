@@ -5,6 +5,7 @@ function Builder(){
 }
 Builder.prototype={
     message:[],
+    running:false,
     init:function(oData){
         var oE,oD,oF;
         oF=document.createDocumentFragment();
@@ -45,6 +46,8 @@ Builder.prototype={
                     var n=this.getElementsByTagName("dd").length;
                     var that=this;
                     if(e.target.tagName!="DT")return;//判断事件源是否是DT点击
+                    if(Builder.prototype.running) return;
+                    Builder.prototype.running=true;
                     var arg=Builder.prototype.message.pop();
                     //console.log(arg);
                     if(this.className=="active"){
@@ -82,12 +85,14 @@ Builder.prototype={
                 dom.style.height=31+26*n+"px";
                 //console.log(Math.round(ct),ct);
                 clearInterval(fn);
+                Builder.prototype.running=false;
                 return ;
             }
             else if(!flag&&Math.round(ct)<=31){
                 dom.style.height="31px";
                 clearInterval(fn);
                 //console.log(Math.round(ct),ct);
+                Builder.prototype.running=false;
                 return ;
             }
             ct+=speed;
