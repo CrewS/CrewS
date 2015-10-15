@@ -57,9 +57,12 @@
                 }
             }
         };
-        // 常见错误dom操作问题: getElementsByTagName =>获得的是一个数组 所以就算是只有一个元素
-        // 也应该用 result[0]=>这个才是节点对象
-        //
+        // 常见dom操作问题:
+        // 1)getElementsByTagName =>获得的是一个数组 所以就算是只有一个元素也应该用 result[0]=>这个才是节点对象
+        // 2)本节主要运用 creteElement() appendChild() removeChild()
+        // 3)频繁插入节点 会增加浏览器负担 优化方式:createDocumentFragment()
+        //   创建一个文档碎片,然后节点操作在文档碎片中进行，最后把文档碎片插入其中即可
+        // 4)运用了委托模式=> 对于未出现的元素 在未来也受到事件监控
     </script>
 </body>
 </html>
