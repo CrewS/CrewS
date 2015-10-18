@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM文档节点</title>
+    <link href="../../css/base.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrap">
+        <h3>my-list</h3>
+        <ul id="my-list">
+            <li>1</li>
+            <li id="sec">2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <ul class="o-list">
+            <li><input type="button" id="btn-n" value="获取my-list节点数"><span class="red"></span></li>
+        </ul>
+
+    </div>
+    <script type="text/javascript">
+        window.onload=function(){
+            var myList=document.getElementById("my-list");
+            var btnGetN=document.getElementById("btn-n");
+
+            btnGetN.onclick=function(){
+                var num=myList.childNodes.length;
+                btnGetN.nextSibling.innerHTML="节点个数为:"+num;
+                //console.log(myList.childNodes);
+            }
+
+        };
+        //childNodes的长度 此时为9 就是li的个数+换行的次数
+        //不过当<ul id="my-list"><li>1</li><li>2</li><li>3</li><li>4</li></ul>
+        //此时length=4;
+        //此时childNodes有 3换行 也算一个text节点 nodeType=3 nodeName="#text"
+    </script>
+
+
+
+
+</body>
+</html>

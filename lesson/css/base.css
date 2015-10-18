@@ -1,0 +1,9 @@
+*{margin: 0;padding: 0;}
+.wrap{
+    padding: 80px 20px ;
+    height: 500px;
+    width: 600px;
+    margin: 0 auto;
+}
+.o-list li{ list-style: none;}
+.red{color: red;}
