@@ -1,13 +1,10 @@
 $(document).ready(function(){
-    $(".item").dblclick(function(){
-        console.log(this);
-    });
+
 
     $("#date-box").click(function(e){
         //console.log($(e.target).hasClass("checkbox"));
 
         var dom=$(e.target);
-        console.log(dom.parent().hasClass("icon-add"));
         if(dom.hasClass("click-checkbox")){
             check(dom);
             return false;
@@ -34,8 +31,6 @@ $(document).ready(function(){
     });
     function check(dom){
         var nextDom=dom.next();
-        //console.log(dom);
-        //console.log(dom.hasClass("checkbox-icon"));
         if(dom.hasClass("checkbox-icon")) {
             dom.removeClass("checkbox-icon").addClass("checkbox-active");
             nextDom.addClass("has-done");
@@ -53,7 +48,7 @@ $(document).ready(function(){
         var liDom=document.createElement("li");
 
         liDom.innerHTML="<label class='base-checkbox checkbox-icon click-checkbox'></label>"+"" +
-            "<div class='item edit-block' contenteditable='true'></div>"+"<div class='delete'><i></i></div>";
+            "<div class='item edit-block' contenteditable='true'>...</div>"+"<div class='delete'><i></i></div>";
         ulDom.append(liDom);
     }
 });
