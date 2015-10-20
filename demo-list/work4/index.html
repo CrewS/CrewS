@@ -38,39 +38,6 @@
                             <th class="data-time">10-16</th>
                             <th>工作/变更/问题/心得/总结</th>
                         </tr>
-                        <tr class="success">
-                            <td class="name">姓名</td>
-                            <td class="data-time">
-                                <ul class="to-do-list">
-                                    <li class="clearfix">
-                                        <input type="checkbox">
-                                        <div class="checkbox checkbox-active click-checkbox"></div>
-                                        <div class="item edit-block has-done" >Web知识网络构建Web知识网络构建Web知识网络构建Web知识网络构建Web知识网络构建</div>
-                                        <div class="delete">
-                                            <i></i>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <input type="checkbox">
-                                        <label class="checkbox checkbox-icon click-checkbox"></label>
-                                        <div class="item">Web知识网络构建</div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <input type="checkbox">
-                                        <label class="checkbox checkbox-icon click-checkbox"></label>
-                                        <div class="item">Web知识网络构建</div>
-                                    </li>
-                                </ul>
-                                <div class="icon-add">
-                                        <div class="plus"></div>
-                                </div>
-                            </td>
-                            <td class="data-time">10-13</td>
-                            <td class="data-time">10-14</td>
-                            <td class="data-time">10-15</td>
-                            <td class="data-time">10-16</td>
-                            <td>工作/变更/问题/心得/总结</td>
-                        </tr>
                     </thead>
                 </table>
             </div>
@@ -120,14 +87,39 @@
     </div>
     <script type="text/javascript">
         window.onload=function(){
-            var data=[
-                {name:"赖承海",id:"lch",datePlan:["1","2","3","4","5"],workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"},
-                {name:"Joson",id:"joson",datePlan:["3","4","5","6","7"],workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"}
+            //document.onselectstart = new Function("return false");
+            var data=[{
+                    name:"赖承海",id:"lch",
+                    datePlan:[
+                        [
+                            {"done":"0","content":"DOM编程艺术学习","exist":"1"},
+                            {"done":"1","content":"DOM编程艺术学习","exist":"1"}
+                        ],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}]
+                    ],
+                    workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"
+                }, {
+                    name:"Joson",id:"joson",
+                datePlan:[
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}]
+                ],
+                workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"}
             ];
             Builder(data);
-
-            var planDom=$("#lch").find("td");
+                $("#lch").addClass("success");
+                $("#lch ul li label").addClass("click-checkbox");
+                $("#lch div.delete").removeClass("hidden");
+                $("#lch div.item").attr("contentEditable","true");
+                var planDom=$("#lch").find("td");
                 setEdit(planDom);
+
             var loginBtn=document.getElementById("login-btn"),
                 signBtn=document.getElementById("sign-btn");
 
@@ -138,8 +130,20 @@
                 $("#outer").hide();
             });
              function setEdit (obj){
-                for(var i= 1,len=obj.length;i<len;i++){
-                    obj[i].contentEditable="true";
+                for(var i= 1,len=obj.length-1;i<len;i++){
+                    var addicon=document.createElement("div");
+                    addicon.className="icon-add";
+                    addicon.innerHTML="<div class='plus'></div>";
+                    obj[i].appendChild(addicon);
+                    (function(n){
+                        $(obj[n]).hover(function(){
+                                $(this).find("div.icon-add").stop(true,true).animate({"opacity":"1"},300);
+                        },function(){
+                                $(this).find("div.icon-add").stop(true,true).animate({"opacity":"0.2"},300);
+                            console.log($(this).find("div.icon-add"));
+                        })
+                    })(i);
+                    //obj[i].contentEditable="true";
                 }
             }
         }

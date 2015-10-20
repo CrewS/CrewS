@@ -1,45 +1,41 @@
 $(document).ready(function(){
-    //var checkboxDom=$(".click-checkbox");
-    ////console.log(checkboxDom)
-    //checkboxDom.click(function(){
-    //    var nextDom=$(this).next();
-    //    //console.log(nextDom);
-    //    if($(this).hasClass("checkbox-icon")) {
-    //        $(this).removeClass("checkbox-icon").addClass("checkbox-active");
-    //        nextDom.addClass("has-done");
-    //    }else{
-    //        $(this).removeClass("checkbox-active").addClass("checkbox-icon");
-    //        nextDom.removeClass("has-done");
-    //    }
-    //});
-    $(".icon-add").click(function(){
-        var ulDom=$(this).prev();
-        var liDom=document.createElement("li");
-        liDom.innerHTML="<input type='checkbox'>\n"+"<label class='checkbox checkbox-icon click-checkbox'></label> \n"+"" +
-            "<div class='item'>write....</div>\n"+"<div class='delete'><i></i></div>";
-        ulDom.append(liDom);
-    });
-
     $(".item").dblclick(function(){
-        console.log(this.contenteditable="true");
+        console.log(this);
     });
 
-    $(".to-do-list").click(function(e){
+    $("#date-box").click(function(e){
         //console.log($(e.target).hasClass("checkbox"));
+
         var dom=$(e.target);
-        if(dom.hasClass("checkbox")){
+        console.log(dom.parent().hasClass("icon-add"));
+        if(dom.hasClass("click-checkbox")){
             check(dom);
-            return ;
+            return false;
         }
-        if(dom.hasClass("delete")){
-            deleteDom(dom);
-            return ;
+        if(dom.hasClass("delete")||dom.parent().hasClass("delete")){
+            if(dom.hasClass("delete")){
+                deleteDom(dom);
+            }else{
+                deleteDom(dom.parent());
+            }
+            return false;
         }
+        if(dom.hasClass("icon-add")||dom.parent().hasClass("icon-add")){
+            //console.log(dom.find("div.icon-add"));
+            if(dom.hasClass("icon-add")){
+                addIcon(dom);
+            }else{
+                addIcon(dom.parent());
+            }
+            //因为按钮下面还有标签 所以写一份兼容 让他冒泡
+            return false;
+        }
+
     });
     function check(dom){
         var nextDom=dom.next();
-        //console.log($(dom));
-        console.log(dom.hasClass("checkbox-icon"));
+        //console.log(dom);
+        //console.log(dom.hasClass("checkbox-icon"));
         if(dom.hasClass("checkbox-icon")) {
             dom.removeClass("checkbox-icon").addClass("checkbox-active");
             nextDom.addClass("has-done");
@@ -52,5 +48,15 @@ $(document).ready(function(){
         var farther=dom.parent();
         farther.remove();
     }
+    function addIcon(dom){
+        var ulDom=dom.prev();
+        var liDom=document.createElement("li");
 
+        liDom.innerHTML="<label class='base-checkbox checkbox-icon click-checkbox'></label>"+"" +
+            "<div class='item edit-block' contenteditable='true'></div>"+"<div class='delete'><i></i></div>";
+        ulDom.append(liDom);
+    }
 });
+//研究下innerHTML写标签和 createElement的区别
+//小BUG 点击delete的时候 如果点到icon I标签 不会触发事件....
+
