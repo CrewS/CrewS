@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="css/teamapp.min.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bmob.min.js"></script>
     <script src="js/builder.min.js"></script>
     <script src="js/basefunction.min.js"></script>
-    <script src="js/bmob.min.js"></script>
+
     <title></title>
 </head>
 <body>
@@ -19,8 +20,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a id="login-btn" href="#">Login</a> </li>
-                    <li><a id="sign-btn" href="#">Sign</a> </li>
+                    <li><a id="login-btn" class="g1" href="#">Login</a> </li>
+                    <li><a id="sign-btn" class="g1" href="#">Sign</a> </li>
+                    <li><a id="china-name" class="g2 hidden" href="#">中文名</a></li>
+                    <li><a id="login-out" class="g2 hidden" href="#">Login-out</a></li>
                 </ul>
             </div>
         </div>
@@ -51,34 +54,34 @@
                     <h3 class="panel-title">Login</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" action="">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <label for="inputEmail-login" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                <input type="email" class="form-control" id="inputEmail-login" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <label for="inputPassword-login" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                <input type="password" class="form-control" id="inputPassword-login" placeholder="Password">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox"> Remember me
+                                        <input type="checkbox" checked="checked"> Remember me
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-4">
-                                <button id="login-in" type="submit" class="btn btn-default">Sign in</button>
+                                <button id="login-in"  class="btn btn-default">Login in</button>
                             </div>
                             <div class="col-sm-offset-2 col-sm-4">
-                                <button id="close" class="btn btn-warning">Cancel</button>
+                                <button class="close-btn btn btn-warning">Cancel</button>
                             </div>
                         </div>
                     </form>
@@ -93,26 +96,26 @@
                 <div class="panel-body">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="inputEmail-0" class="col-sm-2 control-label">Email</label>
+                            <label for="inputEmail-sign" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail-0" placeholder="Email">
+                                <input type="email" class="form-control" id="inputEmail-sign" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword-0" class="col-sm-2 control-label">Password</label>
+                            <label for="inputPassword-sign" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword-0" placeholder="Password">
+                                <input type="password" class="form-control" id="inputPassword-sign" placeholder="Password">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">中文名</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" class="form-control" id="sign-name" placeholder="Name">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-2">
-                                <button id="sign-in" type="submit" class="btn btn-default">Sign</button>
+                                <button id="sign-in"  class="btn btn-default">Sign</button>
                             </div>
                             <div class="col-sm-offset-4 col-sm-2">
                                 <button class="close-btn btn btn-warning">Cancel</button>
@@ -130,16 +133,32 @@
         window.onload=function(){
             //document.onselectstart = new Function("return false");
             Bmob.initialize("a5ae9dc99286fe6eeac1b59de3b9cb20", "15247fa7fb815af5c4d2bdbd2913b70a");
+            var currentUser = Bmob.User.current();
+            if(currentUser){
+                console.log(currentUser.get("china-name"));
+                $("#china-name")[0].innerHTML=currentUser.get("china-name");
+                $(".g1").addClass("hidden");
+                $(".g2").removeClass("hidden");
+            }
             function testSetData(){
                 var PlanData =Bmob.Object.extend("PlanData");
                 var userPlan= new PlanData();
-                userPlan.set("name","abc");
-                userPlan.set("uid","lch");
+                userPlan.set("name",currentUser.get("china-name"));
+                userPlan.set("uid","id_"+currentUser.id);
                 userPlan.set("workExe","acb");
-                userPlan.set("datePlan", [
+                //datePlan需要个缓冲适配器
+                userPlan.set("datePlan", [[
                     {"done":"0","content":"DOM编程艺术学习","exist":"1"},
                     {"done":"1","content":"DOM编程艺术学习","exist":"1"}
-                ]);
+                ],[
+
+                ],[
+
+                ],[
+
+                ],[
+
+                ]]);
                 userPlan.set("cheatMode", false);
                 userPlan.save(null, {
                     success:function(userPlan){
@@ -222,23 +241,29 @@
             $("#lch div.item").attr("contentEditable","true");
             var planDom=$("#lch").find("td");
             setEdit(planDom);
-
+            //
+            //登录注册btn
             var loginBtn=$("#login-btn"),
                 signBtn=$("#sign-btn");
             loginBtn.click(function(){
                 $("#login-box").show();
                 $("#sign-box").hide();
                 $("#outer").show();
+                return false;
             });
             signBtn.click(function(){
                 $("#sign-box").show();
                 $("#login-box").hide();
                 $("#outer").show();
+                return false;
+            });
+            $("#login-out").click(function(){
+                Bmob.User.logOut();
+                window.location.reload();
             });
 
-            $(".close-btn").click(function(){
-                $("#outer").hide();
-            });
+
+
              function setEdit (obj){
                 for(var i= 1,len=obj.length-1;i<len;i++){
                     var addicon=document.createElement("div");
