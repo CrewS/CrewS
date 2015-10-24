@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="css/teamapp.min.css">
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bmob.min.js"></script>
     <script src="js/builder.min.js"></script>
+    <script src="js/basefunction.min.js"></script>
+
     <title></title>
 </head>
 <body>
@@ -17,15 +20,17 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a id="login-btn" href="#">Login</a> </li>
-                    <li><a id="sign-btn" href="#">Sign</a> </li>
+                    <li><a id="login-btn" class="g1" href="#">Login</a> </li>
+                    <li><a id="sign-btn" class="g1" href="#">Sign</a> </li>
+                    <li><a id="china-name" class="g2 hidden" href="#">中文名</a></li>
+                    <li><a id="login-out" class="g2 hidden" href="#">Login-out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 main">
+            <div class="col-sm-12 main">
                 <table id="date-box" class="table table-bordered">
                     <thead>
                         <tr>
@@ -43,40 +48,77 @@
         </div>
     </div>
     <div id="outer">
-        <div id="login-box" class="hidden">
+        <div id="login-box">
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <h3 class="panel-title">Login</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" action="">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <label for="inputEmail-login" class="col-sm-2 control-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                <input type="email" class="form-control" id="inputEmail-login" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <label for="inputPassword-login" class="col-sm-2 control-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                <input type="password" class="form-control" id="inputPassword-login" placeholder="Password">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox"> Remember me
+                                        <input type="checkbox" checked="checked"> Remember me
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-4">
-                                <button type="submit" class="btn btn-default">Sign in</button>
+                                <button id="login-in"  class="btn btn-default">Login in</button>
                             </div>
                             <div class="col-sm-offset-2 col-sm-4">
-                                <button id="close" class="btn btn-warning">Cancel</button>
+                                <button class="close-btn btn btn-warning">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="sign-box">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail-sign" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail-sign" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword-sign" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword-sign" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">中文名</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="sign-name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-2">
+                                <button id="sign-in"  class="btn btn-default">Sign</button>
+                            </div>
+                            <div class="col-sm-offset-4 col-sm-2">
+                                <button class="close-btn btn btn-warning">Cancel</button>
                             </div>
                         </div>
                     </form>
@@ -84,28 +126,158 @@
             </div>
         </div>
     </div>
+
+
+
     <script type="text/javascript">
         window.onload=function(){
-            var data=[
-                {name:"赖承海",id:"lch",datePlan:["1","2","3","4","5"],workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"},
-                {name:"Joson",id:"joson",datePlan:["3","4","5","6","7"],workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"}
+            //document.onselectstart = new Function("return false");
+            Bmob.initialize("a5ae9dc99286fe6eeac1b59de3b9cb20", "15247fa7fb815af5c4d2bdbd2913b70a");
+            var currentUser = Bmob.User.current();
+            if(currentUser){
+                console.log(currentUser.get("china-name"));
+                $("#china-name")[0].innerHTML=currentUser.get("china-name");
+                $(".g1").addClass("hidden");
+                $(".g2").removeClass("hidden");
+            }
+            function testSetData(){
+                var PlanData =Bmob.Object.extend("PlanData");
+                var userPlan= new PlanData();
+                userPlan.set("name",currentUser.get("china-name"));
+                userPlan.set("uid","id_"+currentUser.id);
+                userPlan.set("workExe","acb");
+                //datePlan需要个缓冲适配器
+                userPlan.set("datePlan", [[
+                    {"done":"0","content":"DOM编程艺术学习","exist":"1"},
+                    {"done":"1","content":"DOM编程艺术学习","exist":"1"}
+                ],[
+
+                ],[
+
+                ],[
+
+                ],[
+
+                ]]);
+                userPlan.set("cheatMode", false);
+                userPlan.save(null, {
+                    success:function(userPlan){
+                        console.log(userPlan.id+"11111")
+                    },
+                    error:function(userPlan,error){
+                        console.log(error.description+"22222");
+                    }
+                });
+            }
+            function getData(){
+                var PlanData =Bmob.Object.extend("PlanData");
+                var query = new Bmob.Query(PlanData);
+                query.find({
+                    success: function(results) {
+                        console.log("共查询到 " + results.length + " 条记录");
+                        // 循环处理查询到的数据
+                        for (var i = 0; i < results.length; i++) {
+                            var object = results[i];
+                            console.log(object.id + ' - ' + object.get('name'));
+                        }
+                    },
+                    error: function(error) {
+                        console.log("查询失败: " + error.code + " " + error.message);
+                    }
+                });
+            }
+
+//            //创建类和实例
+//            var PlanData = Bmob.Object.extend("PlanData");
+//            var userPlan = new PlanData();
+//            userPlan.set("score", 137);
+//            userPlan.set("playerName", "bmob");
+//            userPlan.set("uid",123);
+//            userPlan.set("cheatMode", false);
+////添加数据，第一个入口参数是null
+//            userPlan.save(null, {
+//                success: function(gameScore) {
+//                    // 添加成功，返回成功之后的objectId（注意：返回的属性名字是id，不是objectId），你还可以在Bmob的Web管理后台看到对应的数据
+//                    alert('添加数据成功，返回的objectId是：' + gameScore.id);
+//                },
+//                error: function(gameScore, error) {
+//                    // 添加失败
+//                    alert('添加数据失败，返回错误信息：' + error.description);
+//                }
+//            });
+
+
+
+
+
+            var data=[{
+                    name:"赖承海",id:"lch",
+                    datePlan:[
+                        [
+                            {"done":"0","content":"DOM编程艺术学习","exist":"1"},
+                            {"done":"1","content":"DOM编程艺术学习","exist":"1"}
+                        ],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                        [{"done":"0","content":"DOM编程艺术学习","exist":"1"}]
+                    ],
+                    workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"
+                }, {
+                    name:"Joson",id:"joson",
+                datePlan:[
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}],
+                    [{"done":"0","content":"DOM编程艺术学习","exist":"1"}]
+                ],
+                workExe:"web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话web哈哈哈哈哈特别多话说怎么办啊啊啊啊我就是想说话"}
             ];
             Builder(data);
-
+            $("#lch").addClass("success");
+            $("#lch ul li label").addClass("click-checkbox");
+            $("#lch div.delete").removeClass("hidden");
+            $("#lch div.item").attr("contentEditable","true");
             var planDom=$("#lch").find("td");
-                setEdit(planDom);
-            var loginBtn=document.getElementById("login-btn"),
-                signBtn=document.getElementById("sign-btn");
-
-            loginBtn.onclick=function(){
+            setEdit(planDom);
+            //
+            //登录注册btn
+            var loginBtn=$("#login-btn"),
+                signBtn=$("#sign-btn");
+            loginBtn.click(function(){
+                $("#login-box").show();
+                $("#sign-box").hide();
                 $("#outer").show();
-            };
-            $("#close").click(function(){
-                $("#outer").hide();
+                return false;
             });
+            signBtn.click(function(){
+                $("#sign-box").show();
+                $("#login-box").hide();
+                $("#outer").show();
+                return false;
+            });
+            $("#login-out").click(function(){
+                Bmob.User.logOut();
+                window.location.reload();
+            });
+
+
+
              function setEdit (obj){
-                for(var i= 1,len=obj.length;i<len;i++){
-                    obj[i].contentEditable="true";
+                for(var i= 1,len=obj.length-1;i<len;i++){
+                    var addicon=document.createElement("div");
+                    addicon.className="icon-add";
+                    addicon.innerHTML="<div class='plus'></div>";
+                    obj[i].appendChild(addicon);
+                    (function(n){
+                        $(obj[n]).hover(function(){
+                                $(this).find("div.icon-add").stop(true,true).animate({"opacity":"1"},300);
+                        },function(){
+                                $(this).find("div.icon-add").stop(true,true).animate({"opacity":"0.2"},300);
+                        })
+                    })(i);
+                    //obj[i].contentEditable="true";
                 }
             }
         }
