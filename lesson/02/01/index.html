@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素高度宽度</title>
+    <link href="../../css/base.css" rel="stylesheet">
+    <style type="text/css">
+        #test-box{
+            height: 200px;
+            width: 150px;
+            background: #aaa;
+            color: #fff;
+        }
+        #click-btn{
+            cursor: pointer;
+            margin-bottom: 10px;;
+        }
+        #click-btn:hover{
+            color: #3399cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="click-btn">点击获取</div>
+        <div id="test-box">200*150</div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function (){
+        var clickBtn = document.getElementById('click-btn'),
+            element = document.getElementById('test-box');
+
+        clickBtn.onclick=function (){
+            var dh = element.clientHeight,
+                dw = element.clientWidth;
+            alert('height : '+dh+'\n'+'width : '+dw+'\n没有px单位');
+        };
+
+
+
+
+    };
+
+
+
+</script>
+</html>
