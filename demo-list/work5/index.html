@@ -6,17 +6,118 @@
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" href="css/ui-dialog.css">
     <script src="dist/dialog-min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body{
+            font:12px/1.14 arial, 'Microsoft YaHei';
+            background: #efefef;
+            color: #333;
+        }
+        #article{
+            border: 1px solid #aaa;
+            width: 800px;
+            height: 150px;
+            margin-left: 100px;
+            float: left;
+            margin-top: 50px;;
+            position: relative;
+        }
+        #reason{
+            width: 60px;
+            height: 20px;
+            position: absolute;
+            right: 20px;;
+            bottom: 26px;
+            cursor: pointer;
+            font-size: 16px;;
+        }
+        .icon{
+            display: block;
+            width: 20px;
+            height: 20px;
+            transform: rotate(-90deg);
+            font-weight: bold;
+            margin-right: 8px;
+            float: right;
+            line-height: 20px;
+            text-align: center;
+        }
+        .reason-content{
+            padding:6px;
+
+        }
+        .reason-content h1{
+            font-size: 14px;
+
+        }
+        .reason-content p{
+            line-height: 32px;
+            font-size: 14px;;
+        }
+        .reason-content{
+            font:14px arial, 'Microsoft YaHei';
+        }
+        .re-edit{
+            height: 36px;
+            width: 96px;
+            float: right;
+            background: #de0010;
+            color: #fff;
+            text-align: center;
+            line-height: 36px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-
+    <div id="article">
+        <div id="reason">
+            原因
+            <span class="icon"><</span>
+        </div>
+    </div>
 </body>
 <script type="text/javascript">
+
+
     window.onload = function (){
-        d =dialog({
-            title:"123",
-            content:"55"
-        });
-        d.show();
+
+        var tar = document.getElementById('reason');
+         d = dialog({
+             width:'380',
+             height:'260',
+             align:'bottom left',
+             content:
+             '<div class="reason-content">'+
+             '<h1>未通过的原因</h1>'+
+             '<p>安途团体保障计划是华泰财产保险股份有限公司面向国内户外活动爱好者和自助旅行者团队开发的专门产品。本产品承保非职业领队和队员的各种意外事故，并且针对领队的责任进行了保障。万一发生队友和领队(包括职业、半职业、非职业)进行诉讼，领队责任保障计划都可以给领队在保障额度内的诉讼费用以及可能出现的判决赔偿予以保障。</p>'+
+             '<div class="re-edit">重新编辑</div>'+
+             '</div>'
+         });
+        var btn = document.getElementById('reason');
+        btn.onclick = function (){
+            if(this.class==='active'){
+                d.close();
+                this.class='';
+            }else{
+                d.show(tar);
+                this.class='active';
+            }
+
+
+        };
+
+
+
+
+
+//        d =dialog({
+//            title:"123",
+//            content:"55"
+//        });
+//        d.show();
     }
 
 
