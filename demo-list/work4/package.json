@@ -1,0 +1,23 @@
+{
+  "name": "crews",
+  "version": "1.0.0",
+  "description": "work4 package",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.9.10",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-uglify": "^1.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yes"
+  ],
+  "author": "crews",
+  "license": "ISC"
+}
