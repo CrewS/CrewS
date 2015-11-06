@@ -143,6 +143,10 @@
             function testSetData(){
                 var PlanData =Bmob.Object.extend("PlanData");
                 var userPlan= new PlanData();
+                if(!currentUser){
+                    console.log('未登录');
+                    return;
+                }
                 userPlan.set("name",currentUser.get("china-name"));
                 userPlan.set("uid","id_"+currentUser.id);
                 userPlan.set("workExe","acb");
@@ -178,7 +182,11 @@
                         // 循环处理查询到的数据
                         for (var i = 0; i < results.length; i++) {
                             var object = results[i];
-                            console.log(object.id + ' - ' + object.get('name'));
+                            console.log(object.id + ' - ' + object.get('datePlan'));
+                            var data = object.get('datePlan');
+                            for(var j = 0;j<data.length;j++){
+                                console.log('done:'+data[j].done,'content:'+data[j].content);
+                            }
                         }
                     },
                     error: function(error) {
@@ -208,8 +216,8 @@
 
 
 
-
-
+            getData();
+            testSetData();
             var data=[{
                     name:"赖承海",id:"lch",
                     datePlan:[

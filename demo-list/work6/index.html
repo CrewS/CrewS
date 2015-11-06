@@ -30,26 +30,38 @@
             background: #049cdb;
             /*transform: rotate(45deg) translate(0,20px);*/
             /*transform-origin: right bottom;*/
+            transition: all 1s;
 
         }
         .normal:hover{
-            -webkit-transform: rotate(2160deg);
-            -moz-transform: rotate(2160deg);
-            -ms-transform: rotate(2160deg);
-            -o-transform: rotate(2160deg);
-            transform: rotate(2160deg);
 
-            -webkit-transition: transform 3s ease-out;
-            -moz-transition: transform 3s ease-out;
-            -ms-transition: transform 3s ease-out;
-            -o-transition: transform 3s ease-out;
-            transition: transform 3s ease-out;
+
+
+            /*-webkit-transform: rotate(2160deg);*/
+            /*-moz-transform: rotate(2160deg);*/
+            /*-ms-transform: rotate(2160deg);*/
+            /*-o-transform: rotate(2160deg);*/
+            transform: rotate(45deg) translate(250px,0);
+            /*transform: rotate(360deg);*/
+            /*-webkit-transition: transform 3s ease-out;*/
+            /*-moz-transition: transform 3s ease-out;*/
+            /*-ms-transition: transform 3s ease-out;*/
+            /*-o-transition: transform 3s ease-out;*/
+            width: 125px;
+            height: 125px;
+            background: #46a546;
+            /*transition: all 1s;*/
+            /*transform-origin: left bottom;*/
         }
         .green{
             background: #46a546;
         }
+        .green:active{
+            background: #f89406;
+        }
         .orange{
             background: #f89406;
+            transition: height 1s ease;
         }
         .rotate-css{
             -webkit-transform: rotate(2160deg);
@@ -84,19 +96,26 @@
             var green = document.getElementById('box3');
 
             orange.onclick = function() {
-                if(this.className==='orange rotate-css'){
-                    return ;
-                }
-                console.log(this);
-                this.className='orange rotate-css';
-                var that = this ;
+                var h = orange.clientHeight;
+                //console.log(h);
+                orange.style.height="300px";
 
-                setTimeout(function(){
-                    console.log(this);
-                    that.className='orange';
-                },3000)
+
+
+
+//                if(this.className==='orange rotate-css'){
+//                    return ;
+//                }
+//                console.log(this);
+//                this.className='orange rotate-css';
+//                var that = this ;
+//
+//                setTimeout(function(){
+//                    console.log(this);
+//                    that.className='orange';
+//                },3000)
             };
-            green.className="green rotate-css";
+            //green.className="green rotate-css";
 
 
         }
