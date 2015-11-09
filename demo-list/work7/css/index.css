@@ -5,9 +5,12 @@ a{
 body{
     font: 12px/1.14 arial,'Microsoft YaHei'
 }
+.wrap{
+    min-width: 1120px;
+}
 .section1{
     height: 1022px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/01.jpg") no-repeat;
     background-position: center center;
 }
@@ -45,7 +48,7 @@ body{
 }
 .section2{
     height: 888px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/02.jpg") no-repeat;
     background-position: center center;
 
@@ -73,35 +76,35 @@ body{
 
 .section3{
     height: 1524px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/03.jpg") no-repeat;
     background-position: center center;
 
 }
 .section4{
     height: 710px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/04.jpg") no-repeat;
     background-position: center center;
 
 }
 .section5{
     height: 971px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/05.jpg") no-repeat;
     background-position: center center;
 
 }
 .section6{
     height: 1214px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/06.jpg") no-repeat;
     background-position: center center;
 
 }
 .section7{
     height: 1061px;
-    min-width: 1020px;
+    min-width: 1120px;
     background: url("../img/07.jpg") no-repeat;
     background-position: center center;
 
@@ -142,6 +145,10 @@ body{
 .nav-container{
     width: 1120px;
     margin: 0 auto;
+    position: relative;
+}
+.menu{
+    position: relative;
 }
 .menu li{
     float: left;
@@ -169,6 +176,7 @@ body{
 }
 .footer{
     height: 303px;
+    min-width: 1120px;
     background: url("../img/footer.jpg") no-repeat;
     background-position: center center;
 }
@@ -181,3 +189,13 @@ body{
     color: #fff;
     font-size: 18px;
 }
+
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
