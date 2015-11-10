@@ -132,6 +132,16 @@
     <script type="text/javascript">
         window.onload=function(){
             //document.onselectstart = new Function("return false");
+            //时间组件:
+            //
+            var date = new Date();
+
+
+
+
+
+
+
             Bmob.initialize("a5ae9dc99286fe6eeac1b59de3b9cb20", "15247fa7fb815af5c4d2bdbd2913b70a");
             var currentUser = Bmob.User.current();
             if(currentUser){
@@ -151,18 +161,13 @@
                 userPlan.set("uid","id_"+currentUser.id);
                 userPlan.set("workExe","acb");
                 //datePlan需要个缓冲适配器
-                userPlan.set("datePlan", [[
+                userPlan.set("datePlan", [
                     {"done":"0","content":"DOM编程艺术学习","exist":"1"},
                     {"done":"1","content":"DOM编程艺术学习","exist":"1"}
-                ],[
+                ]);
+                userPlan.set('',"");
 
-                ],[
 
-                ],[
-
-                ],[
-
-                ]]);
                 userPlan.set("cheatMode", false);
                 userPlan.save(null, {
                     success:function(userPlan){
