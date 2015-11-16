@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680b0ba0-97e9-42f8-a394-184f3235916a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo-list/work7/bm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work4/app/index.html" afterPath="$PROJECT_DIR$/demo-list/work4/app/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo-list/work8/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrewS.github.io.iws" />
@@ -25,58 +24,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work4/app/index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="158" column="17" selection-start-line="158" selection-start-column="17" selection-end-line="158" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.4415243">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
-                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#8836#8858#0" expanded="false" />
+                <element signature="e#1687#1878#0" expanded="false" />
+                <element signature="e#1903#1949#0" expanded="false" />
+                <element signature="e#1968#2030#0" expanded="false" />
+                <element signature="e#2055#2098#0" expanded="false" />
+                <element signature="e#2125#2190#0" expanded="false" />
+                <element signature="e#2211#2308#0" expanded="false" />
+                <element signature="e#2327#2389#0" expanded="false" />
+                <element signature="e#2410#2508#0" expanded="false" />
+                <element signature="e#2520#2557#0" expanded="false" />
+                <element signature="e#2576#2673#0" expanded="false" />
+                <element signature="e#2692#2787#0" expanded="false" />
+                <element signature="e#2808#2936#0" expanded="false" />
+                <element signature="e#2958#3192#0" expanded="false" />
+                <element signature="e#3237#3280#0" expanded="false" />
+                <element signature="e#3302#3370#0" expanded="false" />
+                <element signature="e#3390#3533#0" expanded="false" />
+                <element signature="e#3555#3670#0" expanded="false" />
+                <element signature="e#3686#3795#0" expanded="false" />
+                <element signature="e#3810#3923#0" expanded="false" />
+                <element signature="e#3938#4051#0" expanded="false" />
+                <element signature="e#4063#4177#0" expanded="false" />
+                <element signature="e#4193#4307#0" expanded="false" />
+                <element signature="e#4335#4458#0" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work7/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.5">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bm.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo-list/work7/bm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22996058">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="builder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work4/app/js/builder.js">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-list/work7/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basefunction.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work4/app/js/basefunction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="200" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,6 +104,7 @@
         <option value="$PROJECT_DIR$/demo-list/work7/css/index.css" />
         <option value="$PROJECT_DIR$/demo-list/work4/app/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work7/bm.html" />
+        <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
       </list>
     </option>
   </component>
@@ -128,8 +116,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="79" />
+    <option name="x" value="169" />
+    <option name="y" value="30" />
     <option name="width" value="1520" />
     <option name="height" value="962" />
   </component>
@@ -160,6 +148,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,6 +195,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="work8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrewS.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrewS.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="work7" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -224,7 +231,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="work6" />
+              <option name="myItemId" value="work7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,7 +255,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,8 +325,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="79" width="1520" height="962" extended-state="0" />
-    <editor active="false" />
+    <frame x="169" y="30" width="1520" height="962" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1858108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -366,20 +376,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascripts/builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="46" selection-start-line="86" selection-start-column="46" selection-end-line="86" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lesson/01/02/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -674,14 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work7/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9433962">
-          <caret line="38" column="2" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work7/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.094339624">
@@ -694,7 +682,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -720,19 +708,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work7/bm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.147059">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work7/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.5">
+        <state vertical-scroll-proportion="-21.32353">
           <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work7/bm.html">
+    <entry file="file://$PROJECT_DIR$/demo-list/work7/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22996058">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="200" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49056605">
+          <caret line="314" column="16" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4415243">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#1687#1878#0" expanded="false" />
+            <element signature="e#1903#1949#0" expanded="false" />
+            <element signature="e#1968#2030#0" expanded="false" />
+            <element signature="e#2055#2098#0" expanded="false" />
+            <element signature="e#2125#2190#0" expanded="false" />
+            <element signature="e#2211#2308#0" expanded="false" />
+            <element signature="e#2327#2389#0" expanded="false" />
+            <element signature="e#2410#2508#0" expanded="false" />
+            <element signature="e#2520#2557#0" expanded="false" />
+            <element signature="e#2576#2673#0" expanded="false" />
+            <element signature="e#2692#2787#0" expanded="false" />
+            <element signature="e#2808#2936#0" expanded="false" />
+            <element signature="e#2958#3192#0" expanded="false" />
+            <element signature="e#3237#3280#0" expanded="false" />
+            <element signature="e#3302#3370#0" expanded="false" />
+            <element signature="e#3390#3533#0" expanded="false" />
+            <element signature="e#3555#3670#0" expanded="false" />
+            <element signature="e#3686#3795#0" expanded="false" />
+            <element signature="e#3810#3923#0" expanded="false" />
+            <element signature="e#3938#4051#0" expanded="false" />
+            <element signature="e#4063#4177#0" expanded="false" />
+            <element signature="e#4193#4307#0" expanded="false" />
+            <element signature="e#4335#4458#0" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
