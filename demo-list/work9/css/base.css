@@ -1,0 +1,227 @@
+*{margin: 0;padding: 0;}
+body{
+    font: 12px/1.14 arial,'Microsoft YaHei'
+}
+
+
+.wrap{
+    min-width: 1120px;
+    background: url("../img/bg.png");
+    min-height: 1000px;/*---*/
+}
+    .header{
+        min-width: 1120px;
+        height: 300px;
+        background: url("../img/header.jpg") no-repeat;
+        background-position: center center;
+    }
+    .main-container{
+        width: 1120px;
+        margin: 0 auto;
+        min-height: 1000px;
+        background: url("../img/container-bg.png");
+        padding-top: 82px;
+        padding-bottom: 90px;
+    }
+        .main-header{
+            height: 220px;
+            border: 10px solid #4d4d4d;
+            background: #ffffff;
+            position: relative;
+            padding-left: 354px;
+            margin-bottom: 31px;
+            /*height: 354px;*/
+            /*background: url("../img/zp-icon.png") no-repeat;*/
+        }
+            .zp-logo{
+                height: 354px;
+                width: 354px;
+                background: url("../img/zp-icon.png") no-repeat;
+                position: absolute;
+                top: -92px;
+                left: 0;
+            }
+            .zp-text{
+                padding-top: 47px;
+                padding-left: 50px;
+                padding-right: 50px;
+                line-height: 28px;
+            }
+            .zp-text p{
+                font-size: 18px;
+            }
+        .zp-item-title{
+            height: 63px;
+            padding-top: 110px;
+            background: url("../img/block-bg.png") no-repeat;
+        }
+            .zp-item-title p{
+                font-size: 48px;
+                text-align: center;
+                color: #fff;
+            }
+            .section-header{
+                height: 328px;
+                position: relative;
+            }
+                /****ÕÐÆ¸Í·²¿*****/
+                .section-block-item{
+                    position: absolute;
+                    bottom: 0;
+                    height: 90px;
+                    width: 374px;
+                    left: 50%;
+                    margin-left: -187px;
+                }
+                .section-teyuegaoren{
+                    background: url("../img/section1.png") no-repeat;
+                }
+                .section-tuwenbaodao{
+                    background: url("../img/section2.png") no-repeat;
+                }
+                .section-shipinpaishe{
+                    background: url("../img/section3.png") no-repeat;
+                }
+
+            .section-content{
+                background: #fff;
+                min-height: 450px;
+                padding-top: 40px;
+            }
+                .section-content p{
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                .section-content p.beizhu{
+                    font-size: 13px;
+                    color: #333;
+                }
+                    .sub-item-title{
+                        margin-right: 10px;
+                        font-size: 17px;
+                    }
+                    .li-style-icon{
+                        display: inline-block;
+                        height: 17px;
+                        width: 17px;
+                        position: relative;
+                        top: 3px;
+                        background: url("../img/li-style-icon.png") no-repeat;
+                    }
+            .sub-section-title{
+                display: table;
+                margin: 0 auto;
+                font-size: 20px;
+                color: #fff;
+                background: #4d4d4d;
+                border: 1px solid #b1b1b1;
+                padding: 5px 15px;
+                margin-bottom: 25px;
+            }
+        .fl-content{
+            background: #fff;
+            padding-top: 50px;
+        }
+
+            .fl-content p{
+                font-size: 16px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: bold;
+                color: #333;
+            }
+        .specify-content{
+            height: 539px;
+            padding-top: 120px;
+            background: url("../img/specify-bg.jpg") no-repeat;
+        }
+            .specify-content p{
+                font-size: 14px;
+                text-align: center;
+                line-height: 30px;
+                font-weight: bold;
+            }
+            .zp-style-item{
+                height: 123px;
+                margin-bottom: 60px;
+                padding-left: 290px;
+            }
+                .style-item-box{
+                    width: 123px;
+                    height: 93px;
+                    padding-top: 30px;
+                    float: left;
+                    margin-right: 65px;
+                    border-radius: 123px;
+
+                    color: #fff;
+                    background: rgba(0,0,0,0.8);
+                }
+                    .style-item-box p{
+                        font-size: 22px;
+                    }
+        .about-us-content{
+            height: 350px;
+            padding-top: 330px;
+            background: url("../img/about-us.jpg") no-repeat;
+        }
+            .about-us-content p{
+                font-size: 16px;
+                text-align: center;
+                line-height: 30px;
+                color: #fff;
+            }
+            .logo{
+                height: 37px;
+                width: 172px;
+                margin:  0 auto;
+                background: url("../img/biketo-logo.png") no-repeat;
+                margin-bottom: 50px;
+            }
+.footer{
+    padding: 90px;
+    height: 50px;
+    background: #1a1a1a;
+}
+    .footer p{
+        font-size: 14px;
+        color: #aaa;
+        text-align: center;
+    }
+
+.b{
+    font-weight: bold;
+}
+.fs{
+    font-size: 17px;
+}
+.under-line{
+    text-decoration: underline;
+}
+.red{
+    color: #fa0000;
+}
+.while{
+    color: #fff;
+}
+.bg-red{
+    background: #fa0000;
+}
+.hr-w{
+    width:960px ;
+    margin-left: 80px;
+}
+.pd5{
+    padding: 0 5px;
+}
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+
