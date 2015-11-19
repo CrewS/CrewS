@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680b0ba0-97e9-42f8-a394-184f3235916a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo-list/work9/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work8/index.html" afterPath="$PROJECT_DIR$/demo-list/work8/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" afterPath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" afterPath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrewS.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile-index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mobile-index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40239045">
-              <caret line="136" column="60" selection-start-line="136" selection-start-column="60" selection-end-line="136" selection-end-column="60" />
+            <state vertical-scroll-proportion="-21.411764">
+              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -79,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-56.40625">
-              <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.40397352">
+              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -127,9 +124,9 @@
         <option value="$PROJECT_DIR$/demo-list/work9/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/css/base.css" />
         <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
-        <option value="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
         <option value="$PROJECT_DIR$/demo-list/work9/test.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
+        <option value="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
       </list>
     </option>
   </component>
@@ -141,8 +138,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="35" />
+    <option name="x" value="337" />
+    <option name="y" value="47" />
     <option name="width" value="1505" />
     <option name="height" value="954" />
   </component>
@@ -404,7 +401,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="35" width="1505" height="954" extended-state="0" />
+    <frame x="337" y="47" width="1505" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -786,22 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work9/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-56.40625">
-          <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6764705">
@@ -832,20 +813,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work9/test.html">
+    <entry file="file://$PROJECT_DIR$/demo-list/work9/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.617647">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="23" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40239045">
-          <caret line="136" column="60" selection-start-line="136" selection-start-column="60" selection-end-line="136" selection-end-column="60" />
+        <state vertical-scroll-proportion="-21.411764">
+          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40397352">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding />
         </state>
       </provider>
