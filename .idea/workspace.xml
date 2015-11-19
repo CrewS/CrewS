@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="680b0ba0-97e9-42f8-a394-184f3235916a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" afterPath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" afterPath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
     </list>
     <ignored path="CrewS.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +78,8 @@
       <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40397352">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.16688742">
+              <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -831,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40397352">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.16688742">
+          <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
           <folding />
         </state>
       </provider>

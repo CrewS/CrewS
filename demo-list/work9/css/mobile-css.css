@@ -159,13 +159,14 @@ html{font-size:40px;}
                 position: relative;
             }
                 .zp-style-item{
-                    height: 3.075rem;
+                    width: 260px;
+                    margin: 0 auto;
                     min-height: 81px;
                     margin-bottom: 60px;
                 }
                     .style-item-box{
-                        width: 3.075rem;
-                        height: 3.075rem;
+                        /*width: 3.075rem;*/
+                        /*height: 3.075rem;*/
                         min-width:81px;
                         min-height: 81px;
                         display: table;
@@ -173,7 +174,7 @@ html{font-size:40px;}
                         /*padding-top: 30px;*/
                         float: left;
                         border-radius: 123px;
-                        margin-left: 0.4rem;
+                        margin-left: 8px;
                         color: #fff;
                         background: rgba(0,0,0,0.8);
                     }
