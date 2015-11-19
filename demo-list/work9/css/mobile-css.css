@@ -8,7 +8,7 @@ body{
 p{line-height: 1rem;}
 .wrap{
     /*max-width: 640px;*/
-    width: 16rem;http://172.16.0.49:3000/mobile-index.html
+    width: 16rem;
     margin: 0 auto;
     background: url("../img/mobile-container-bg.png");
 }
