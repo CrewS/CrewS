@@ -7,7 +7,7 @@
     <title></title>
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap" id="wrap" >
         <div class="header">
 
         </div>
@@ -88,8 +88,10 @@
             var wrap=document.getElementById("wrap");
             var width=html.clientWidth;
             alert(width);
+
             var percent=width/640.0;
             html.style.fontSize=40*percent+"px";
+            alert(wrap.clientWidth);
         }
     </script>
 </body>
