@@ -44,12 +44,11 @@ html{font-size:40px;}
             }
             .zp-text p{
                 line-height: 0.9rem;
-                font-size:0.3rem;
             }
 
         .zp-item-title{
             height: 1.1rem;
-            padding-top: 1.4rem;
+            padding-top: 1.2rem;
             background: url("../img/block-bg.png") no-repeat;
             background-size: 100%;
         }
@@ -58,6 +57,27 @@ html{font-size:40px;}
                 text-align: center;
                 color: #fff;
             }
+        .section-nav{
+            height: 0.7rem;
+            padding-bottom: 0.2rem;
+        }
+            .section-nav div.active{
+                background: #fa0000;
+            }
+            .section-nav-item{
+                float: left;
+                height: 0.7rem;
+                width: 32%;
+                background: #959595;
+                color: #eaeaea;
+                line-height: 0.7rem;
+                text-align: center;
+            }
+
+            .mr2{
+                margin-right: 2%;
+            }
+            
         .section-header{
 
         }
@@ -70,6 +90,7 @@ html{font-size:40px;}
         }
         .section-content p{
             text-align: center;
+            line-height: 20px;
         }
             .sub-section-title{
                 display: table;
@@ -81,16 +102,87 @@ html{font-size:40px;}
                 margin-bottom: 25px;
             }
 
+        .fl-content{
+            background: #fff;
+            padding-top: 50px;
+        }
+
+        .fl-content p{
+            font-size: 12px;
+            text-align: center;
+            /*line-height: 30px;*/
+            font-weight: bold;
+            color: #333;
+        }
+        .specify-content{
+            height: 539px;
+            padding-top: 120px;
+            background: url("../img/specify-bg.jpg") no-repeat;
+        }
+            .specify-content p{
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                font-weight: bold;
+            }
+                .zp-style-item{
+                    height: 3.075rem;
+                    margin-bottom: 60px;
+                }
+                    .style-item-box{
+                        width: 3.075rem;
+                        height: 3.075rem;
+                        /*padding-top: 30px;*/
+                        float: left;
+                        border-radius: 123px;
+                        margin-left: 1.15rem;
+                        color: #fff;
+                        background: rgba(0,0,0,0.8);
+                    }
+                        .style-item-box p{
+                            font-size: 12px;
+                        }
+        .about-us-content{
+            height: 350px;
+            padding-top: 330px;
+            background: url("../img/about-us.jpg") no-repeat;
+            background-position: center center;
+        }
+            .about-us-content p{
+                font-size: 12px;
+                text-align: center;
+                line-height: 20px;
+                color: #fff;
+            }
+                .logo{
+                    height: 37px;
+                    width: 172px;
+                    margin:  0 auto;
+                    background: url("../img/biketo-logo.png") no-repeat;
+                    margin-bottom: 50px;
+                }
 
 
 .b{
     font-weight: bold;
+}
+.ub{
+    font-weight: 100;
 }
 .fs{
     font-size: 17px;
 }
 .under-line{
     text-decoration: underline;
+}
+.bg-gray{
+    background: #333333;
+}
+.while{
+    color: #e6e6e6;
+}
+.pd5{
+    padding: 0 5px;
 }
 .red{
     color: #fa0000;
