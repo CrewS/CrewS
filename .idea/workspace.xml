@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680b0ba0-97e9-42f8-a394-184f3235916a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work8/index.html" afterPath="$PROJECT_DIR$/demo-list/work8/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" afterPath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrewS.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,64 +25,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/css/base.css">
+      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/project/work4/app/css/mobile-css.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
+              <caret line="144" column="31" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile-index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.411764">
-              <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6764705">
-              <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.564409">
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
-                <element signature="e#2175#2221#0" expanded="false" />
-                <element signature="e#2327#2370#0" expanded="false" />
-                <element signature="e#2397#2462#0" expanded="false" />
-                <element signature="e#2483#2580#0" expanded="false" />
-                <element signature="e#2599#2661#0" expanded="false" />
-                <element signature="e#2682#2780#0" expanded="false" />
-                <element signature="e#2792#2829#0" expanded="false" />
-                <element signature="e#2848#2945#0" expanded="false" />
-                <element signature="e#2964#3059#0" expanded="false" />
-                <element signature="e#3080#3208#0" expanded="false" />
-                <element signature="e#3230#3464#0" expanded="false" />
-                <element signature="e#3509#3552#0" expanded="false" />
-                <element signature="e#3574#3642#0" expanded="false" />
-                <element signature="e#3662#3805#0" expanded="false" />
-                <element signature="e#3827#3942#0" expanded="false" />
-                <element signature="e#3958#4067#0" expanded="false" />
-                <element signature="e#4082#4195#0" expanded="false" />
-                <element signature="e#4210#4323#0" expanded="false" />
-                <element signature="e#4335#4449#0" expanded="false" />
-                <element signature="e#4465#4579#0" expanded="false" />
-                <element signature="e#4607#4730#0" expanded="false" />
+                <element signature="e#2252#2298#0" expanded="false" />
+                <element signature="e#2404#2447#0" expanded="false" />
+                <element signature="e#2474#2539#0" expanded="false" />
+                <element signature="e#2560#2657#0" expanded="false" />
+                <element signature="e#2676#2738#0" expanded="false" />
+                <element signature="e#2759#2857#0" expanded="false" />
+                <element signature="e#2869#2906#0" expanded="false" />
+                <element signature="e#2925#3022#0" expanded="false" />
+                <element signature="e#3041#3136#0" expanded="false" />
+                <element signature="e#3157#3285#0" expanded="false" />
+                <element signature="e#3307#3541#0" expanded="false" />
+                <element signature="e#3586#3629#0" expanded="false" />
+                <element signature="e#3651#3719#0" expanded="false" />
+                <element signature="e#3739#3882#0" expanded="false" />
+                <element signature="e#3904#4019#0" expanded="false" />
+                <element signature="e#4035#4144#0" expanded="false" />
+                <element signature="e#4159#4272#0" expanded="false" />
+                <element signature="e#4287#4400#0" expanded="false" />
+                <element signature="e#4412#4526#0" expanded="false" />
+                <element signature="e#4542#4656#0" expanded="false" />
+                <element signature="e#4684#4807#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16688742">
-              <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,10 +104,11 @@
         <option value="$PROJECT_DIR$/demo-list/work7/bm.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/css/base.css" />
-        <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/test.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
+        <option value="$USER_HOME$/Desktop/project/work4/app/css/mobile-css.css" />
+        <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
       </list>
     </option>
   </component>
@@ -137,8 +120,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="337" />
-    <option name="y" value="47" />
+    <option name="x" value="298" />
+    <option name="y" value="72" />
     <option name="width" value="1505" />
     <option name="height" value="954" />
   </component>
@@ -168,7 +151,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,7 +312,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,28 +383,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="337" y="47" width="1505" height="954" extended-state="0" />
+    <frame x="298" y="72" width="1505" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278846" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -768,7 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6764705">
           <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -776,39 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.9920318">
           <caret line="160" column="18" selection-start-line="145" selection-start-column="12" selection-end-line="160" selection-end-column="18" />
-          <folding>
-            <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6764705">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
-          <folding>
-            <element signature="e#2175#2221#0" expanded="false" />
-            <element signature="e#2327#2370#0" expanded="false" />
-            <element signature="e#2397#2462#0" expanded="false" />
-            <element signature="e#2483#2580#0" expanded="false" />
-            <element signature="e#2599#2661#0" expanded="false" />
-            <element signature="e#2682#2780#0" expanded="false" />
-            <element signature="e#2792#2829#0" expanded="false" />
-            <element signature="e#2848#2945#0" expanded="false" />
-            <element signature="e#2964#3059#0" expanded="false" />
-            <element signature="e#3080#3208#0" expanded="false" />
-            <element signature="e#3230#3464#0" expanded="false" />
-            <element signature="e#3509#3552#0" expanded="false" />
-            <element signature="e#3574#3642#0" expanded="false" />
-            <element signature="e#3662#3805#0" expanded="false" />
-            <element signature="e#3827#3942#0" expanded="false" />
-            <element signature="e#3958#4067#0" expanded="false" />
-            <element signature="e#4082#4195#0" expanded="false" />
-            <element signature="e#4210#4323#0" expanded="false" />
-            <element signature="e#4335#4449#0" expanded="false" />
-            <element signature="e#4465#4579#0" expanded="false" />
-            <element signature="e#4607#4730#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,23 +765,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.411764">
-          <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16688742">
-          <caret line="160" column="31" selection-start-line="160" selection-start-column="31" selection-end-line="160" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6635762">
+          <caret line="175" column="41" selection-start-line="175" selection-start-column="41" selection-end-line="175" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4701195">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/project/work4/app/css/mobile-css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="31" selection-start-line="144" selection-start-column="31" selection-end-line="144" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.564409">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding>
+            <element signature="e#2252#2298#0" expanded="false" />
+            <element signature="e#2404#2447#0" expanded="false" />
+            <element signature="e#2474#2539#0" expanded="false" />
+            <element signature="e#2560#2657#0" expanded="false" />
+            <element signature="e#2676#2738#0" expanded="false" />
+            <element signature="e#2759#2857#0" expanded="false" />
+            <element signature="e#2869#2906#0" expanded="false" />
+            <element signature="e#2925#3022#0" expanded="false" />
+            <element signature="e#3041#3136#0" expanded="false" />
+            <element signature="e#3157#3285#0" expanded="false" />
+            <element signature="e#3307#3541#0" expanded="false" />
+            <element signature="e#3586#3629#0" expanded="false" />
+            <element signature="e#3651#3719#0" expanded="false" />
+            <element signature="e#3739#3882#0" expanded="false" />
+            <element signature="e#3904#4019#0" expanded="false" />
+            <element signature="e#4035#4144#0" expanded="false" />
+            <element signature="e#4159#4272#0" expanded="false" />
+            <element signature="e#4287#4400#0" expanded="false" />
+            <element signature="e#4412#4526#0" expanded="false" />
+            <element signature="e#4542#4656#0" expanded="false" />
+            <element signature="e#4684#4807#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

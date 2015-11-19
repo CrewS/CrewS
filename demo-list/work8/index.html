@@ -38,7 +38,7 @@
             float: left;
             background-size: 102%;
             background-position: center center;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
         }
         /*.main-content a:hover{*/
             /*background-size: 120%;*/
@@ -73,6 +73,8 @@
             width: 940px;
             margin: 0 auto;
             background: url("img/foot-bg.jpg") no-repeat;
+            background-position: 0 -2px;
+            background-color: #000;
             padding: 120px 84px 0 96px;
             height: 285px;
             border: 1px solid #424242;
@@ -289,7 +291,7 @@
     <script type="text/javascript">
         $(function(){
            $('.main-content').find('a').hover(function(){
-               $(this).stop(true,false).animate({'background-size':'120%'},500);
+               $(this).stop(true,false).animate({'background-size':'115%'},500);
            },function(){
                $(this).stop(true,false).animate({'background-size':'102%'},500);
            })
