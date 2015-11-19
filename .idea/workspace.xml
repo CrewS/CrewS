@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="680b0ba0-97e9-42f8-a394-184f3235916a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo-list/work9/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work8/index.html" afterPath="$PROJECT_DIR$/demo-list/work8/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" afterPath="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" afterPath="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CrewS.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,34 +27,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="mobile-index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-list/work9/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.117647">
-              <caret line="160" column="31" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
+      <file leaf-file-name="mobile-index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39644217">
-              <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.40239045">
+              <caret line="136" column="60" selection-start-line="136" selection-start-column="60" selection-end-line="136" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo-list/work9/index.html">
+        <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.382353">
-              <caret line="160" column="18" selection-start-line="145" selection-start-column="12" selection-end-line="160" selection-end-column="18" />
+            <state vertical-scroll-proportion="-3.6764705">
+              <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
               <folding>
-                <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#2175#2221#0" expanded="false" />
+                <element signature="e#2327#2370#0" expanded="false" />
+                <element signature="e#2397#2462#0" expanded="false" />
+                <element signature="e#2483#2580#0" expanded="false" />
+                <element signature="e#2599#2661#0" expanded="false" />
+                <element signature="e#2682#2780#0" expanded="false" />
+                <element signature="e#2792#2829#0" expanded="false" />
+                <element signature="e#2848#2945#0" expanded="false" />
+                <element signature="e#2964#3059#0" expanded="false" />
+                <element signature="e#3080#3208#0" expanded="false" />
+                <element signature="e#3230#3464#0" expanded="false" />
+                <element signature="e#3509#3552#0" expanded="false" />
+                <element signature="e#3574#3642#0" expanded="false" />
+                <element signature="e#3662#3805#0" expanded="false" />
+                <element signature="e#3827#3942#0" expanded="false" />
+                <element signature="e#3958#4067#0" expanded="false" />
+                <element signature="e#4082#4195#0" expanded="false" />
+                <element signature="e#4210#4323#0" expanded="false" />
+                <element signature="e#4335#4449#0" expanded="false" />
+                <element signature="e#4465#4579#0" expanded="false" />
+                <element signature="e#4607#4730#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobile-css.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-56.40625">
+              <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,8 +95,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Html5" />
         <option value="CSS File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -91,11 +124,12 @@
         <option value="$PROJECT_DIR$/demo-list/work7/css/index.css" />
         <option value="$PROJECT_DIR$/demo-list/work4/app/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work7/bm.html" />
-        <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/css/base.css" />
-        <option value="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
+        <option value="$PROJECT_DIR$/demo-list/work8/index.html" />
         <option value="$PROJECT_DIR$/demo-list/work9/css/mobile-css.css" />
+        <option value="$PROJECT_DIR$/demo-list/work9/test.html" />
+        <option value="$PROJECT_DIR$/demo-list/work9/mobile-index.html" />
       </list>
     </option>
   </component>
@@ -107,8 +141,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="295" />
-    <option name="y" value="108" />
+    <option name="x" value="50" />
+    <option name="y" value="35" />
     <option name="width" value="1505" />
     <option name="height" value="954" />
   </component>
@@ -370,13 +404,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="295" y="108" width="1505" height="954" extended-state="0" />
+    <frame x="50" y="35" width="1505" height="954" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18771331" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278846" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -390,7 +425,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -421,13 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascripts/builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -715,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2956636">
-          <caret line="9" column="9" selection-start-line="7" selection-start-column="8" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/img/block-bg.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -750,14 +770,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work5/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4117646">
-          <caret line="6" column="112" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="112" />
+        <state vertical-scroll-proportion="-3.6764705">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.382353">
+        <state vertical-scroll-proportion="2.9920318">
           <caret line="160" column="18" selection-start-line="145" selection-start-column="12" selection-end-line="160" selection-end-column="18" />
           <folding>
             <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -768,23 +789,63 @@
     <entry file="file://$PROJECT_DIR$/demo-list/work9/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="180" column="13" selection-start-line="163" selection-start-column="8" selection-end-line="180" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.117647">
-          <caret line="160" column="31" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="31" />
+          <caret line="110" column="21" selection-start-line="103" selection-start-column="20" selection-end-line="110" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo-list/work9/css/mobile-css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39644217">
-          <caret line="110" column="33" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+        <state vertical-scroll-proportion="-56.40625">
+          <caret line="217" column="16" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6764705">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="73" />
+          <folding>
+            <element signature="e#2175#2221#0" expanded="false" />
+            <element signature="e#2327#2370#0" expanded="false" />
+            <element signature="e#2397#2462#0" expanded="false" />
+            <element signature="e#2483#2580#0" expanded="false" />
+            <element signature="e#2599#2661#0" expanded="false" />
+            <element signature="e#2682#2780#0" expanded="false" />
+            <element signature="e#2792#2829#0" expanded="false" />
+            <element signature="e#2848#2945#0" expanded="false" />
+            <element signature="e#2964#3059#0" expanded="false" />
+            <element signature="e#3080#3208#0" expanded="false" />
+            <element signature="e#3230#3464#0" expanded="false" />
+            <element signature="e#3509#3552#0" expanded="false" />
+            <element signature="e#3574#3642#0" expanded="false" />
+            <element signature="e#3662#3805#0" expanded="false" />
+            <element signature="e#3827#3942#0" expanded="false" />
+            <element signature="e#3958#4067#0" expanded="false" />
+            <element signature="e#4082#4195#0" expanded="false" />
+            <element signature="e#4210#4323#0" expanded="false" />
+            <element signature="e#4335#4449#0" expanded="false" />
+            <element signature="e#4465#4579#0" expanded="false" />
+            <element signature="e#4607#4730#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work9/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.617647">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo-list/work9/mobile-index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40239045">
+          <caret line="136" column="60" selection-start-line="136" selection-start-column="60" selection-end-line="136" selection-end-column="60" />
           <folding />
         </state>
       </provider>

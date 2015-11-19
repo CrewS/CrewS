@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>山地自行车装备频道</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <style type="text/css">
         *{margin: 0;padding: 0;}
         body{
@@ -32,15 +33,16 @@
         }
         .main-content a{
             display: block;
-            height: 370px;
-            width: 560px;
+            height: 366px;
+            width: 556px;
             float: left;
             background-size: 102%;
             background-position: center center;
+            border: 2px solid rgba(255,255,255,0.3);
         }
-        .main-content a:hover{
-            background-size: 120%;
-        }
+        /*.main-content a:hover{*/
+            /*background-size: 120%;*/
+        /*}*/
         .img-block-01{
             background: url("img/img-block-1.jpg") no-repeat;
         }
@@ -68,21 +70,20 @@
 
 
         .footer{
-            width: 980px;
+            width: 940px;
             margin: 0 auto;
             background: url("img/foot-bg.jpg") no-repeat;
-            padding: 120px 100px 0 40px;
+            padding: 120px 84px 0 96px;
             height: 285px;
+            border: 1px solid #424242;
         }
-        .a{
-            back
-        }
+
         .footer-content{
             padding-bottom: 35px;;
         }
         .help-item{
             float: left;
-            width: 145px;
+            width: 135px;
         }
         .help-item ul li{
             line-height: 20px;;
@@ -260,10 +261,10 @@
                         <hr class="op">
                         <br>
                         <div>
-                            <strong><span class="email-add">邮件地址</span></strong><br><br>
+                            <strong><span class="email-add">邮件地址</span></strong><br>
                             <div class="input-box">
                                 <input class="email-input" type="text" placeholder="输入邮件地址">
-                                <input class="email-submit" type="submit">
+                                <input class="email-submit" type="submit" value="提交">
                             </div>
                         </div>
                     </div>
@@ -284,5 +285,16 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(function(){
+           $('.main-content').find('a').hover(function(){
+               $(this).stop(true,false).animate({'background-size':'120%'},500);
+           },function(){
+               $(this).stop(true,false).animate({'background-size':'102%'},500);
+           })
+
+        });
+    </script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 *{margin: 0;padding: 0;}
 body{
-    font: 12px/1.14 arial,'Microsoft YaHei'
+    font: 12px/1.14 arial,'Microsoft YaHei';
+    font-size-adjust: none;
 }
 html{font-size:40px;}
 .wrap{
@@ -90,10 +91,12 @@ html{font-size:40px;}
         .section-content{
             background: #fff;
             padding-top: 1rem;
+            padding-left: 0.5rem;
         }
         .section-content p{
-            text-align: center;
+            text-align: left;
             line-height: 20px;
+
         }
             .sub-section-title{
                 display: table;
@@ -104,6 +107,20 @@ html{font-size:40px;}
                 padding: 5px 15px;
                 margin-bottom: 25px;
             }
+            .standard-text p{
+                padding-left: 17px;
+                position: relative;
+            }
+                .li-style-icon{
+                    display: inline-block;
+                    height: 17px;
+                    width: 17px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url("../img/li-style-icon.png") no-repeat;
+                }
+
         .fl-info{
             padding-bottom: 1rem;
         }
@@ -113,52 +130,66 @@ html{font-size:40px;}
         .fl-content{
             background: #fff;
             padding-top: 50px;
+            padding-left: 0.5rem;
         }
 
         .fl-content p{
             font-size: 12px;
-            text-align: center;
-            /*line-height: 30px;*/
+            text-align: left;
+            line-height: 20px;
             font-weight: bold;
             color: #333;
+            padding-left: 17px;
+            position: relative;
         }
         .specify-content{
             height: 539px;
             padding-top: 120px;
+            padding-left: 0.5rem;
             background: url("../img/specify-bg.jpg") no-repeat;
         }
             .specify-content p{
                 font-size: 12px;
-                text-align: center;
+                text-align: left;
                 line-height: 20px;
-                font-weight: bold;
+                padding-left: 17px;
+                position: relative;
             }
                 .zp-style-item{
                     height: 3.075rem;
+                    min-height: 81px;
                     margin-bottom: 60px;
                 }
                     .style-item-box{
                         width: 3.075rem;
                         height: 3.075rem;
+                        min-width:81px;
+                        min-height: 81px;
+                        display: table;
+                        vertical-align: middle;
                         /*padding-top: 30px;*/
                         float: left;
                         border-radius: 123px;
-                        margin-left: 1.15rem;
+                        margin-left: 0.4rem;
                         color: #fff;
                         background: rgba(0,0,0,0.8);
                     }
                         .style-item-box p{
                             font-size: 12px;
+                            text-align: center;
+                            padding: 0;
+                            line-height: 28px;
                         }
         .about-us-content{
             height: 350px;
             padding-top: 330px;
             background: url("../img/about-us.jpg") no-repeat;
             background-position: center center;
+            padding-left: 0.5rem;
         }
             .about-us-content p{
                 font-size: 12px;
-                text-align: center;
+                text-align: left;
                 line-height: 20px;
                 color: #fff;
             }
@@ -185,6 +216,9 @@ html{font-size:40px;}
 }
 .bg-gray{
     background: #333333;
+}
+.ml0{
+    margin-left: 0;
 }
 .while{
     color: #e6e6e6;
