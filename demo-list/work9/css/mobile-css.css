@@ -1,12 +1,14 @@
 *{margin: 0;padding: 0;}
+
+html{font-size:40px;}
 body{
-    font: 12px/1.14 arial,'Microsoft YaHei';
+    font: 0.6rem arial,'Microsoft YaHei';
     font-size-adjust: none;
 }
-html{font-size:40px;}
+p{line-height: 1rem;}
 .wrap{
     /*max-width: 640px;*/
-    width: 16rem;
+    width: 16rem;http://172.16.0.49:3000/mobile-index.html
     margin: 0 auto;
     background: url("../img/mobile-container-bg.png");
 }
@@ -76,6 +78,7 @@ html{font-size:40px;}
                 color: #eaeaea;
                 line-height: 0.7rem;
                 text-align: center;
+                font-size: 0.6rem;
             }
 
             .mr2{
@@ -96,8 +99,6 @@ html{font-size:40px;}
         }
         .section-content p{
             text-align: left;
-            line-height: 20px;
-
         }
             .sub-section-title{
                 display: table;
@@ -107,6 +108,7 @@ html{font-size:40px;}
                 border: 1px solid #b1b1b1;
                 padding: 5px 15px;
                 margin-bottom: 25px;
+                font-size: 0.6rem;
             }
             .standard-text p{
                 padding-left: 17px;
@@ -136,9 +138,7 @@ html{font-size:40px;}
         }
 
         .fl-content p{
-            font-size: 12px;
             text-align: left;
-            line-height: 20px;
             font-weight: bold;
             color: #333;
             padding-left: 17px;
@@ -167,8 +167,9 @@ html{font-size:40px;}
                     .style-item-box{
                         /*width: 3.075rem;*/
                         /*height: 3.075rem;*/
-                        min-width:81px;
-                        min-height: 81px;
+                        width:81px;
+                        height: 81px;
+
                         display: table;
                         vertical-align: middle;
                         /*padding-top: 30px;*/
