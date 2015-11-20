@@ -2,25 +2,326 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport" />
-    <link rel="stylesheet" href="css/main.css">
-    <title></title>
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>美骑福利大转盘 - 美骑网|Biketo.com</title>
+    <link href="css/lottery-style.css" rel="stylesheet" type="text/css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body>
-    <div class="wrap" id="wrap">
+<body class="activity-lottery-winning">
+<div class="main">
+    <div id="outercont">
+        <div id="outer-cont">
+            <div id="outer" ><img src="img/lottery/activity-lottery-01.png"></div>
+        </div>
+        <div id="inner-cont">
+            <div id="inner"><img src="img/lottery/activity-lottery-02.png"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="check-my">
+            查看我的奖品
+        </div>
+        <div class="message-box">
+            <P>奖项说明：</p>
+            <p class="prize-rank"><span>一等奖:</span> MISSILE米塞尔导弹M310-G27速山地车</p>
+            <p class="prize-rank"><span>二等奖:</span> BEARS熊牌骑行防护眼镜</p>
+            <p class="prize-rank"><span>三等奖:</span> spakct美火眼系列骑行手套</p>
+            <br>
+            <p>*美骑APP新用户在活动期间每天三次抽奖机会</p>
+            <p>*抽到奖品后，填写收货人信息</p>
+
+        </div>
+        <!--<div class="get-prize-member">-->
+            <!--<P>已有 <span class="member-number"><?=$winner_count?></span> 人中奖</p>-->
+            <!--<div class="auto-box">-->
+                <!--<div class="auto-box-container">-->
+                    <!--<?php foreach($winner as $val){ ?>-->
+                    <!--<p>用户 <?=$val['username']?> 抽到<?=$val['praisename']?></p>-->
+                    <!--<?php } ?>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
 
     </div>
-    <script type="text/javascript">
-        window.onload=function(){
-            var html=document.getElementsByTagName("html")[0];
-            var wrap=document.getElementById("wrap");
-            var width=html.clientWidth;
-            var percent=width/640.0;
-            console.log(width);
-            console.log(percent);
+    <div class="foot-bg"></div>
+    <!--<div id="shadow">-->
+        <!--<div id="my-prize" class="shadow-box">-->
+            <!--<div class="response-text">-->
+                <!--<?php if(!empty($data)){ ?>-->
+                <!--<p>您获得</p>-->
+                <!--<?php foreach($data as $val){ ?>-->
+                <!--<p><?=$val['praisename']?> : <?=$val['prizecontent']?></p>-->
+                <!--<?php } ?>-->
+                <!--<?php }else{ ?>-->
+                <!--<p>您暂时还没有</p>-->
+                <!--<p>获得奖品</p>-->
+                <!--<?php } ?>-->
+            <!--</div>-->
+            <!--<div class="btn-confirm">确定</div>-->
+        <!--</div>-->
+        <!--<div id="no-time" class="shadow-box">-->
+            <!--<div class="response-text">-->
+                <!--<p>您今天抽奖机会已用完啦！</p>-->
+                <!--<p>请明天再来吧!</p>-->
+            <!--</div>-->
+            <!--<div class="btn-confirm">好的</div>-->
+        <!--</div>-->
+        <!--<div id="xiexie" class="shadow-box ">-->
+            <!--<div class="response-xiexie">-->
+            <!--</div>-->
+            <!--<div class="btn-confirm">确定</div>-->
+        <!--</div>-->
+        <!--<div id="get-prize" class="shadow-box">-->
+            <!--<div class="response-prize">-->
+                <!--<p id="prize-name">一等奖 </p>-->
+            <!--</div>-->
+            <!--<div class="btn-get-prize">立即领取</div>-->
+        <!--</div>-->
+        <!--<div id="response-box" class="shadow-box">-->
+            <!--<div class="response-text">-->
+                <!--<p>您今天抽奖机会已用完啦！</p>-->
+            <!--</div>-->
+            <!--<div class="btn-confirm">确定</div>-->
+        <!--</div>-->
+        <!--<div id="contact" class="shadow-box">-->
+            <!--<div class="text-title">-->
+                <!--<p>留下你的联系方式<br>客服将会与你联系</p>-->
+            <!--</div>-->
+            <!--<div class="contact-group">-->
+                <!--<form id="contact-form" action="app.php?m=welfare&a=pp" method="post">-->
+                    <!--<input class="input-box" name="name" value="输入姓名" type="text" onfocus="this.value=='输入姓名'?this.value='':1" onblur="this.value?1:this.value='输入姓名'">-->
+                    <!--<br>-->
+                    <!--<input class="input-box" name="phone" value="输入手机号" type="text" onfocus="this.value=='输入手机号'?this.value='':1" onblur="this.value?1:this.value='输入手机号'">-->
+                    <!--<br>-->
+                    <!--<input class="input-box" name="address" value="输入收货地址" type="text" onfocus="this.value=='输入收货地址'?this.value='':1" onblur="this.value?1:this.value='输入收货地址'">-->
+                <!--</form>-->
+            <!--</div>-->
+            <!--<div class="info-confirm ">确定</div>-->
+        <!--</div>-->
+        <!--<div id="activity-ending" class="shadow-box">-->
+            <!--<div class="ending-text">-->
+                <!--<p>亲爱的车友：</p>-->
+                <!--<br>-->
+                <!--<p>这一期的抽奖活动已经结束拉，后续有更好玩的活动等着您参与，祝您生活愉快！</p>-->
+                <!--<br>-->
+                <!--<p style="text-align:right">美骑君（上）</p>-->
+            <!--</div>-->
 
-            html.style.fontSize=40*percent+"px";
+            <!--<div class="btn-confirm">确定</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript">
+    $(function () {
+        var html=document.getElementsByTagName("html")[0];
+        var wrap=document.getElementById("wrap");
+        var width=html.clientWidth;
+        var percent=width/640.0;
+        html.style.fontSize=40*percent+"px";
+
+        //滚动效果
+//        function autoText(){
+//            var h = $(".auto-box-container").height();
+//            var top = $(".auto-box-container")[0].offsetTop;
+//            if(h <= Math.abs(top)){
+//                $(".auto-box-container").css({"top":"50px"});
+//                return;
+//            }
+//            $(".auto-box-container").css({"top":(top-5)+"px"});
+//
+//
+//            //$(".auto-box-container").animate({"top":"-"+h+"px"},5000);
+//            //console.log(h,top,Math.abs(top));
+//        }
+//        //autoText();
+//        setInterval(autoText,100);
+
+
+        $("#check-my").click(function(){
+//            if(!<?=$islogin?>){
+//                response("请登录后再进行抽奖");
+//                return;
+//            }
+//            showBox();
+//            $("#my-prize").addClass("active");
+        });
+//        $(".btn-confirm").click(function(){
+//            $("#shadow").hide();
+//            $("#shadow div").removeClass("active")
+//            $(".main").css("height","50rem");
+//            <?php if(!$islogin){ ?>
+//                window.location.href="<?=BIKETO_UCENTER_LOGIN?>";return;
+//            <?php } ?>
+//
+//        })
+
+        $(".btn-get-prize").click(function(){
+            $("#shadow div").removeClass("active");
+            $("#contact").addClass("active");
+        })
+        $(".info-confirm").click(function(){
+            var inputDom = $(".contact-group").find("input");
+            if(inputDom[0].value!="输入姓名"&&inputDom[1].value!="输入手机号"){
+                $("#shadow").hide();
+                $(".main").css("height","50rem");
+                $("#contact-form").submit();
+            }
+            return;
+        })
+
+
+
+        function showBox(){
+            $("#shadow").show();
+            //var h=$("#shadow").height();
+            var h = document.documentElement.clientHeight;
+            $(".main").css("height",h+"px");
         }
-    </script>
+
+        window.requestAnimFrame = (function () {
+            return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+                    function (callback) {
+                        window.setTimeout(callback, 1000 / 60)
+                    }
+        })();
+        var totalDeg = 360 * 3 + 0;
+        var steps = [];
+        var lostDeg = [45];
+        var prize, prizecontent;
+        var count =4;//<?=($count?$count:0)?>;
+        var now = 0;
+        var a = 0.01;
+        var outter, inner, timer, running = false;
+
+        function countSteps() {
+            var t = Math.sqrt(2 * totalDeg / a);
+            var v = a * t;
+            for (var i = 0; i < t; i++) {
+                steps.push((2 * v * i - a * i * i) / 2)
+            }
+            steps.push(totalDeg)
+        }
+        function step() {
+            outter.style.webkitTransform = 'rotate(' + steps[now++] + 'deg)';
+            outter.style.MozTransform = 'rotate(' + steps[now++] + 'deg)';
+            if (now < steps.length) {
+                requestAnimFrame(step)
+            } else {
+                running = false;
+                setTimeout(function () {
+                    if (prize != null && prize != 4) {
+                        var type = "";
+                        if (prize == 1) {
+                            type = "一等奖"
+                        } else if (prize == 2) {
+                            type = "二等奖"
+                        } else if (prize == 3) {
+                            type = "三等奖"
+                        }
+                        setTimeout(function(){
+                            showBox();
+                            $("#prize-name")[0].innerHTML = type;
+                            $("#get-prize").addClass("active");
+                        },100)
+                        var textDom=$("#my-prize .response-text p");
+                        if(textDom[0].innerHTML!="您获得"){
+                            textDom[0].innerHTML="您获得";
+                            textDom[1].innerHTML=type+" : "+prizecontent;
+                        }else{
+                            var p=document.createElement("p");
+                            p.innerHTML=type+" : "+prizecontent;
+                            $("#my-prize .response-text").append(p);
+                        }
+
+                    } else {
+                        setTimeout(function(){
+                            showBox();
+                            $("#xiexie").addClass("active");
+                        },100)
+                    }
+                }, 200)
+            }
+        }
+        function start(deg) {
+            deg = deg || lostDeg[parseInt(lostDeg.length * Math.random())];
+            running = true;
+            totalDeg = 360 * 5 + deg;
+            steps = [];
+            now = 0;
+
+            $("#outer").css({"transform":"rotate("+totalDeg+"deg)"});
+            //$("#outer").animate({"transform":"rotate("+deg+"deg)"},600);
+//            countSteps();
+//            requestAnimFrame(step)
+        }
+//        function response(message){//根据返回信息 改变提示
+//            $("#response-box .response-text p")[0].innerHTML=message;
+//            showBox();
+//            $("#response-box").addClass("active");
+//        }
+        window.start = start;
+        outter = document.getElementById('outer');
+        inner = document.getElementById('inner');
+        i = 10;
+        $("#inner").click(function () {
+//            if(!<?=$islogin?>){
+//                response("请登录后再进行抽奖");
+//                return;
+//            }
+
+            if (running) return;
+            if (count >= 3) {
+                //showBox();
+                $("#no-time").addClass("active");
+                start(45);
+                return
+            }
+//            $.ajax({
+//                type: 'POST',
+//                url: "app.php?m=welfare&a=run",
+//                dataType: "json",
+//                success: function (data) {
+//                    if (data.state == "start") {
+//                        response(data.message)
+//                        return;
+//                    }
+//                    if (data.state == "end") {
+//                        showBox();
+//                        $("#activity-ending").addClass("active");
+//                        return;
+//                    }
+//                    if (data.state == '1') {
+//                        prize = data.prizetype;
+//                        prizecontent = data.prizecontent;
+//                        start(parseInt(data.angle));
+//                    }
+//                    else if (data.state == '0'){
+//                        response(data.message)
+//                        return;
+//                    }
+//                    else {
+//                        prize = null;
+//                        start();
+//                        running = false;
+//                    }
+//                    count++
+//                },
+//                error: function () {
+//                    prize = null;//null 是跳到谢谢页面
+//                    start();
+//                    running = false;
+//                    count++;
+//
+//                },
+//                timeout: 4000
+//            })
+        })
+    });
+</script>
 </body>
 </html>
