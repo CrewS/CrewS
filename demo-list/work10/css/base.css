@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 'Microsoft YaHei',Tahoma,Helvetica,SimSun,sans-serif,arial,\5b8b\4f53;color:#333;outline:0;}
+li{list-style: none;}
+a{text-decoration: none;}
+
+.wrap{
+    min-width: 1120px;
+    min-height: 1220px;
+}
+
+
+.top-prompt{height:35px;width:100%;}
+.top-prompt li b{display: block;width: 13px;height: 20px;float: left;padding-right: 10px;position: relative;bottom:2px;left:0;}
+.prompt-wrapper{margin:0 auto;}
+.prompt-l{float:left;}
+.prompt-r{float:right;}
+.prompt-wrapper li{float:left;padding:0 10px;margin: 10px 0;}
+.top-prompt .prompt-l li:first-child {border-right: 1px solid #b8b8b8;}
+
+
+.top-prompt{background:#2d2d2d;color: #b8b8b8;}
+.top-prompt li{border-right:1px solid #b8b8b8; }
+.top-prompt li:first-child{border: none; padding-left: 0;}
+.top-prompt .lastItem{border:none; padding-right: 0;}
+/*.top-prompt li b{background: url(../img/icon2.png) no-repeat -140px -211px;}*/
+.top-prompt li a{color:#b8b8b8;}
+.top-prompt li a:hover{color:#c20305; text-decoration: underline;}
+.prompt-r li:first-child a{color:#FFF;}
+.prompt-r li:first-child{margin-bottom: -7px;}
+
+.top-pull-down{width: 1120px;margin: 0 auto;display: none;}
+.top-pull-down img{width: 100%;}
+.prompt-wrapper{width:1120px;}
+
+
+
+/***首页大banner****/
+.banner{
+    height: 620px;
+    min-width: 1120px;
+    background: url("../img/test-ad.jpg") no-repeat;
+    background-position: center center;
+}
+/**阴影层**/
+.banner-container{
+    height: 620px;
+    background: url("../img/shadow-bg.png") repeat-x;
+}
+.banner-content{
+    width: 1120px;
+    margin: 0 auto;
+    position: relative;
+}
+    .banner-top{
+        padding-top:25px;
+    }
+        .logo{
+            float: left;
+        }
+        .login{
+            display: block;
+            float: right;
+            width: 57px;
+            height: 32px;
+            color: #fff;
+            background: #d43832;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        .sign{
+            display: block;
+            float: right;
+            height: 30px;
+            width: 55px;
+            background: rgba(0,0,0,0.1);
+            color: #fff;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            line-height: 32px;
+            font-size: 14px;
+        }
+        /*******搜索框*******/
+    .search-container{
+        height: 115px;
+        width: 644px;
+        background: rgba(0,0,0,0.4);
+        position: absolute;
+        top: 268px;
+        left: 50%;
+        margin-left: -348px;
+        padding:20px 26px;
+        border-radius: 4px;
+    }
+        .search-title{
+            color: #fff;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        .search-box{
+            display: block;
+            width: 644px;
+            height: 60px;
+            position: relative;
+        }
+        .input-search{
+            height: 60px;
+            border: none;
+            width: 544px;
+            padding-left: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+        .search-icon{
+            position: absolute;
+            height: 60px;
+            width: 83px;
+            background: url("../img/search-icon.png") no-repeat;
+            right: 0;
+            top: 0;
+        }
+        .search-tip-box{
+            position: absolute;
+            width: 210px;
+            height: 30px;
+            right: 90px;
+            top: 15px;
+        }
+        .search-tip{
+            height: 30px;
+            width: 60px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            display: block;
+            float: right;
+            line-height: 30px;
+            text-align: center;
+            color: #aaa;
+            margin-right: 7px;
+        }
+.around-way{
+    background: #fff;
+}
+    .around-way-container{
+        width: 1120px;
+        margin: 0 auto;
+    }
+        .big-title{
+            font-size: 30px;
+            color: #555;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .hot-city-list{
+            padding-bottom: 40px;
+        }
+        .hot-city-list li{
+            width: 265px;
+            height: 280px;
+            margin-right: 20px;
+            float: left;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .hot-city-list li.rm-mr{
+            margin-right: 0;
+        }
+            .has-way{
+                height: 46px;
+                width: 46px;
+                border-radius: 46px;
+                position: absolute;
+                background:rgba(0,0,0,0.7);
+                top: 80px;
+                left: 50%;
+                margin-left: -23px;
+                overflow: hidden;
+                text-align: center;
+            }
+                .location-icon{
+                    height: 23px;
+                    width: 14px;
+                    background: url("../img/location-icon.png") no-repeat;
+                    position: relative;
+                    left: 35%;
+                    margin-bottom: 5px;
+                }
+                .has-way span{
+                    color: #fff;
+                    font-size: 14px;
+                }
+
+            .hot-city-list li img{
+                width: 265px;
+                height: 200px;
+
+            }
+            .city-name{
+                font-size: 20px;
+                height: 79px;
+                width: 263px;
+                border: 1px solid #eaeaea;
+                border-top: none;
+                text-align: center;
+                color: #333;
+                font-weight: bold;
+                line-height: 80px;
+            }
+                .city-name a{
+                    color: #333;
+                }
+
+        .city-list{
+            min-height: 350px;
+        }
+    .classical-way{
+        background: #f6f6f6;
+        min-height: 500px;
+    }
+        .classical-way-container{
+            width: 1120px;
+            margin: 0 auto;
+        }
+        .big-way-box{
+            width: 740px;
+            height: 444px;
+            background: #000000;
+            float: left;
+            margin-bottom: 20px;
+
+        }
+        .mid-way-box{
+            width: 550px;
+            height: 330px;
+            background: #dbdbdb;
+            float: left;
+        }
+        .small-way-box{
+            width: 360px;
+            height: 212px;
+            margin-bottom: 20px;
+            float: left;
+            background: #dbdbdb;
+        }
+/**查看更多**/
+    .see-more-way{
+        height: 110px;
+        padding: 60px 0;
+    }
+        .see-more-way-container{
+            width: 1120px;
+            margin: 0 auto;
+            text-align: center;
+             color: #555;
+        }
+            .ad-text{
+                font-size: 18px;
+                padding-top: 16px;
+                padding-bottom: 12px;
+            }
+            .see-more-icon{
+                font-size: 18px;
+            }
+
+                .see-more-icon span{
+                    display: inline-block;
+                    position: relative;
+                    padding-left: 47px;
+                    height: 37px;
+                    line-height: 37px;
+                }
+                    .see-more-icon-img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }
+                    .see-more-icon span a{
+
+                    }
+
+
+
+
+
+/*foot**/
+.footer{background: #555;color:#9f9f9f;}
+.footer .footer-column{border-left:1px solid #414141;color:#d3d3d3;}
+.footer .footer-column dl dt{color:#858585;}
+.footer .footer-column dl dd a{color:#bdbdbd;}
+
+.footer .footer-logo .copyright a{color:#9f9f9f;}
+.footer{height:340px;text-align: center;}
+.footer .footer-wrapper{padding-top: 45px; width: 1120px; margin: 0 auto;}
+.footer .footer-logo{float: left;margin-left: 2%;margin-right: 2%;}
+.footer .footer-logo .copyright{margin-top: 55px;line-height: 150%;}
+.footer .footer-column{height:190px;float:left;text-align: left;font-size:12px;font-family:'Microsoft YaHei';line-height: 24px;padding: 0 25px;}
+.footer .footer-column a:hover{text-decoration: underline;}
+.footer .statistics a img{display: none;}
+
+
+
+
+.mr20{
+    margin-right: 20px;
+}
+.blue{
+    color: #14d0ff;
+}
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
