@@ -10,30 +10,38 @@ a{text-decoration: none;}
     min-width: 1120px;
     min-height: 1220px;
 }
+.top-bar {
+    width: 100%;
+    height: 35px;
+    background: #333
+}
 
+.top-bar .top-bar-inner {
+    width: 1120px;
+    line-height: 35px;
+    margin: 0 auto
+}
 
-.top-prompt{height:35px;width:100%;}
-.top-prompt li b{display: block;width: 13px;height: 20px;float: left;padding-right: 10px;position: relative;bottom:2px;left:0;}
-.prompt-wrapper{margin:0 auto;}
-.prompt-l{float:left;}
-.prompt-r{float:right;}
-.prompt-wrapper li{float:left;padding:0 10px;margin: 10px 0;}
-.top-prompt .prompt-l li:first-child {border-right: 1px solid #b8b8b8;}
+.top-bar a {
+    padding: 0 20px;
+    color: #999;
+    border-left: 1px solid #999
+}
 
+.top-bar a.first {
+    padding: 0 20px 0 0;
+    border: none;
+}
 
-.top-prompt{background:#2d2d2d;color: #b8b8b8;}
-.top-prompt li{border-right:1px solid #b8b8b8; }
-.top-prompt li:first-child{border: none; padding-left: 0;}
-.top-prompt .lastItem{border:none; padding-right: 0;}
-/*.top-prompt li b{background: url(../img/icon2.png) no-repeat -140px -211px;}*/
-.top-prompt li a{color:#b8b8b8;}
-.top-prompt li a:hover{color:#c20305; text-decoration: underline;}
-.prompt-r li:first-child a{color:#FFF;}
-.prompt-r li:first-child{margin-bottom: -7px;}
-
-.top-pull-down{width: 1120px;margin: 0 auto;display: none;}
-.top-pull-down img{width: 100%;}
-.prompt-wrapper{width:1120px;}
+.top-bar .mobile-icon {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin: 0 5px 0 0;
+    background: url(../img/mobile.png) no-repeat;
+}
 
 
 
@@ -172,29 +180,19 @@ a{text-decoration: none;}
             margin-right: 0;
         }
             .has-way{
-                height: 46px;
-                width: 46px;
-                border-radius: 46px;
+                height: 23px;
+                width: 80px;
+                border-radius: 12px;
                 position: absolute;
-                background:rgba(0,0,0,0.7);
-                top: 80px;
-                left: 50%;
-                margin-left: -23px;
+                background:#37a8cd;
+                top: 20px;
+                right: 20px;
                 overflow: hidden;
                 text-align: center;
+                color: #fff;
+                line-height: 23px;
+                font-size: 14px;
             }
-                .location-icon{
-                    height: 23px;
-                    width: 14px;
-                    background: url("../img/location-icon.png") no-repeat;
-                    position: relative;
-                    left: 35%;
-                    margin-bottom: 5px;
-                }
-                .has-way span{
-                    color: #fff;
-                    font-size: 14px;
-                }
 
             .hot-city-list li img{
                 width: 265px;
@@ -233,21 +231,56 @@ a{text-decoration: none;}
             background: #000000;
             float: left;
             margin-bottom: 20px;
-
+            position: relative;
         }
+            .big-way-box a img{
+                width: 740px;
+                height: 444px;
+            }
         .mid-way-box{
             width: 550px;
             height: 330px;
             background: #dbdbdb;
             float: left;
+            position: relative;
         }
+            .mid-way-box a img{
+                width: 550px;
+                height: 330px;
+            }
         .small-way-box{
             width: 360px;
             height: 212px;
             margin-bottom: 20px;
             float: left;
             background: #dbdbdb;
+            position: relative;
         }
+            .small-way-box a img{
+                width: 360px;
+                height: 212px;
+            }
+            .way-name{
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                color: #fff;
+                height: 25px;
+                font-size: 24px;
+            }
+            .love-member{
+                height: 22px;
+                position: absolute;
+                padding: 0 12px 0 30px;
+                bottom: 40px;
+                right: 40px;
+                border-radius: 12px;
+                font-size: 14px;
+                color: #37a8cd;
+                line-height: 22px;
+                background:url("../img/love-icon.png") no-repeat #fff;
+                background-position: 10px 0;
+            }
 /**查看更多**/
     .see-more-way{
         height: 110px;
@@ -305,7 +338,12 @@ a{text-decoration: none;}
 
 
 
-
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
 .mr20{
     margin-right: 20px;
 }
