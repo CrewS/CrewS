@@ -97,18 +97,112 @@ a{text-decoration: none;}
         .brief-info-title{
             font-size: 30px;
             color: #333;
-            padding-bottom: 27px;
+            padding-bottom: 22px;
         }
-    .brief-info-box p{
-        font-size: 14px;
-        line-height: 28px;
-    }
+        .brief-info-text{
+            font-size: 14px;
+            line-height: 26px;
+            padding-bottom: 30px;
+        }
+        .underline{
+            height: 1px;
+            background-color: #dbdbdb;
+            border: none;
+        }
+        .way-length{
+            padding: 21px 0;
+            height: 78px;
+        }
+            .way-length-icon{
+                height: 72px;
+                width: 72px;
+                border: 3px solid #dbdbdb;
+                border-radius: 72px;
+                font-size: 24px;
+                color: #777;
+                line-height: 72px;
+                text-align: center;
+                float: left;
+            }
+            .way-length-number{
+                padding-top: 18px;
+                font-size: 30px;
+                width: 150px;
+                float: left;
+                margin-left: 30px;
+            }
+                .way-length-number span{
+                    font-size: 14px;
+                }
+            .brief-sub-info-box{
+                /*width: 183px;*/
+                height: 42px;
+                margin-top: 18px;
+                float: right;
+                background: #37a8cd;
+                border-radius: 22px;
+                display: inline-block;
+            }
+                .arrived{
+                    height: 16px;
+                    /*width: 61px;*/
+                    float: left;
+                    padding: 5px 0;
+                    padding-left: 20px;
+                    margin-top: 9px;
+                    margin-left: 15px;
+                    background:url("../img/icon-1.png") no-repeat;
+                    background-position: 0 5px;
+                    color: #fff;
+                    font-size: 14px;
+                    padding-right: 10px;
+                    border-right: 1px solid rgba(255,255,255,0.3);
+                    cursor: pointer;
+                }
+                .want-to{
+                    height: 16px;
+                    /*width: 61px;*/
+                    float: left;
+                    padding: 5px 0;
+                    padding-left: 20px;
+                    margin-top: 9px;
+                    margin-left: 10px;
+                    background:url("../img/icon-2.png") no-repeat;
+                    background-position: 0 5px;
+                    color: #fff;
+                    font-size: 14px;
+                    padding-right: 15px;
+                    cursor: pointer;
+                }
+
+        .brief-info-box-bottom{
+            padding-top: 27px;
+            height: 73px;
+
+        }
+            .brief-info-box-bottom li{
+                height: 59px;
+                width: 169px;
+                text-align: center;
+                float: left;
+                padding-top: 14px;
+            }
+                .box-bottom-number{
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                .box-bottom-text{
+                    font-size: 14px;
+                    color: #777777;
+                 }
 
 
 
-
-
-
+.side-border{
+    border-right: 1px solid #787878;
+    border-left: 1px solid #787878;
+}
 .fl{
     float: left;
 }
