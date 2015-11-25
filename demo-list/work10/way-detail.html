@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>路线详情页面</title>
     <link href="css/detail.css" rel="stylesheet">
+    <script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/Gscroll.js"></script>
+    <script src="js/base.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -64,6 +67,269 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container clearfix">
+            <div class="main-content">
+                <ul class="content-list">
+                    <li>
+                        <div class="local-icon">
+                            1234
+                        </div>
+                        <div class="section-title">路段1 :<strong>成都市-雅安市</strong> <span class="race-tip">建议骑行天数 : <strong>1</strong>天</span></div>
+                        <ul class="step-detail">
+                            <li>
+                                <i class="step-icon pointer"></i>
+                                <p>【路线概况】这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。从成都到邛崃一路基本都是平路，过了邛崃之后是可以称得上坡的小上坡，之后又是平路直到新店镇，接着4km下坡到名山区，然后翻过一座小山、穿过一个隧道再下坡就到达雅安雨城区，之后就是市区平路下坡。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon sight"></i>
+                                <p>【沿途景点】成都市内的景点，有宽窄巷子、武侯祠、锦里、文殊院等等；路途上则较为枯燥，而且车多需要时刻保持注意力；抵达雅安后则可到青衣江边吹吹风放松一下。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon eat"></i>
+                                <p>【食宿推荐】成都住宿非常方便，各位可根据自己具体出发路线就近选择，美食方面可去锦里小吃一条街觅食；路过邛崃可以试试奶汤面和凉拌鸡片；从成都到雅安沿途城镇多，均有住宿，如果打算一天骑到雅安，雨城区住宿比市区稍微便宜，住青旅的话可有东升竹庄青年旅舍、雨城记忆青年客栈、桃园山庄青年旅舍等可以选择。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon attention"></i>
+                                <p>【注意事项】从成都到雅安这一段难度不大，但是车多岔路多，一定要注意安全。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="local-icon">
+                            520
+                        </div>
+                        <div class="section-title">路段2 :<strong>成都市-雅安市</strong> <span class="race-tip">建议骑行天数 : <strong>3</strong>天</span></div>
+                        <ul class="step-detail">
+                            <li>
+                                <i class="step-icon pointer"></i>
+                                <p>【路线概况】这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。从成都到邛崃一路基本都是平路，过了邛崃之后是可以称得上坡的小上坡，之后又是平路直到新店镇，接着4km下坡到名山区，然后翻过一座小山、穿过一个隧道再下坡就到达雅安雨城区，之后就是市区平路下坡。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon sight"></i>
+                                <p>【沿途景点】成都市内的景点，有宽窄巷子、武侯祠、锦里、文殊院等等；路途上则较为枯燥，而且车多需要时刻保持注意力；抵达雅安后则可到青衣江边吹吹风放松一下。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon eat"></i>
+                                <p>【食宿推荐】成都住宿非常方便，各位可根据自己具体出发路线就近选择，美食方面可去锦里小吃一条街觅食；路过邛崃可以试试奶汤面和凉拌鸡片；从成都到雅安沿途城镇多，均有住宿，如果打算一天骑到雅安，雨城区住宿比市区稍微便宜，住青旅的话可有东升竹庄青年旅舍、雨城记忆青年客栈、桃园山庄青年旅舍等可以选择。</p>
+                            </li>
+                            <li>
+                                <i class="step-icon attention"></i>
+                                <p>【注意事项】从成都到雅安这一段难度不大，但是车多岔路多，一定要注意安全。</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="useful-tip-list">
+                        <div class="useful-tip-icon">
+
+                        </div>
+                        <p><strong>1、自行车托运</strong></p>
+                        <p>可选择火车随车托运、飞机托运、快递与物流。</p>
+                        <p>（1）火车随车托运</p>
+                        <p>优点：同时到达，免去等待时间</p>
+                        <p>缺点：费用高，运送方法暴力。需提前到达火车站办手续，否则错过托运时间会有巨大的麻烦。受损率较高。</p>
+                        <p>（2）飞机托运</p>
+                        <p>优点：时间灵活，不超重的话无需额外付费。</p>
+                        <p>缺点：适合折叠车等小体积车种。</p>
+                        <p>（3）快递</p>
+                        <p>优点：便于事先安排，时间基本处于可控范围。费用较便宜。</p>
+                        <p>缺点：受损率较高。需事先联系好接收点。</p>
+                        <p>（4）物流</p>
+                        <p>优点：便于事先安排，费用较低。</p>
+                        <p>缺点：受损率较高。需事先联系好接收点。</p>
+                        <br>
+                        <br>
+                        <p><strong>2、建议携带装备</strong></p>
+                        <p>衣物	头盔</p>
+                        <p>骑行手套	推荐防风防水的皮手套。</p>
+                        <br>
+                        <br>
+                        <p><strong>3、如何应对高原反应</strong></p>
+                        <p>（1）保持轻松的心态，和良好的睡眠。休息好对预防高反有很大的作用。也不要害怕高反，更不要觉得自己就是一定会高反的人。</p>
+                        <p>（2）最好不要在感冒期间上高原。若在启程之前感冒了，请尽快及时治疗。</p>
+                        <p>（3）在高原上不要暴饮暴食，每天补充维生素。</p>
+                        <p>（4）注意保暖，刚上高原尽量不要洗澡，避免失温导致感冒或更严重的高反。</p>
+                        <p>（5）能接受酥油茶味道可以多喝酥油茶。</p>
+                        <p>（6）尽量别轻易吸氧，不一定有用还容易形成依赖。</p>
+                        <p>（7）爬坡的时候尽量保持匀速，不要歇一段，又猛踩一段，这样很容易高反。</p>
+                        <p>（注：攻略整理自蚂蜂窝以及骑友 @可可西里的狼 与 @波尔 分享的攻略）</p>
+                    </li>
+                </ul>
+                <div class="banquan">
+                    <h1 class="banquan-title">版权声明</h1>
+                    <p>在墨竹工卡找旅舍住宿的话，基本只有两种，一种是比较好的旅舍，各类设施齐全，但是价格超贵，另一种是则是和路上几乎一样的穷驴旅舍，不能洗澡，更别说免费WiFi了。不过想想明天就能到拉萨了，大家就将就住下吧。</p>
+                </div>
+            </div>
+            <div class="side-bar">
+                <div class="race-way-img">
+                    <h1>路线图<span class="look-big-img">查看大图</span></h1>
+
+                </div>
+                <div class="relate-way">
+                    <h1>相关路线</h1>
+                </div>
+                <div class="section-way">
+                    <h1>路段</h1>
+                    <div class="scroll-box">
+                        <div class="scroll-cont">
+                            <ul class="section-way-list">
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 200 </span>km
+                                </li>
+                                <li>
+                                    <span class="destination">01  <a href="#">成都市 - 雅安市</a> </span>
+                                    <span class="far-number"> 300 </span>km
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="scroll-toolbar">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <!-- 统计代码 -->
+            <!--<div class="statistics">-->
+            <!--<script>-->
+            <!--var _hmt = _hmt || [];-->
+            <!--_hmt.push(['_setCustomVar', 1, 'navid', '']);-->
+            <!--</script>-->
+            <!--<script>-->
+            <!--var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");-->
+            <!--document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fdafa5b6f1421186b22c564180031bfd2' type='text/javascript'%3E%3C/script%3E"));-->
+            <!--document.write(unescape("%3Cscript src='http://s122.cnzz.com/stat.php?id=547230&amp;web_id=547230&amp;show=pic' type='text/javascript'%3E%3C/script%3E"));-->
+            <!--</script><script src=" http://hm.baidu.com/h.js?dafa5b6f1421186b22c564180031bfd2" type="text/javascript"></script><script src="http://s122.cnzz.com/stat.php?id=547230&amp;web_id=547230&amp;show=pic" type="text/javascript"></script><script src="http://c.cnzz.com/core.php?web_id=547230&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=547230" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a>-->
+            <!--</div>-->
+            <!-- /统计代码 -->
+            <div class="footer-wrapper clearfix">
+                <div class="footer-logo">
+                    <img src="img/biketo.png" alt="biketo">
+                    <div class="copyright">
+                        <p>广州市美骑网络科技有限公司</p>
+                        <p>MagicCycling Media Limited. </p>
+                        <p>2002-2015 All Rights Reserved.</p>
+                        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备12045810号</a></p>
+                    </div>
+                </div>
+                <div class="footer-column" id="MCM">
+                    <dl>
+                        <dt>美骑传媒·MCM</dt>
+                        <dd><a href="http://www.biketo.com/" target="_blank">美骑网</a></dd>
+                        <!-- <dd><a href="http://bbs.biketo.com/" target="_blank">美骑论坛</a></dd> -->
+                        <dd><a href="http://www.biketo.com/video/" target="_blank">美骑影像</a></dd>
+                        <dd><a href="http://book.biketo.com/" target="_blank">美骑图书</a></dd>
+                        <dd><a href="http://tour.biketo.com/" target="_blank">美骑假日</a></dd>
+                        <dd><a href="http://club.biketo.com/" target="_blank">美骑会</a></dd>
+                        <!-- <dd><a href="http://bx.biketo.com/?hmsr=BIKETO&hmmd=&hmpl=&hmkw=&hmci=" target="_blank">美骑保险</a></dd> -->
+                    </dl>
+                </div>
+                <div class="footer-column" id="US">
+                    <dl>
+                        <dt>关于我们·About US</dt>
+
+                        <dd><a href="/about/">BIKETO美骑网</a></dd>
+                        <dd><a href="/about/team.html">团队介绍</a></dd>
+                        <dd><a href="/about/adservice.html">广告服务</a></dd>
+                        <dd><a href="/about/contribute.html">投稿指南</a></dd>
+                        <dd><a href="/about/writer.html">特约撰稿人</a></dd>
+                        <dd><a href="/about/jobs.html">人才招聘</a></dd>
+                        <dd><a href="/about/contact.html">联系我们</a></dd>
+                        <dd><a href="/about/mcm.html">关于我们</a></dd>
+
+                    </dl>
+                </div>
+                <div class="footer-column" id="MCP">
+                    <dl>
+                        <dt>美骑图书·MCP</dt>
+                        <dd><a href="http://book.biketo.com/bibleofbiking/" target="_blank">《单车圣经》</a></dd>
+                        <dd><a href="http://book.biketo.com/biketouring.html" target="_blank">《单车旅行》</a></dd>
+                        <dd><a href="http://book.biketo.com/100yearstourdefrance.html" target="_blank">《百届环法》</a></dd>
+                        <dd><a href="http://www.biketo.com/page/topevent/" target="_blank">《顶级赛事》</a></dd>
+                    </dl>
+                    <dl class="moreInfo">
+                        <dt>美骑论坛·Forum</dt>
+                        <dd><a href="http://bbs.biketo.com/xiangyue.html" target="_blank">相约结伴</a></dd>
+                        <dd><a href="http://bbs.biketo.com/forum-70-1.html" target="_blank">路线攻略</a></dd>
+                        <dd><a href="http://bbs.biketo.com/forum-39-1.html" target="_blank">车友交易</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-column" id="Race">
+                    <dl>
+                        <dt>美骑赛事·Race</dt>
+                        <dd><a href="http://www.biketo.com/racing/Events/" target="_blank">国际赛事</a></dd>
+                        <dd><a href="http://www.biketo.com/racing/internal/" target="_blank">国内赛事</a></dd>
+                        <dd><a href="http://www.biketo.com/racing/index_1.html?racingtype=3" target="_blank">专业赛事</a></dd>
+                        <dd><a href="http://www.biketo.com/racing/index_1.html?racingtype=2" target="_blank">业余赛事</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>美骑影像·MCF</dt>
+                        <dd><a href="http://i.youku.com/u/UNDMzNDcyMjQ4" target="_blank">优酷空间</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-column" id="Partners">
+                    <dl>
+                        <dt><a style="color:#bdbdbd;" href="http://www.biketo.com/partners.html" target="_blank">合作伙伴·Partners</a></dt>
+                        <dd><a href="http://www.biketo.com/partners.html#events" target="_blank">赛事活动</a></dd>
+                        <dd><a href="http://www.biketo.com/partners.html#exhibition" target="_blank">展览展会</a></dd>
+                        <dd><a href="http://www.biketo.com/partners.html#association" target="_blank">协会团体</a></dd>
+                        <dd><a href="http://www.biketo.com/partners.html#media" target="_blank">合作媒体</a></dd>
+                        <dd><a href="http://www.biketo.com/partners.html#link" target="_blank">友情链接</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>更多信息·More info</dt>
+                        <dd><a href="http://weibo.com/chinabiketo" target="_blank">官方微博</a></dd>
+                        <dd><a href="/weblink/" target="_blank">网址大全</a></dd>
+                        <dd><a href="/news/bikenews/16593.html" target="_blank">ZAKER</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-column" id="Projects">
+                    <dl>
+                        <dt>美骑项目·Projects</dt>
+                        <dd><a href="http://holiday.biketo.com/" target="_blank">BIKETO车友节</a></dd>
+                        <dd><a href="http://film.biketo.com/" target="_blank">美骑单车电影节</a></dd>
+                        <dd><a href="/news/cycling/" target="_blank">越骑越野</a></dd>
+                        <dd class="mt10">
+                            <a href="http://www.biketo.com/biketoapp/" target="_blank"><img src="img/biketo-rqcode.png" alt=""></a>
+                        </dd>
+                    </dl>
                 </div>
             </div>
         </div>

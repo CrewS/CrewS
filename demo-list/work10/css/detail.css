@@ -27,6 +27,9 @@ a{text-decoration: none;}
     color: #999;
     border-left: 1px solid #999
 }
+.top-bar a:hover{
+    color: #de0010;
+}
 
 .top-bar a.first {
     padding: 0 20px 0 0;
@@ -196,9 +199,268 @@ a{text-decoration: none;}
                     font-size: 14px;
                     color: #777777;
                  }
+/*****主体容器********/
+.main-container{
+    padding-top: 30px;
+    width: 1120px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+    /********左侧内容*********/
+    .main-content{
+        width: 798px;
+        padding-left: 42px;
+        float: left;
+        min-height: 100px;
+    }
+        /**************/
+        .content-list{
+            border-left: 1px solid #e2e2e2;
+            margin-bottom: 33px;
+        }
+            .content-list li{
+                padding-bottom: 55px;
+                padding-left: 59px;
+                padding-top: 32px;
+                padding-right: 30px;
+                position: relative;
+            }
+                .local-icon{
+                    display: block;
+                    width: 82px;
+                    height: 133px;
+                    position: absolute;
+                    top: 0;
+                    left: -43px;
+                    background: url("../img/icon-3.jpg") no-repeat;
+                    text-align: center;
+                    font-size: 22px;
+                    color: #fff;
+                    line-height: 74px;
+                }
+                .section-title{
+                    font-size: 16px;
+                    padding-bottom: 25px;
+                }
+                    .race-tip{
+                        margin-left: 50px;
+                    }
+                    .step-detail{
+                        padding-left: 30px;
+                    }
+                        /*****块内人4大内容****/
+                        .step-detail li{
+                            position: relative;
+                            padding: 0;
+                            font-size: 14px;
+                            line-height: 28px;
+                            color: #777;
+                            padding-bottom: 30px;
+                        }
+                        .step-icon{
+                            display: block;
+                            position: absolute;
+                            height: 24px;
+                            width: 24px;
+                            left: -30px;
+                            top: 0;
+                        }
+                        .pointer{
+                            background: url("../img/step-icon-1.png") no-repeat;
+                        }
+                        .sight{
+                            background: url("../img/step-icon-2.png") no-repeat;
+                        }
+                        .eat{
+                            background: url("../img/step-icon-3.png") no-repeat;
+                        }
+                        .attention{
+                            background: url("../img/step-icon-4.png") no-repeat;
+                        }
+            .content-list li.useful-tip-list{
+                            padding-bottom: 10px;
+            }
+            .useful-tip-list p{
+                padding-left: 30px;
+                font-size: 14px;
+                color: #777;
+                line-height: 28px;
+            }
+                .useful-tip-icon{
+                    display: block;
+                    width: 82px;
+                    height: 133px;
+                    position: absolute;
+                    top: 0;
+                    left: -43px;
+                    background: url("../img/gonglue-icon.jpg") no-repeat;
+                    text-align: center;
+                    font-size: 22px;
+                    color: #fff;
+                    line-height: 74px;
+                }
+                .useful-tip-list p strong{
+                    color: #333;
+                }
+        /*****版权********/
+        .banquan{
+            padding:25px 60px 25px 30px;
+            border: 1px solid #eaeaea;
+        }
+            .banquan-title{
+                font-size: 16px;
+                padding-left: 23px;
+                height: 24px;
+                position: relative;
+                line-height: 24px;
+                background: url("../img/banquan-icon.png") no-repeat;
+                margin-bottom: 25px;
+            }
+            .banquan p{
+                font-size: 14px;
+                line-height: 30px;
+            }
+
+/***右侧内容***/
+.side-bar{
+    width: 280px;
+    float: right;
+}
+    .race-way-img{
+        border: 1px solid #eaeaea;
+        width: 238px;
+        height: 255px;
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+        .race-way-img h1{
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+            .look-big-img{
+                color: #de0010;
+                font-size: 12px;
+                display: block;
+                float: right;
+                cursor: pointer;
+                font-weight: 100;
+            }
+    .relate-way{
+        border: 1px solid #eaeaea;
+        width: 238px;
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+        .relate-way h1{
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+    .section-way{
+        border: 1px solid #eaeaea;
+        width: 258px;
+        height: 464px;
+        overflow: hidden;
+        padding: 20px;
+        margin-bottom: 28px;
+        padding-right: 0;
+    }
+
+        .section-way h1{
+            font-size: 16px;
+            padding-bottom: 20px;
+
+        }
+        /**滚动窗口**/
+        .scroll-box{
+            height: 414px;
+            overflow: hidden;
+            position: relative;
+        }
+            .scroll-cont{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .scroll-toolbar{
+                width: 3px;
+                height: 99%;
+                background: #fff;
+                top: 0;
+                right: 0;
+                position: absolute;
+                /*display: none;*/
+            }
+                .scroll-toolbar div{
+                    width: 8px;
+                    height: 250px;
+                    position: absolute;
+                    border-radius: 5px;
+                    right: 0;
+                    background: #ccc;
+                    cursor: pointer;
+                }
+
+                /**鼠标在上面才出现tooL-bar**/
+                /*.section-way:hover .scroll-toolbar{*/
+                    /*display: block;*/
+                /*}*/
+        .section-way-list li {
+            width: 208px;
+            padding: 8px 10px 8px 20px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+        .section-way-list li:nth-child(odd){
+            background: #f7f7f7;
+        }
+            .destination{
+                display: inline-block;
+                height: 30px;
+                border-right: 1px solid #dedede;
+                padding-right: 14px;
+                margin-right: 10px;
+            }
+                .destination a{
+                    color: #777;
+                }
+                .destination a:hover{
+                    color: #de0010;
+                }
+            .far-number{
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
 
 
 
+
+
+
+
+
+/*foot**/
+.footer{background: #555;color:#9f9f9f;}
+.footer .footer-column{border-left:1px solid #414141;color:#d3d3d3;}
+.footer .footer-column dl dt{color:#858585;}
+.footer .footer-column dl dd a{color:#bdbdbd;}
+
+.footer .footer-logo .copyright a{color:#9f9f9f;}
+.footer{height:340px;text-align: center;}
+.footer .footer-wrapper{padding-top: 45px; width: 1120px; margin: 0 auto;}
+.footer .footer-logo{float: left;margin-left: 2%;margin-right: 2%;}
+.footer .footer-logo .copyright{margin-top: 55px;line-height: 150%;}
+.footer .footer-column{height:190px;float:left;text-align: left;font-size:12px;font-family:'Microsoft YaHei';line-height: 24px;padding: 0 25px;}
+.footer .footer-column a:hover{text-decoration: underline;}
+.footer .statistics a img{display: none;}
+
+
+
+
+
+/**两边有边框**/
 .side-border{
     border-right: 1px solid #787878;
     border-left: 1px solid #787878;
@@ -209,3 +471,12 @@ a{text-decoration: none;}
 .fr{
     float: right;
 }
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
