@@ -337,6 +337,31 @@ a{text-decoration: none;}
             font-size: 16px;
             padding-bottom: 20px;
         }
+            .race-way-img-box{
+                width: 240px;
+                height: 220px;
+                background: #d0e9c6;
+                position: relative;
+            }
+                .img-tab{
+                    width: 80px;
+                    height: 30px;
+                    background: #fff;
+                    border-radius: 4px;
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    box-shadow: 1px 1px 5px #777;
+                    text-align: center;
+                    line-height: 30px;
+                    color: #777;
+                }
+                .img-tab a{
+                    color: #777;
+                }
+                .img-tab a.select-tab{
+                    color: #333;
+                }
             .look-big-img{
                 color: #de0010;
                 font-size: 12px;
@@ -345,6 +370,7 @@ a{text-decoration: none;}
                 cursor: pointer;
                 font-weight: 100;
             }
+    /**相关路线**/
     .relate-way{
         border: 1px solid #eaeaea;
         width: 238px;
@@ -353,8 +379,68 @@ a{text-decoration: none;}
     }
         .relate-way h1{
             font-size: 16px;
-            padding-bottom: 20px;
+            color: #333;
+            padding-bottom: 12px;
         }
+            .relate-way h1 a{
+                color: #333;
+            }
+            .relate-way h1 a:hover{
+                color: #de0010;
+            }
+            .relate-way-list li{
+                position: relative;
+                padding-bottom: 18px;
+                padding-top: 20px;
+                border-bottom: 1px solid #dbdbdb;
+                padding-left: 70px;
+            }
+                .lc{
+                    padding: 5px;
+                    border: 1px solid #37a8cd;
+                    width: 40px;
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    text-align: center;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    line-height: 24px;
+                }
+                    .lc-location-icon {
+                        display: inline-block;
+                        height: 18px;
+                        width: 18px;
+                        background: url("../img/lc-location-icon.png") no-repeat;
+                        position: relative;
+                        top: 3px;
+                    }
+                    .lc-time-icon{
+                        display: inline-block;
+                        height: 18px;
+                        width: 18px;
+                        background: url("../img/clock.png") no-repeat;
+                        position: relative;
+                        top: 3px;
+                    }
+            .relate-way-list p{
+                line-height: 24px;
+            }
+                .relate-way-list p span{
+                    font-size: 12px;
+                    color: #777;
+                    padding: 0 5px;
+                }
+
+
+
+
+
+
+
+
+
+
     .section-way{
         border: 1px solid #eaeaea;
         width: 258px;
@@ -464,6 +550,9 @@ a{text-decoration: none;}
 .side-border{
     border-right: 1px solid #787878;
     border-left: 1px solid #787878;
+}
+.red{
+    color: #de0010;
 }
 .fl{
     float: left;
