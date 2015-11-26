@@ -222,6 +222,7 @@ a{text-decoration: none;}
     .classical-way{
         background: #f6f6f6;
         min-height: 500px;
+        padding-bottom: 70px;
     }
         .classical-way-container{
             width: 1120px;

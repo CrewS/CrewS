@@ -343,6 +343,10 @@ a{text-decoration: none;}
                 background: #d0e9c6;
                 position: relative;
             }
+            .race-way-img-box img{
+                width: 240px;
+                height: 220px;
+            }
                 .img-tab{
                     width: 80px;
                     height: 30px;
@@ -526,7 +530,9 @@ a{text-decoration: none;}
 
 
 
-
+.hidden{
+    display: none;
+}
 /*foot**/
 .footer{background: #555;color:#9f9f9f;}
 .footer .footer-column{border-left:1px solid #414141;color:#d3d3d3;}
