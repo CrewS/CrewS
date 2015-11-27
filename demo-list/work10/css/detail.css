@@ -599,9 +599,16 @@ a{text-decoration: none;}
                 border-right: 1px solid #dedede;
                 padding-right: 14px;
                 margin-right: 10px;
+                color: #333;
             }
                 .destination a{
                     color: #777;
+                    height: 20px;
+                    width: 99px;
+                    display: inline-block;
+                    line-height: 28px;
+                    overflow: hidden;
+
                 }
                 .destination a:hover{
                     color: #de0010;
