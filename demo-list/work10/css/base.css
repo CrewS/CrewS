@@ -181,6 +181,10 @@ a{text-decoration: none;}
         .hot-city-list li.rm-mr{
             margin-right: 0;
         }
+            .hot-city-list li a img{
+                width: 265px;
+                height: 200px;
+            }
             .has-way{
                 height: 23px;
                 width: 80px;
