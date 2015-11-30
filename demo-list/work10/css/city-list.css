@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 'Microsoft YaHei',Tahoma,Helvetica,SimSun,sans-serif,arial,\5b8b\4f53;color:#333;outline:0;}
+li{list-style: none;}
+a{text-decoration: none;}
+/***顶部导航***/
+.wrap{
+    min-width: 1120px;
+    min-height: 1220px;
+}
+.top-bar {
+    width: 100%;
+    height: 35px;
+    background: #333
+}
+
+.top-bar .top-bar-inner {
+    width: 1120px;
+    line-height: 35px;
+    margin: 0 auto
+}
+
+.top-bar a {
+    padding: 0 20px;
+    color: #999;
+    border-left: 1px solid #999
+}
+.top-bar a:hover{
+    color: #de0010;
+}
+
+.top-bar a.first {
+    padding: 0 20px 0 0;
+    border: none;
+}
+
+.top-bar .mobile-icon {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin: 0 5px 0 0;
+    background: url(../img/mobile.png) no-repeat;
+}
+
+.header{
+    height: 99px;
+    background: #fff;
+    border-bottom: 1px solid #f4f4f4;
+}
+    .header-logo{
+        height: 99px;width: 151px;
+        background: url("../img/header-logo.png") no-repeat;
+        display: block;
+        float: left;
+        margin-right: 26px;
+    }
+    .header-container{
+        width: 1120px;
+        margin: 0 auto;
+    }
+        .input-box{
+            height: 30px;
+            width: 188px;
+            border: 1px solid #e2e2e2;
+            border-radius: 30px;
+            float: left;
+
+            margin-top: 30px;
+            position: relative;
+        }
+            .input-box input{
+               border: none;
+                height: 20px;
+                width: 100px;
+                padding:5px  30px 5px 0;
+                color: #aaa;
+                margin-left: 15px;
+                line-height: 20px;
+            }
+            .detail-search-icon{
+                height: 20px;
+                width: 20px;
+                background: url("../img/detail-search-icon.png") no-repeat;
+                position: absolute;
+                right:8px;
+                top: 5px;
+                display: block;
+            }
+            .op-btn{
+                width: 122px;
+                height: 32px;
+                float: right;
+                margin-top: 30px;
+            }
+                .btn{
+                    width: 53px;
+                    height: 28px;
+                    border: 2px solid #37a8cd;
+                    display: block;
+                    float: left;
+                    color: #777;
+                    font-size: 14px;
+                    line-height: 28px;
+                    text-align: center;
+                    border-radius: 4px;
+                }
+    .city-map{
+        height: 200px;
+        border-top: 1px solid #e7e7e7;
+        background: #f6f6f6;
+    }
+        .city-map-container{
+            margin: 0 auto;
+            width: 1120px;
+            height: 200px;
+            background: url("../img/city-map-bg.png") no-repeat;
+        }
+            .city-name{
+                width: 140px;
+                padding-top:70px ;
+                margin: 0 auto;
+                height: 100px;
+                text-align: center;
+            }
+                .city-name h1{
+                    font-size: 28px;
+                    color: #37a8cd;
+                    padding-bottom: 18px;
+                }
+                .city-name span{
+                    font-size: 14px;
+                }
+
+/*****主体容器********/
+.main-container{
+    padding-top: 30px;
+    width: 1120px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+    /********左侧内容*********/
+    .main-content{
+        width: 810px;
+        float: left;
+        min-height: 100px;
+    }
+        .way-item-list{
+            padding-bottom: 45px;
+        }
+            .way-item-list dt , .way-item-list dd{
+                padding-bottom: 39px;
+                border-bottom: 1px solid #e2e2e2;
+                position: relative;
+            }
+                .way-item-list dt .info-img{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 120px;
+                    width: 160px;
+                }
+                .way-item-list dd .info-img{
+                    position: absolute;
+                    top: 40px;
+                    right: 0;
+                    height: 120px;
+                    width: 160px;
+                }
+                    .info-img img{
+                        height: 120px;
+                        width: 160px;
+                    }
+                .way-item-title{
+                    padding-bottom: 20px;
+                }
+                    .way-item-title a{
+                        font-size: 16px;
+                        color: #333;
+                    }
+                    .way-item-title a:hover{
+                        color: #de0010;
+                    }
+            .way-item-list dd{
+                padding-top: 39px;
+            }
+            .some-info-container{
+                height: 52px;
+                padding-bottom: 20px;
+            }
+                .way-length{
+                    height: 28px;
+                    width: 52px;
+                    padding: 12px 0;
+                    border-radius: 52px;
+                    background: #37a8cd;
+                    float: left;
+                    color: #fff;
+                    text-align: center;
+                    margin-right: 15px;
+                }
+                    .way-length-number{
+                        font-size: 16px;
+                    }
+                    .way-info{
+                        padding-top: 10px;
+                        float: left;
+                        width: 500px;
+                    }
+                        .way-info span{
+                            display: inline-block;
+                            height: 16px;
+                            line-height: 16px;
+                        }
+                            .all-day{
+                                padding-right: 10px;
+                            }
+                            .has-join{
+                                padding: 0 20px 0 36px;
+                                background: url("../img/gray-icon-1.png") no-repeat;
+                                background-position: 18px 0;
+                            }
+                            .love-member{
+                                padding: 0 20px 0 30px;
+                                background: url("../img/gray-icon-2.png") no-repeat;
+                                background-position: 12px 0;
+                            }
+            .brief-text{
+                font-size: 14px;
+                line-height: 28px;
+                color: #777777;
+                padding-right: 220px;
+            }
+            .page-list{
+                text-align: center;
+            }
+            .page-list div{
+                display: inline-block;
+            }
+                .page-list div span:hover{
+                    background: #37a8cd;
+                    color: #fff;
+                }
+                .page-number{
+                    display: inline-block;
+                    cursor: pointer;
+                    margin: 0 5px;
+                    height: 31px;
+                    width: 31px;
+                    line-height: 31px;
+                    font-size: 14px;
+                    border: 1px solid #e2e2e2;
+                }
+                .page-pre , .page-next{
+                    display: inline-block;
+                    cursor: pointer;
+                    margin: 0 5px;
+                    height: 31px;
+                    width: 75px;
+                    line-height: 31px;
+                    border-radius:15px;
+                    font-size: 14px;
+                    border: 1px solid #e2e2e2;
+                }
+                .current-page{
+                    background: #37a8cd;
+                    color: #fff;
+                }
+
+
+
+
+
+
+        /**************/
+
+/***右侧内容***/
+.side-bar{
+    width: 280px;
+    float: right;
+}
+    /**相关路线**/
+    .relate-way{
+        border: 1px solid #eaeaea;
+        width: 238px;
+        padding: 20px;
+        margin-bottom: 28px;
+    }
+        .relate-way h1{
+            font-size: 16px;
+            color: #333;
+            padding-bottom: 12px;
+        }
+            .relate-way h1 a{
+                color: #333;
+            }
+            .relate-way h1 a:hover{
+                color: #de0010;
+            }
+            .relate-way-list li{
+                position: relative;
+                padding-bottom: 18px;
+                padding-top: 20px;
+                border-bottom: 1px solid #dbdbdb;
+                padding-left: 70px;
+            }
+                .lc{
+                    padding: 5px;
+                    border: 1px solid #37a8cd;
+                    width: 40px;
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    text-align: center;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    line-height: 24px;
+                }
+                    .lc-location-icon {
+                        display: inline-block;
+                        height: 18px;
+                        width: 18px;
+                        background: url("../img/lc-location-icon.png") no-repeat;
+                        position: relative;
+                        top: 3px;
+                    }
+                    .lc-time-icon{
+                        display: inline-block;
+                        height: 18px;
+                        width: 18px;
+                        background: url("../img/clock.png") no-repeat;
+                        position: relative;
+                        top: 3px;
+                    }
+            .relate-way-list p{
+                line-height: 24px;
+            }
+                .relate-way-list p span{
+                    font-size: 12px;
+                    color: #777;
+                    padding: 0 5px;
+                }
+
+.hidden{
+    display: none;
+}
+/*foot**/
+.footer{background: #555;color:#9f9f9f;}
+.footer .footer-column{border-left:1px solid #414141;color:#d3d3d3;}
+.footer .footer-column dl dt{color:#858585;}
+.footer .footer-column dl dd a{color:#bdbdbd;}
+
+.footer .footer-logo .copyright a{color:#9f9f9f;}
+.footer{height:340px;text-align: center;}
+.footer .footer-wrapper{padding-top: 45px; width: 1120px; margin: 0 auto;}
+.footer .footer-logo{float: left;margin-left: 2%;margin-right: 2%;}
+.footer .footer-logo .copyright{margin-top: 55px;line-height: 150%;}
+.footer .footer-column{height:190px;float:left;text-align: left;font-size:12px;font-family:'Microsoft YaHei';line-height: 24px;padding: 0 25px;}
+.footer .footer-column a:hover{text-decoration: underline;}
+.footer .statistics a img{display: none;}
+
+
+
+
+
+/**两边有边框**/
+.side-border{
+    border-right: 1px solid #787878;
+    border-left: 1px solid #787878;
+}
+.red{
+    color: #de0010;
+}
+.mr8{
+    margin-right: 8px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.underline{
+    height: 1px;
+    background-color: #dbdbdb;
+    border: none;
+}
+.pb{
+    padding-bottom: 10px;
+}
+
+.clearfix:after {content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}

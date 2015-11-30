@@ -56,18 +56,20 @@ a{text-decoration: none;}
         background: url("../img/header-logo.png") no-repeat;
         display: block;
         float: left;
+        margin-right: 26px;
     }
     .header-container{
         width: 1120px;
         margin: 0 auto;
     }
+
         .input-box{
             height: 30px;
             width: 188px;
             border: 1px solid #e2e2e2;
             border-radius: 30px;
             float: left;
-            margin-left: 26px;
+
             margin-top: 30px;
             position: relative;
         }
@@ -604,7 +606,7 @@ a{text-decoration: none;}
                 .destination a{
                     color: #777;
                     height: 20px;
-                    width: 99px;
+                    width: 98.5px;
                     display: inline-block;
                     line-height: 28px;
                     overflow: hidden;
