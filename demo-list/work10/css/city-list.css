@@ -156,7 +156,7 @@ a{text-decoration: none;}
                 border-bottom: 1px solid #e2e2e2;
                 position: relative;
             }
-                .way-item-list dt .info-img{
+                .way-item-list dt  .info-img{
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -170,7 +170,7 @@ a{text-decoration: none;}
                     height: 120px;
                     width: 160px;
                 }
-                    .info-img img{
+                    .info-img a img{
                         height: 120px;
                         width: 160px;
                     }
@@ -335,6 +335,13 @@ a{text-decoration: none;}
                         position: relative;
                         top: 3px;
                     }
+                    .info-img-title{
+
+                    }
+                        .relate-way-title a{
+                            font-weight: 100;
+                            font-size: 14px;
+                        }
             .relate-way-list p{
                 line-height: 24px;
             }

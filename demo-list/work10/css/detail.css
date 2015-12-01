@@ -517,6 +517,13 @@ a{text-decoration: none;}
                         position: relative;
                         top: 3px;
                     }
+                    .relate-way-title{
+
+                    }
+                        .relate-way-title a{
+                            font-weight: 100;
+                            font-size: 14px;
+                        }
             .relate-way-list p{
                 line-height: 24px;
             }
