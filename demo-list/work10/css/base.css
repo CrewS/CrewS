@@ -219,9 +219,74 @@ a{text-decoration: none;}
                 .city-name a{
                     color: #333;
                 }
+                .hot-tip{
+                    display: inline-block;
+                    width: 30px;
+                    height: 15px;
+                    font-size: 12px;
+                    border-radius: 2px;
+                    color: #fff;
+                    background: #fe8611;
+                    text-align: center;
+                    line-height: 15px;
+                    margin-left: 5px;
+                }
 
         .city-list{
-            min-height: 350px;
+            min-height: 240px;
+            padding-bottom: 65px;
+            position: relative;
+        }
+            .city-list-header{
+                font-size: 18px;
+                margin-bottom: 50px;
+                font-weight: bold;
+            }
+            .city-item{
+                padding-left: 40px;
+                font-size: 14px;
+            }
+                .city-item a{
+                     color: #333;;
+                }
+                .city-item div div{
+                    height: 16px;
+                    width: 313px;
+                    float: left;
+                    padding-bottom: 10px;
+                }
+                .city-item div div.row-last-item {
+                        width: 128px;
+                    }
+            .tab-item{
+                display: none;
+            }
+    .tab-select{
+        display: inline-block;
+        float: right;
+        border-bottom: 1px solid #37a8cd;
+        margin-right: 25px;
+    }
+        .tab-select li{
+            min-width: 20px;
+            padding: 0 3px;
+            height: 25px;
+            float: left;
+            text-align: center;
+        }
+        .tab-select li a{
+            color: #333333;
+            font-size: 16px;
+        }
+        .tab-select li.tab-active a{
+            color:#37a8cd ;
+            border-bottom: 4px solid #37a8cd;
+            font-size: 18px;
+        }
+        .tab-select li a:hover{
+            color:#37a8cd ;
+            border-bottom: 4px solid #37a8cd;
+            font-size: 18px;
         }
     .classical-way{
         background: #f6f6f6;
@@ -344,7 +409,14 @@ a{text-decoration: none;}
 .footer .statistics a img{display: none;}
 
 
-
+.hints{
+    font-size: 12px;
+    color: #777;
+    font-weight: 100;
+}
+.gray{
+    color: #777;
+}
 .fl{
     float: left;
 }

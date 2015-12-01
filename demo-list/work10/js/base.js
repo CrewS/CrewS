@@ -60,7 +60,4 @@ $(function(){
         d.close();
         img.removeClass('spic');
     })
-
-
-
 });
