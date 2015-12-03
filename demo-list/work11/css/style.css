@@ -97,6 +97,7 @@ a:hover{
                 }
                 .img-item li img{
                     width: 380px;
+                    cursor: pointer;
                 }
         .info-full{
             position: absolute;
@@ -135,7 +136,19 @@ a:hover{
                             font-size: 14px;
                             padding-bottom: 10px;
                         }
-
+    /**µØ≥ˆ≤„…Ë÷√**/
+    .close-btn{
+        position: absolute;
+        height: 23px;
+        width: 23px;
+        background: url("../img/from-close-icon.png") no-repeat;
+        right: -6px;
+        top: -6px;
+        cursor: pointer;
+    }
+    #big-img{
+        width: 960px;
+    }
     .footer{
         width: 1100px;
         margin: 0 auto;
