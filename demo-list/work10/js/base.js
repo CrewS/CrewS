@@ -32,6 +32,51 @@ $(function(){
         $('#big-text-title').text(title);
         textBox.showModal();
     });
+    $(window).on("scroll",function(){
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var block = $('.section-way');
+        if(scrollTop>500){
+            $('.top-icon').removeClass('hidden');
+        }else{
+            $('.top-icon').addClass('hidden');
+        }
+
+        if(scrollTop>1530 &&scrollTop<3600){
+            block.css({"position":"fixed","top":"0","z-index":"20"});
+        }else if(scrollTop>3600){
+            block.css({"position":"relative","top":"2080px","z-index":"20"});
+        }
+        else{
+            block.css({'position':'static'});
+        }
+    });
+
+
+
+    //·µ»Ø
+    $('.top-icon').click(function(){
+
+        $('html,body').stop().animate({scrollTop:'10'},500,function(){
+        });
+    });
+
+    //
+    $('.response').hover(function(){
+        $('.extend-help').toggleClass('hidden');
+    },function(){
+        $('.extend-help').toggleClass('hidden');
+    });
+    $('.top-icon').hover(function(){
+        $('.top-icon-hover').toggleClass('hidden');
+    },function(){
+        $('.top-icon-hover').toggleClass('hidden');
+    });
+
+
+
+
+
+
     $('#text-close').click(function(){
         textBox.close();
     });

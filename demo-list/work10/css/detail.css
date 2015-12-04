@@ -628,7 +628,62 @@ a{text-decoration: none;}
                 color: #333;
             }
 
-
+.extend-container{
+    z-index: 999;
+    position: fixed;
+    bottom: 50px;
+    right: 16px;
+    height: 90px;
+    width: 460px;
+}
+    .extend-content{
+        position: relative;
+        height: 90px;
+        width: 460px;
+    }
+        .extend-help{
+            padding: 21px;
+            width: 340px;
+            float: left;
+            color: #777;
+            font-size: 12px;
+            background: #eee;
+            line-height: 24px;
+            border-radius: 4px;
+        }
+        .top-icon{
+            width: 56px;
+            height: 42px;
+            border-radius: 4px;
+            float: right;
+            background: url("../img/return-icon-0.png") #eee no-repeat;
+            cursor: pointer;
+        }
+        .top-icon-hover{
+            width: 56px;
+            height: 42px;
+            background: url("../img/return-icon-1.png") no-repeat;
+            position: absolute;
+            right: 0;
+            top: -65px;
+        }
+        .response{
+            font-size: 14px;
+            width: 56px;
+            height: 42px;
+            position: absolute;
+            border-radius: 4px;
+            text-align: center;
+            color: #777;
+            background: #eee;
+            line-height: 42px;
+            right: 0;
+            top: 48px;
+            cursor: pointer;
+        }
+        .email{
+            color: #333;
+        }
 
 
 
