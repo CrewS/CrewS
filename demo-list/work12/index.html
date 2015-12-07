@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>崔克MADONE9.9</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/base.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="first-page"><img src="img/01.png"></div>
+        <div class="production">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="production-img"><img src="img/production-img.png"></div>
+            <div class="production-info">
+                <h1>MADONE9.9<br>第一款真正的超级自行车</h1>
+                <p>
+                    Madone 是力量、空气动力学特性、骑行品<br>
+                    质和整合性的高性能融合。它独一无二的：是<br>
+                    第一款真正意义上的超级自行车，是公路自行<br>
+                    车设计史上的里程碑。
+                </p>
+                <div class="underline-red">
+
+                </div>
+            </div>
+            <div class="video-box">
+                <iframe width="100%" src="http://player.youku.com/embed/XMTI3NjQ2NTUxMg==" frameborder=0 allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="some-info">
+            <div class="header"><img src="img/header.png"></div>
+            <img src="img/02.png">
+            <div class="see-more">了解更多细节</div><br>
+            <div class="row-icon" onclick="AnchorClick(1)"></div>
+        </div>
+        <div class="section1 section">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="feature">
+                <span class="title">特征</span><br>
+                <span class="gray e-title">FEATURE</span>
+            </div>
+            <div class="img-feature">
+                <img src="img/section1-img.png">
+            </div>
+            <div class="row-icon" onclick="AnchorClick(2)"></div>
+        </div>
+        <div class="section2 section">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="feature">
+                <span class="title">特征</span><br>
+                <span class="gray e-title">FEATURE</span>
+            </div>
+            <div class="img-feature">
+                <img src="img/section2-img.png">
+            </div>
+            <div class="row-icon" onclick="AnchorClick(3)"></div>
+        </div>
+        <div class="section3 section">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="feature">
+                <span class="title">特征</span><br>
+                <span class="gray e-title">FEATURE</span>
+            </div>
+            <div class="img-feature">
+                <img src="img/section3-img.png">
+            </div>
+            <div class="row-icon" onclick="AnchorClick(4)"></div>
+        </div>
+        <div class="section4 section">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="feature">
+                <span class="title">特征</span><br>
+                <span class="gray e-title">FEATURE</span>
+            </div>
+            <div class="img-feature">
+                <img src="img/section4-img.png">
+            </div>
+            <div class="row-icon" onclick="AnchorClick(5)"></div>
+        </div>
+        <div class="size-note">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="feature">
+                <span class="title">尺寸</span><br>
+                <span class="gray e-title">SIZE</span>
+            </div>
+            <div class="size-info-img">
+                <img src="img/size-info-img.png">
+            </div>
+            <div class="row-icon" onclick="AnchorClick(6)"></div>
+        </div>
+        <div class="contact-us">
+            <div class="header"><img src="img/header.png"></div>
+            <div class="contact-us-content">
+                <img src="img/contact-us.png">
+                <div class="contact-text">
+                    TREK经销商渠道全收录<br>
+                    千家经销车店一手掌握
+                    <br><br><br>
+                    <a href="">找车店，去美骑车店库</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    window.onload = function(){
+        var html=document.getElementsByTagName("html")[0];
+        var wrap=document.getElementById("wrap");
+        var width=html.clientWidth;
+//            alert(width);
+
+        var percent=width/640.0;
+        html.style.fontSize=40*percent+"px";
+//            alert(wrap.clientWidth);
+    };
+    var data =[];
+    data[1]=".section1";
+    data[2]=".section2";
+    data[3]=".section3";
+    data[4]=".section4";
+    data[5]=".size-note";
+    data[6]=".contact-us";
+    var AnchorClick = function (obj) {
+        console.log(data[obj]);
+        var pos = $(data[obj]).offset().top;
+
+        $("html,body").animate({ scrollTop: pos }, 800);
+    };
+</script>
+</html>

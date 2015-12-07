@@ -1,0 +1,113 @@
+*{margin: 0;padding: 0;}
+
+html{font-size:40px;}
+body{
+    font: 0.6rem arial,'Microsoft YaHei';
+    font-size-adjust: none;
+    text-align: center;
+    background: #f6f6f6;
+}
+img{
+    display: block;
+    width: 100%;
+}
+.wrap{
+    width: 100%;
+}
+    .first-page{
+        width: 100%;
+    }
+        .first-page img{
+            width: 100%;
+        }
+    .production{
+        width: 100%;
+    }
+        .header{
+            border-top: 1px solid #e6e6e6;
+        }
+            .header img{
+                width: 100%;
+            }
+        .production-info{
+            padding-bottom: 1.6rem;
+        }
+            .production-info h1{
+                font-size: 0.8rem;
+                padding-top: 0.1rem;
+                color: #282828;
+                line-height: 1.2rem;
+            }
+            .production-info p{
+                font-size: 0.35rem;
+                padding-top: 0.4rem;
+                line-height: 20px;
+                margin-bottom: 0.3rem;
+            }
+                .underline-red{
+                    width: 30%;
+                    height: 0.175rem;
+                    border-top: 1px solid #ebbfbf;
+                    border-bottom: 1px solid #ebbfbf;
+                    background: #cb1b1b;
+                    margin: 0 auto;
+                }
+        .video-box{
+            height: 8.75rem;
+            width: 100%;
+            padding-bottom: 2.5rem;
+        }
+
+            .see-more{
+                font-size: 0.35rem;
+                text-align: center;
+                display: inline-block;
+                padding-top: 0.5rem;
+            }
+            .some-info{
+                padding-bottom: 0.85rem;
+            }
+                .row-icon{
+                    display: inline-block;
+                    width: 0.8rem;
+                    height: 0.4rem;
+                    background: url("../img/row-icon.png") no-repeat;
+                    background-size: 100%;
+                }
+        .feature{
+            padding: 0.7rem 0;
+            padding-left: 45%;
+            text-align: left;
+        }
+            .feature .title{
+                font-size: 0.75rem;
+            }
+            .feature .e-title{
+                font-size: 0.6rem;
+            }
+        .section{
+            padding-bottom: 1.5rem;
+        }
+            .contact-us-content{
+                position: relative;
+            }
+                .size-note{
+                    padding-bottom: 0.5rem;
+                }
+                .contact-text{
+                    position: absolute;
+                    top: 50%;
+                    color: #fff;
+                    width: 100%;
+                    font-size: 0.85rem;
+                    text-align: center;
+                }
+                    .contact-text a{
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 0.6rem;
+                    }
+
+.gray{
+    color: #7a7a7a;
+}
