@@ -644,7 +644,9 @@ a{text-decoration: none;}
         .extend-help{
             padding: 21px;
             width: 340px;
-            float: left;
+            position: absolute;
+            left: 0;
+            top: 0;
             color: #777;
             font-size: 12px;
             background: #eee;
