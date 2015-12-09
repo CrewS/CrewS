@@ -62,9 +62,10 @@ $(function(){
 
     //
     $('.response').hover(function(){
-        $('.extend-help').toggleClass('hidden');
-    },function(){
-        $('.extend-help').toggleClass('hidden');
+        $('.extend-help').removeClass('hidden');
+    });
+    $('.extend-content').mouseleave(function(){
+        $('.extend-help').addClass('hidden');
     });
     $('.top-icon').hover(function(){
         $('.top-icon-hover').toggleClass('hidden');
