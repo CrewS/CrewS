@@ -32,6 +32,32 @@ a:hover{
         padding-top: 20px;
         padding-left: 10px;
     }
+        .info-77day{
+            padding-right: 20px;
+        }
+            .info-content{
+                padding-top: 10px;
+                padding-bottom: 60px;
+            }
+            .info-content h1{
+                font-size: 18px;
+                padding-bottom: 26px;
+                color: #0791ee;
+            }
+            .info-content h2{
+                font-size: 14px;
+                padding-bottom: 10px;
+
+            }
+            .info-content p{
+                font-size: 14px;
+                line-height: 26px;
+                text-indent: 2em;
+            }
+                .item-list li{
+                    font-size: 14px;
+                    padding: 5px 0 5px 10px;
+                }
         .main{
             width: 780px;
             float: left;
@@ -111,6 +137,17 @@ a:hover{
         margin-right: 10px;
         padding-bottom: 20px;
     }
+        .section-block{
+            padding: 10px 0;
+        }
+            .section-block p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .section-block h1{
+                font-size: 16px;
+                font-weight: 100;
+            }
         .contact-img img{
             width: 300px;
             padding-top: 10px;
