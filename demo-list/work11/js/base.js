@@ -1,5 +1,4 @@
 $(function(){
-    console.log(111);
     var d = dialog({
         width:960,
         height:919,
