@@ -37,8 +37,8 @@ img{
         }
         .ad div.mid{
             width: 33%;
-            margin-left: 0.5%;
-            margin-right: 0.5%;
+            margin-left: 1px;
+            margin-right: 2px;
         }
         .section-tab{
             height: 30px;
@@ -53,7 +53,7 @@ img{
     .item-list{
     }    
     .item-list div{
-        width: 24.8%;
+        width: 24.7%;
         float: left;
     }
     .classical-contain{
@@ -88,10 +88,10 @@ img{
 
 
 .mr1{
-    margin-right: 0.3%;
+    margin-right: 1px;
 }
 .mr2{
-    margin-right: 0.2%;
+    margin-right: 1px;
 }
 
 .clearfix:after {content: ".";
