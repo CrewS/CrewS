@@ -5,10 +5,11 @@
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 'Microsoft YaHei',Tahoma,Helvetica,SimSun,sans-serif,arial,\5b8b\4f53;color:#333;outline:0;}
 li{list-style: none;}
 a{text-decoration: none;}
-
+img{
+    border: none;
+}
 .container{
     min-width: 1120px;
-    min-height: 500px;
     background: url("../img/contain-bg.png") no-repeat #000;
     background-position: center 0;
 }
