@@ -61,7 +61,7 @@ img{
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-
+        width: 100%;
         -webkit-flex-flow: row wrap;
         justify-content: space-around;
     }    
