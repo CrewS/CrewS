@@ -56,18 +56,11 @@ img{
             font-size: 16px;
         }
     .item-list{
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
         width: 100%;
-        -webkit-flex-flow: row wrap;
-        justify-content: space-around;
     }    
     .item-list div{
         width: 49.5%;
-        align-content:stretch;
+        float: left;
     }
     .classical-contain{
         margin-top: 2px;
@@ -101,7 +94,7 @@ img{
 
 
 .mr1{
-    margin-right: 1px;
+    margin-right: 1%;
 }
 .mr2{
     margin-right: 2px;
