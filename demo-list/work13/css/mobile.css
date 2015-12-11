@@ -30,15 +30,20 @@ img{
     }
     .ad{
         margin-top: 2px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
     }
         .ad div{
-            width: 33%;
-            float: left;
+            width: 33.1%;
+            align-content:stretch;
         }
         .ad div.mid{
-            width: 33%;
-            margin-left: 1px;
-            margin-right: 2px;
         }
         .section-tab{
             height: 30px;
@@ -51,10 +56,18 @@ img{
             font-size: 16px;
         }
     .item-list{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
     }    
     .item-list div{
-        width: 24.7%;
-        float: left;
+        width: 49.5%;
+        align-content:stretch;
     }
     .classical-contain{
         margin-top: 2px;
