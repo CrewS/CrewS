@@ -7,11 +7,12 @@ li{list-style: none;}
 a{text-decoration: none;}
 img{
     border: none;
+    width: 100%;
+    display: block;
 }
 .container{
-    min-width: 1188px;
-    background: url("../img/contain-bg.png") no-repeat #000;
-    background-position: center 0;
+    width: 100%;
+    background: #000;
 }
     .main div div{
         opacity: 0.9;
@@ -20,84 +21,77 @@ img{
         opacity: 1.0;
     }
     .main{
-        width: 1188px;
+        width: 100%;
         margin: 0 auto;
     }
     .banner{
-        width: 1188px;
-        height: 414px;
+        width: 100%;
         margin: 0 auto;
     }
     .ad{
-        height: 206px;
         margin-top: 2px;
     }
         .ad div{
-            width: 395px;
-            height: 206px;
+            width: 33%;
             float: left;
         }
         .ad div.mid{
-            width: 394px;
-            margin-left: 2px;
-            margin-right: 2px;
+            width: 33%;
+            margin-left: 0.5%;
+            margin-right: 0.5%;
         }
         .section-tab{
-            height: 44px;
+            height: 30px;
             background: #135dbc;
             margin-top: 2px;
             margin-bottom: 2px;
             color: #fff;
-            line-height: 44px;
+            line-height: 30px;
             text-align: center;
-            font-size: 20px;
+            font-size: 16px;
         }
     .item-list{
-        height: 347px;
     }    
     .item-list div{
-        height: 347px;
-        width: 295px;
+        width: 24%;
         float: left;
     }
     .classical-contain{
         margin-top: 2px;
+        position: relative;
     }
         .gonglu{
             float: left;
-            height: 282px;
-            width: 594px;
+            width: 49.5%;
         }
         .shandi{
-            float: left;
-            height: 282px;
-            width: 594px;
+            width: 49.5%;
+            position: absolute;
+            bottom: 0;
         }
         .lvxing{
-            width: 593px;
-            height: 566px;
+            width: 50%;
             float: right;
         }
     .others{
         margin-top: 2px;
     }
     .others div{
-        width: 395px;
-        height: 292px;
+        width: 33%;
         float: left;
     }
     .others div.mid{
-        width: 394px;
-        margin-left: 2px;
-        margin-right: 2px;
+        width: 33%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
     }
 
 
-.mr2{
-    margin-right: 2px;
+.mr1{
+    margin-right: 1.32%;
 }
-.mr3{
-    margin-right: 3px;
+.mr2{
+    margin-right: 1.36%;
 }
 
 .clearfix:after {content: ".";
