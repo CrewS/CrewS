@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" href="css/mobile-page.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="section-header">
+            <h1>
+                <i></i>
+                路线状况
+            </h1>
+        </div>
+        <div class="section-detail">
+            <p>
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+            </p>
+        </div>
+        <div class="section-header">
+            <h1>
+                <i></i>
+                沿途景点
+            </h1>
+        </div>
+        <div class="section-detail">
+            <p>
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+            </p>
+        </div>
+        <div class="section-header">
+            <h1>
+                <i></i>
+                食宿推荐
+            </h1>
+        </div>
+        <div class="section-detail">
+            <p>
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+            </p>
+        </div>
+        <div class="section-header">
+            <h1>
+                <i></i>
+                注意事项
+            </h1>
+        </div>
+        <div class="section-detail">
+            <p>
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+            </p>
+            <div class="img-info">
+                <img src="img/mobile-test-img.png">
+            </div>
+            <p>
+                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+            </p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        var html=document.getElementsByTagName("html")[0];
+        var wrap=document.getElementById("wrap");
+        var width=html.clientWidth;
+//            alert(width);
+
+        var percent=width/1242.0;
+        html.style.fontSize=40*percent+"px";
+//            alert(wrap.clientWidth);
+    };
+    var AnchorClick = function (obj) {
+        //var href = $(obj).attr("href");
+//            console.log($(href.hash));
+//            console.log($(obj).offset().top);
+        var pos = $(obj).offset().top;
+        $("html,body").animate({ scrollTop: pos }, 800);
+    };
+</script>
+</html>
