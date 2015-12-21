@@ -25,11 +25,13 @@
             </h1>
         </div>
         <div class="section-detail">
-            <p>
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-            </p>
+            <div class="info-text">
+                <p>
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                </p>
+            </div>
         </div>
         <div class="section-header">
             <h1>
@@ -38,11 +40,13 @@
             </h1>
         </div>
         <div class="section-detail">
-            <p>
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-            </p>
+            <div class="info-text">
+                <p>
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                </p>
+            </div>
         </div>
         <div class="section-header">
             <h1>
@@ -51,11 +55,14 @@
             </h1>
         </div>
         <div class="section-detail">
-            <p>
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-            </p>
+            <div class="info-text">
+                <p>
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                    <img src="img/mobile-test-img.png">
+                </p>
+            </div>
         </div>
         <div class="section-header">
             <h1>
@@ -64,18 +71,20 @@
             </h1>
         </div>
         <div class="section-detail">
-            <p>
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-            </p>
-            <div class="img-info">
+            <div class="info-text">
+                <p>
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                </p>
                 <img src="img/mobile-test-img.png">
+                <p>
+                    这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
+                </p>
             </div>
-            <p>
-                这一段属于热身阶段，整体路况良好，但路线众多，岔路也多，途中需要多查地图多问路，否则容易走错。
-            </p>
         </div>
     </div>
 </body>
+<script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/mobile.js"></script>
 <script type="text/javascript">
     window.onload = function(){
         var html=document.getElementsByTagName("html")[0];
@@ -86,13 +95,8 @@
         var percent=width/1242.0;
         html.style.fontSize=40*percent+"px";
 //            alert(wrap.clientWidth);
-    };
-    var AnchorClick = function (obj) {
-        //var href = $(obj).attr("href");
-//            console.log($(href.hash));
-//            console.log($(obj).offset().top);
-        var pos = $(obj).offset().top;
-        $("html,body").animate({ scrollTop: pos }, 800);
+        var textWidth = $('.info-text')[0].clientWidth;
+        $('.section-detail').find('img').css({'width':textWidth+'px'})
     };
 </script>
 </html>
