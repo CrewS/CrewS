@@ -30,21 +30,28 @@ img{
     }
     .ad{
         margin-top: 2px;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-
-        -webkit-flex-flow: row wrap;
-        justify-content: space-around;
+       position: relative;
     }
-        .ad div{
-            width: 33.1%;
-            align-content:stretch;
+        .ad-1{
+            width: 49.5%;
+            float: left;
         }
-        .ad div.mid{
+        .ad-2{
+            width: 50%;
+            float: right;
         }
+        .ad-3{
+            position: absolute;
+            width: 50%;
+            right: 0;
+            bottom: 0;
+        }
+        /*.ad div{*/
+            /*width: 33.1%;*/
+            /*align-content:stretch;*/
+        /*}*/
+        /*.ad div.mid{*/
+        /*}*/
         .section-tab{
             height: 30px;
             background: #135dbc;
@@ -56,14 +63,26 @@ img{
             font-size: 16px;
         }
     .item-list{
-        width: 100%;
+        /*width: 100%;*/
+
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        justify-content: space-around;
     }    
     .item-list div{
-        width: 49.5%;
-        float: left;
+        /*width: 49.5%;*/
+        /*float: left;*/
+        width: 33.1%;
+        margin-top: 2px;
+        align-content:stretch;
     }
     .item-list div.mr{
-        float: right;
+        /*float: right;*/
     }
     .classical-contain{
         margin-top: 2px;

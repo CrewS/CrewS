@@ -10,11 +10,12 @@ img{
 }
 .container{
     min-width: 1188px;
-    background: url("../img/contain-bg.png") no-repeat #000;
+    background: url("../img/bg.png") no-repeat #fff;
     background-position: center 0;
 }
     .main div div{
         opacity: 0.9;
+
     }
     .main div div:hover{
         opacity: 1.0;
@@ -22,6 +23,7 @@ img{
     .main{
         width: 1188px;
         margin: 0 auto;
+        background: #000;
     }
     .banner{
         width: 1188px;
@@ -30,7 +32,7 @@ img{
     }
     .ad{
         height: 206px;
-        margin-top: 2px;
+
     }
         .ad div{
             width: 395px;
@@ -53,12 +55,14 @@ img{
             font-size: 20px;
         }
     .item-list{
-        height: 347px;
+        height: 698px;
+
     }    
     .item-list div{
         height: 347px;
         width: 295px;
         float: left;
+        margin-top: 2px;
     }
     .classical-contain{
         margin-top: 2px;

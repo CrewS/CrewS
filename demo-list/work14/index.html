@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .wrap{
+
+        }
+        .react-wrap{
+            width: 690px;
+            height: 180px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+            .img-list{
+                width: 690px;
+                height: 180px;
+                position: relative;
+                left: 0;
+            }
+                .img-list li{
+                    width: 690px;
+                    height: 180px;
+                    position: absolute;
+                    left: 0;
+                    display: none;
+                }
+                .img-list li.img-list-active{
+                    display: block;
+                }
+                     .img-list li img{
+                         width: 100%;
+                     }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="react-wrap">
+            <ul class="img-list">
+                <li class="img-list-active" ><img src="img/7.jpg"></li>
+                <li ><img src="img/8.jpg"></li>
+                <li><img src="img/9.jpg"></li>
+                <li><img src="img/10.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+//        function preImg(old,target){
+//            var list = $('.img-list');
+//            var liDom = list.find('li');
+//
+//
+//            liDom.eq(target).css({'display': 'block', 'left': '-690px'});
+//            list.animate({'left': '690px'}, 600, function () {
+//                liDom.eq(old).css({'display': 'none', 'left': '0'});
+//                liDom.eq(target).css({'left': '0'});
+//                list.css({'left': 0});
+//            });
+//
+//
+//        }
+//
+//        function nextImg(old ,target) {
+//            var list = $('.img-list');
+//            var liDom = list.find('li');
+//
+//
+//            liDom.eq(target).css({'display': 'block', 'left': '690px'});
+//            list.animate({'left': '-690px'}, 600, function () {
+//                liDom.eq(old).css({'display': 'none', 'left': '0'});
+//                liDom.eq(target).css({'left': '0'});
+//                list.css({'left': 0});
+//            });
+//        }
+        function moveImg(old,target){
+            var step ;
+            var list = $('.img-list');
+            var liDom = list.find('li');
+            //通过比较左右 判断位移方向
+            if(old<target){
+                step =690;
+            }else{
+                step = -690;
+            }
+
+
+            liDom.eq(target).css({'display': 'block', 'left': step+'px'});
+            list.animate({'left': 0-step+'px'}, 600, function () {
+                liDom.eq(old).css({'display': 'none', 'left': '0'});
+                liDom.eq(target).css({'left': '0'});
+                list.css({'left': 0});
+            });
+
+
+        }
+
+
+
+        var cur=0;
+        function autoRun(){
+            var target ;
+            if(cur==3){
+                target=0;
+                moveImg(cur,target);
+                cur=0;
+            }else{
+                target = cur+1;
+                moveImg(cur,target);
+                cur+=1;
+            }
+        }
+        setInterval(autoRun,4000);
+
+
+
+    })
+</script>
+</html>
