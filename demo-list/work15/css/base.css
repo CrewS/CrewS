@@ -30,13 +30,13 @@
             height: 100%;
         }
     .item-info{
-        width: 11rem;
+        width: 8.5rem;
         height: 4.85rem;
         float: left;
         margin-left: 0.5rem;
     }
     .item-info h1{
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         color: #000;
         margin: 0;
     }
