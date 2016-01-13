@@ -27,7 +27,7 @@ img{
     }
     .banner{
         width: 1188px;
-        height: 414px;
+        height: 344px;
         margin: 0 auto;
     }
     .ad{
@@ -55,11 +55,11 @@ img{
             font-size: 20px;
         }
     .item-list{
-        height: 698px;
+        height: 638px;
 
     }    
     .item-list div{
-        height: 347px;
+        height: 317px;
         width: 295px;
         float: left;
         margin-top: 2px;
