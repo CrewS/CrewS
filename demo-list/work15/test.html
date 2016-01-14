@@ -130,29 +130,17 @@
         //console.log('---')
         var loading = false;
         // 最多可加载的条目
-        var maxItems = 60;
+        var maxItems = 30;
 
         // 每次加载添加多少条目
-        var itemsPerLoad = 10;
+        var itemsPerLoad =6;
 
         function addItems(number, lastIndex) {
             // 生成新条目的HTML
             var html = '';
             for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                html += '<a href="#" class="item-link item-content"> ' +
-                            '<div class="item-inner"> ' +
-                                '<div class="item-img-box"> ' +
-                                    '<img src="img/test-item.jpg"> ' +
-                                '</div> ' +
-                                 '<div class="item-info"> ' +
-                                    '<h1>美利达  REACTO 1300-CN</h1> ' +
-                                    '<p>中奖号：<span class="item-info-init">11571</span></p> ' +
-                                    '<p>中奖ID：贫嘴张大民</p> ' +
-                                    '<p>手机：135xxxx4567</p> ' +
-                                    '<p>期数：0001</p> ' +
-                                '</div> ' +
-                            '</div> ' +
-                        '</a>';
+                html += '<a href="#" class="item-link item-content"><div class="item-inner"><div class="item-img-box"> ' +
+                         '<img src="img/test-item.jpg"></div><div class="item-info"><h1>美利达  REACTO 1300-CN</h1><p>中奖号：<span class="item-info-init">11571</span></p><p>中奖ID：贫嘴张大民</p><p>手机：135xxxx4567</p><p>期数：0001</p></div></div></a>';
             }
             // 添加新条目
             $('.infinite-scroll-bottom .list-block').append(html);
