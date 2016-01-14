@@ -39,7 +39,7 @@
                     <span class="tab-label">设置</span>
                 </a>
             </nav>
-            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="35">
+            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="25">
                 <!-- 这里是页面内容区 -->
                 <div class="page-index list-container">
                     <div class="card">
@@ -174,10 +174,10 @@
         //console.log('---')
         var loading = false;
         // 最多可加载的条目
-        var maxItems = 100;
+        var maxItems = 60;
 
         // 每次加载添加多少条目
-        var itemsPerLoad = 20;
+        var itemsPerLoad = 10;
 
         function addItems(number, lastIndex) {
             // 生成新条目的HTML
