@@ -58,3 +58,27 @@
     right: 0.8rem;
     top: 2.4rem;
 }
+.list-block {
+    margin: 0;
+    font-size: 0.85rem;
+}
+.list-block.media-list .item-inner,
+.list-block li.media-item .item-inner {
+    display: block;
+    padding: 0.25rem;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+}
+.item-inner{
+    padding: 0.25rem;
+    height: 5.35rem;
+}
+.list-block .item-content {
+     padding-left: 0;
+}
+.item-link{
+    background: #fff;
+}
+    .item-inner p{
+        margin: 0;
+    }
