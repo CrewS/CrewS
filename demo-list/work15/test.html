@@ -138,12 +138,19 @@
         function addItems(number, lastIndex) {
             // 生成新条目的HTML
             var html = '';
+            var doc = document.createDocumentFragment();
             for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-                html += '<a href="#" class="item-link item-content"><div class="item-inner"><div class="item-img-box"> ' +
-                         '<img src="img/test-item.jpg"></div><div class="item-info"><h1>美利达  REACTO 1300-CN</h1><p>中奖号：<span class="item-info-init">11571</span></p><p>中奖ID：贫嘴张大民</p><p>手机：135xxxx4567</p><p>期数：0001</p></div></div></a>';
+                var a = document.createElement('A');
+                a.className='item-link item-content';
+                a.innerHTML='<div class="item-inner"><div class="item-img-box"> ' +
+                        '<img src="img/test-item.jpg"></div><div class="item-info"><h1>美利达  REACTO 1300-CN</h1><p>中奖号：<span class="item-info-init">11571</span></p><p>中奖ID：贫嘴张大民</p><p>手机：135xxxx4567</p><p>期数：0001</p></div></div>'
+                doc.appendChild(a);
+//                html += '<a href="#" class="item-link item-content"><div class="item-inner"><div class="item-img-box"> ' +
+//                         '<img src="img/test-item.jpg"></div><div class="item-info"><h1>美利达  REACTO 1300-CN</h1><p>中奖号：<span class="item-info-init">11571</span></p><p>中奖ID：贫嘴张大民</p><p>手机：135xxxx4567</p><p>期数：0001</p></div></div></a>';
             }
             // 添加新条目
-            $('.infinite-scroll-bottom .list-block').append(html);
+            //doc.appendChild(html);
+            $('.infinite-scroll-bottom .list-block').append(doc);
 
         }
         //预先加载20条
