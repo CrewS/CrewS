@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>送流量</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+        a{
+            text-decoration: none;
+        }
+        body{
+            font: 0.6rem arial,'Microsoft YaHei';
+            font-size-adjust: none;
+        }
+        .wrap{
+            width: 100%;
+            background: url("images/index-bg.jpg") ;
+            background-size: 100%;
+        }
+        .container{
+            width: 100%;
+            padding-top: 7.4rem;
+            position: relative;
+        }
+        .index-header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .index-header img{
+            width: 100%;
+        }
+        .index-content-wrap{
+            height: 14.175rem;
+        }
+        .index-content{
+            height: 14.175rem;
+            width: 13.25rem;
+            margin: 0 auto;
+            background: url("images/index-regular.png") no-repeat;
+            background-size: 100%;
+            color: #dddddd;
+            font-size: 0.6rem;
+        }
+        .content-top{
+            float: left;
+            margin-top: 1.2rem;
+        }
+        .btn{
+            display: block;
+            margin: 0 auto;
+            margin-top: 0.45rem;
+            height: 2rem;
+            border-radius: 2rem;
+            width: 10.625rem;
+            background: #ffcf00;
+            text-align: center;
+            line-height: 2rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: #060606;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="index-header">
+                <img src="images/index-header.png">
+            </div>
+            <div class="index-content-wrap">
+                <div class="index-content">
+                </div>
+            </div>
+            <a href="#" class="btn">下载参与礼包活动</a>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        var html = document.getElementsByTagName("html")[0];
+        var wrap = document.getElementById("wrap");
+        var width = html.clientWidth;
+        var height = html.clientHeight+20;
+        console.log(height);
+        $('.wrap').css({'height':height});
+        var percent = width / 640.0;
+        html.style.fontSize = 40 * percent + "px";
+    });
+</script>
+</html>
