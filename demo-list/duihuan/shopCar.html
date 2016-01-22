@@ -111,10 +111,21 @@
                 送货信息
             </div>
             <div class="address-form">
-                <div><span class='address-item'>送货地址</span></div>
+                <div>
+                    <span class='address-item'>送货地址</span>
+                    <select id="s_province" name="Shop[province_id]" class="address-select">
+                        <option>1</option>
+                    </select>
+                    <select id="s_city" name="Shop[city_id]" class="address-select">
+                        <option>1</option>
+                    </select>
+                    <select id="s_county" name="area_id" class="address-select">
+                        <option>1</option>
+                    </select>
+                </div>
                 <div>
                     <span class='address-item'></span>
-                    <input type="text" class="input-address" value="详细地址">
+                    <input type="text" class="input-address" placeholder="详细地址" value="">
                 </div>
                 <div>
                     <span class='address-item'>收货人</span>
@@ -124,6 +135,15 @@
                     <span class='address-item'>联系电话</span>
                     <input type="text" class="input-info" value="">
                 </div> 
+            </div>
+        </div>
+        <div class="shop-car-bottom-container clearfix">
+            <div class="shop-car-bottom">
+                <div class="item-count-number">商品总计：<span class="count-number">25360 币</span></div>
+                <div class="has-money">可用积分：850000币</div>
+                <div class="count-op-box">
+                    <a href="javascript:;" class="continue">继续找商品</a><a href="javascript:;">兑换</a>
+                </div>
             </div>
         </div>
     </div>
@@ -368,5 +388,11 @@
 </div>
 <script src="http://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"></script>
 <script src="js/common-function.js"></script>
+<script src="js/area.js"></script>
+<script type="text/javascript">
+$(function(){
+    _init_area();
+})
+</script>
 </body>
 </html>
