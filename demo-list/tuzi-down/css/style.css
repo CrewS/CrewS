@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 40px;
+}
+body {
+    font: 0.6rem arial, 'Microsoft YaHei';
+    font-size-adjust: none;
+}
+    .header{
+        background: url("../images/header.jpg") no-repeat;
+        width: 100%;
+        height: 33.35rem;
+        background-size: 100%;
+        background-position: center center;
+        position: relative;
+    }
+        .header-content{
+            color: #fff;
+            position: absolute;
+            top: 30%;
+            padding-left: 1rem;
+        }
+        .header-content .big-text{
+            font-size: 2.5rem;
+        }
+        .mid-text{
+            font-size: 1.875rem;
+        }
+        .s-text{
+            font-size: 0.9rem;
+        }
+        .down-btn{
+            display: block;
+            text-decoration: none;
+            position: absolute;
+            height: 2.5rem;
+            width: 7.5rem;
+            /*margin: 0 auto;*/
+            bottom: 2rem;
+            background: #000;
+            left: 50%;
+            margin-left: -3.75rem;
+            border-radius: 1rem;
+            color: #fff;
+            line-height: 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    .slice{
+        width: 100%;
+        /*height: 34.5rem;*/
+    }
+        .text-content{
+            /*height: 5rem;*/
+            width: 100%;
+            padding-top: 2.25rem;
+            padding-bottom: 1.75rem;
+        }
+            .text-content p{
+                text-align: center;
+            }
+            .text-content .title{
+                font-size: 0.95rem;
+                line-height: 1.2rem;
+                color: #474747;
+                font-weight: bold;
+            }
+            .text-content .detail{
+                font-size: 0.75rem;
+                line-height: 1rem;
+                color: #5e5e5e;
+            }
+        .display-show{
+            /*width: 100%;*/
+            padding: 0 3.275rem;
+            height: 25.3rem;
+        }
+            .display-show img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+.help-tip{
+    padding: 3.75rem 2rem;
+}
+.help-tip span , .help-tip a{
+    display: inline-block;
+    color: #e82d49;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+.help-tip span{
+    margin:0 4rem;
+}
+.help-tip a{
+    /*font-weight: bold;*/
+}
+.copy-right{
+    padding: 1.75rem 0;
+    text-align: center;
+    font-size: 0.65rem;
+    line-height: 0.9rem;
+    color: #fff;
+    background: #000000;
+}

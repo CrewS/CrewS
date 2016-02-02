@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>兔子骑行APP下载页面</title>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header" class="header">
+                <div class="header-content">
+                    <p class="big-text">为骑行而生</p>
+                    <p class="mid-text">JUST RIDE</p>
+                    <p class="s-text">兔子是一款功能强大的骑行工具，</p>
+                    <p class="s-text">让你的每一次骑行变得更有意义，，</p>
+                    <p class="s-text">更加快乐，</p>
+                </div>
+                <a href="javascript:;" class="down-btn">立即体验</a>
+        </div>
+        <div class="slice">
+            <div class="text-content">
+                <p class="title">记录每一次骑行</p>
+                <p class="title">见证骑行之路上的成长</p>
+                <br>
+                <p class="detail">轨迹、距离、速度、卡路里、爬升等等，</p>
+                <p class="detail">堪比专业码表的实时数据，一目了然。	</p>
+            </div>
+            <div class="display-show">
+                <img src="images/slice-1.png">
+            </div>
+        </div>
+        <div class="slice">
+            <div class="text-content">
+                <p class="title">骑行轨迹完整记录</p>
+                <p class="title">全数据图表化分析</p>
+                <br>
+                <p class="detail">完整的轨迹记录</p>
+                <p class="detail">加上可视化的图表分析</p>
+                <p class="detail">等于超有范的骑行分享页</p>
+                <p class="detail">只做最酷的“骑士”。</p>
+            </div>
+            <div class="display-show">
+                <img src="images/slice-2.png">
+            </div>
+        </div>
+        <div class="slice">
+            <div class="text-content">
+                <p class="title">关注车友动态</p>
+                <p class="title">创建、加入车队</p>
+                <br>
+                <p class="detail">骑友、队友，就在你身边</p>
+                <p class="detail">结识同样热爱骑行的朋友，</p>
+                <p class="detail">让你的骑行之路不再孤独。</p>
+            </div>
+            <div class="display-show">
+                <img src="images/slice-3.png">
+            </div>
+        </div>
+        <div class="slice">
+            <div class="text-content">
+                <p class="title">个人&车队夺榜有奖</p>
+                <p class="title">更多玩法敬请期待</p>
+                <br>
+                <p class="detail">夺取个人或者车队的榜单，</p>
+                <p class="detail">获取更丰厚奖励。</p>
+            </div>
+            <div class="display-show">
+                <img src="images/slice-4.png">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="help-tip">
+                <a href="RabbitUserProtocol.html">隐私条款</a>
+                <span>/</span>
+                <a href="RabbitUserProtocol.html">服务条款</a>
+            </div>
+            <div class="copy-right">
+                <p>©2002- 2015 BIKETO美骑网.ALL RIGHTS RESERVED</p>
+                <p>服务热线：020-85697255 </p>
+                <p>地址：广州市天河区车陂路黄洲工业区4栋2楼</p>
+                <p>粤ICP备12045810号</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        var html=document.getElementsByTagName("html")[0];
+        var wrap=document.getElementById("wrap");
+        var width=html.clientWidth;
+        var height =html.clientHeight;
+//            alert(width);
+        console.log(height);
+        var header = document.getElementById("header");
+        header.style.height=height+'px';
+        var percent=width/750.0;
+        html.style.fontSize=40*percent+"px";
+//            alert(wrap.clientWidth);
+//        var textWidth = $('.info-text')[0].clientWidth;
+//        $('.section-detail').find('img').css({'width':textWidth+'px'})
+    };
+</script>
+</html>
