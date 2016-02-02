@@ -1,9 +1,10 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <title>兔子骑行用户协议</title>
-        <style>body{font-family:"微软雅黑",Arial,Helvetica;font-size:12px;text-align:center;background:#FFF;color:#333;}</style>
+        <style>body{font-family:"微软雅黑",Arial,Helvetica;font-size:0.6rem;text-align:center;background:#FFF;color:#333;}</style>
     </head>
     
     <body>
@@ -43,4 +44,21 @@
         <p align="left"><span lang="EN-US" xml:lang="EN-US">1. </span>根据互联网的发展和有关法律、法规及规范性文件的变化，或者因业务发展需要，兔子骑行有权对本协议的条款作出修改或变更，一旦本协议的内容发生变动，兔子骑行将会直接在网站上公布修改之后的协议内容，该公布行为视为兔子骑行已经通知用户修改内容。兔子骑行也可采用电子邮件等传送方式，提示用户协议条款的修改、服务变更、或其它重要事项。</p>
         <p align="left"><span lang="EN-US" xml:lang="EN-US">2. </span>如果不同意兔子骑行对本协议相关条款所做的修改，用户有权并应当停止使用兔子骑行。如果用户继续使用兔子骑行，则视为用户接受兔子骑行对本协议相关条款所做的修改。</p>
     </body>
+    <script type="text/javascript">
+        window.onload = function(){
+            var html=document.getElementsByTagName("html")[0];
+            var wrap=document.getElementById("wrap");
+            var width=html.clientWidth;
+            var height =html.clientHeight;
+//            alert(width);
+            console.log(height);
+            var header = document.getElementById("header");
+            header.style.height=height+'px';
+            var percent=width/750.0;
+            html.style.fontSize=40*percent+"px";
+//            alert(wrap.clientWidth);
+//        var textWidth = $('.info-text')[0].clientWidth;
+//        $('.section-detail').find('img').css({'width':textWidth+'px'})
+        };
+    </script>
 </html>
