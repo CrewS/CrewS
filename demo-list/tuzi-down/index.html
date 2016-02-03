@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="css/style.css">
     <title>兔子骑行APP下载页面</title>
 </head>
@@ -70,6 +71,9 @@
             </div>
         </div>
         <div class="footer">
+            <a href="javascript:;" class="down-btn">
+                立即体验
+            </a>
             <div class="help-tip">
                 <a href="RabbitUserProtocol.html">隐私条款</a>
                 <span>/</span>
@@ -91,7 +95,7 @@
         var width=html.clientWidth;
         var height =html.clientHeight;
 //            alert(width);
-        console.log(height);
+//        console.log(height);
         var header = document.getElementById("header");
         header.style.height=height+'px';
         var percent=width/750.0;
