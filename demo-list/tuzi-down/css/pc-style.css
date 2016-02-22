@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'NotoSansHans-Thin', 'Heiti SC', 'Microsoft Yahei', simsun, sans-serif;
+}
+.wrap{
+    background: #3c3c3c;
+}
+    .header{
+        height: 870px;
+        background:url("../images/header-bg.jpg") no-repeat;
+        background-position: center center;
+    }
+        .logo{
+            height: 42px;
+            width: 207px;
+            background: url("../images/app-logo.png") no-repeat;
+            background-size: 100%;
+            float: left;
+            margin-top: 28px;
+        }
+        .nav{
+            float: right;
+            padding-top: 28px;
+            height: 32px;
+        }
+        .nav li{
+            float: left;
+            list-style: none;
+        }
+        .nav li a{
+            display: block;
+            width: 90px;
+            height: 32px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            text-decoration: none;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .slogan{
+            top: 240px;
+            position: absolute;
+        }
+        .slogan .slogan-title{
+            color: #fff;
+            font-size: 100px;
+            font-weight: 100;
+        }
+        .slogan .en{
+            font-size: 90px;
+            line-height: 80px;
+        }
+        .intro{
+            font-size: 28px;
+            color: #fff;
+        }
+        .down-block{
+            padding-top: 40px;
+            height: 196px;
+        }
+        .rq-code{
+            height: 196px;
+            width: 196px;
+            float: left;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            background: url("../images/rq-code.jpg") no-repeat;
+            background-position: 14px 14px;
+        }
+        .down-icon{
+            float: left;
+            padding-top: 43px;
+            margin-left: 37px;
+        }
+        .down-icon a{
+            display: block;
+            width: 80px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            font-size: 26px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+    .container-inner{
+        width: 1120px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .slice-list{
+        background: #fff;
+        padding-top: 130px;
+        max-width: 1760px;
+        margin: 0 auto;
+        padding-bottom: 130px;
+        margin-bottom: -130px;
+    }
+    .slice-list li{
+        height: 600px;
+        margin-bottom: 130px;
+        background-position: center center;
+        position: relative;
+        list-style: none;
+
+    }
+    .slice-block-1{
+        background: url("../images/slice-block-1.png") no-repeat;
+    }
+    .slice-block-2{
+        background: url("../images/slice-block-2.png") no-repeat;
+    }
+    .slice-block-3{
+        background: url("../images/slice-block-3.png") no-repeat;
+    }
+    .slice-block-4{
+        background: url("../images/slice-block-4.png") no-repeat;
+    }
+        .feature-wording{
+            position: absolute;
+            top: 190px;
+            width: 360px;
+            height: 170px;
+        }
+            .feature-wording h1{
+                color: #474747;
+                font-size: 26px;
+            }
+            .feature-wording p{
+                color: #5e5e5e;
+                font-size: 20px;
+                margin-top: 45px;
+                line-height: 36px;
+            }
+
+
+
+.right{
+        right: 0;
+    }
+    .left{
+        left: 0;
+    }
+    .footer{
+        height: 90px;
+        max-width: 1760px;
+        background: #000;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    .footer{
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+    }
+    .footer .help-tip{
+        height: 40px;
+        color: #ea2c49;
+    }
+    .footer .help-tip a{
+        color: #ea2c49;
+        text-decoration: none;
+        line-height: 30px;
+    }
+    .footer .help-tip span{
+        margin: 0 20px;
+    }

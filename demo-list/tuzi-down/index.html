@@ -11,13 +11,17 @@
     <div class="wrap">
         <div id="header" class="header">
                 <div class="header-content">
+                    <img src="images/app-logo.png" class="logo">
                     <p class="big-text">为骑行而生</p>
                     <p class="mid-text">JUST RIDE</p>
-                    <p class="s-text">兔子是一款功能强大的骑行工具，</p>
-                    <p class="s-text">让你的每一次骑行变得更有意义，，</p>
-                    <p class="s-text">更加快乐，</p>
+                    <p class="s-text">兔子是一款功能强大的骑行工具</p>
+                    <p class="s-text">让你的每一次骑行变得更有意义，</p>
+                    <p class="s-text">更加快乐</p>
                 </div>
-                <a href="javascript:;" class="down-btn">立即体验</a>
+                <a href="javascript:showMask();" class="down-btn">立即体验</a>
+            <div id="mask" class="mask-bg">
+
+            </div>
         </div>
         <div class="slice">
             <div class="text-content">
@@ -104,5 +108,9 @@
 //        var textWidth = $('.info-text')[0].clientWidth;
 //        $('.section-detail').find('img').css({'width':textWidth+'px'})
     };
+    function showMask(){
+        var mask = document.getElementById('mask');
+        mask.style.display='block';
+    }
 </script>
 </html>
