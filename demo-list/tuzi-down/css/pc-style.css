@@ -5,6 +5,10 @@
 body{
     font-family: 'NotoSansHans-Thin', 'Heiti SC', 'Microsoft Yahei', simsun, sans-serif;
 }
+body{
+    /*transform: scale(2);*/
+    /*zoom: 2;*/
+}
 .wrap{
     background: #3c3c3c;
 }
