@@ -17,6 +17,7 @@
     <a v-link="'user'" class="btn">A => B</a> 
     <h2 class="red" @click="getData">{{msg}}</h2>
     <cat :title="title"></cat>
+    <input type="text">
     <li v-for="item in list " track-by="$index">
       {{item}}
     </li>
@@ -72,6 +73,7 @@ export default {
   route: {
     data(){
       console.log(this.list);
+      this.list=[];
       // console.log('data');
       // $(window).on('scroll', () => {
       //     this.getData();

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>美骑送你500G流量，先到先得，最高抢1G - 美骑网|Biketo.com</title>
+	<link href="./css/newyear.css" rel="stylesheet" type="text/css">
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	<script src="./js/jquery.easing.min.js"></script>
+	<script src="./js/jQueryRotate.2.2.js"></script>
+</head>
+<body class="activity-lottery-winning">
+	<div class="main">
+			<!--<a href="" class="share"></a>
+			<div class="share2"></div>-->
+		<div id="outercont">
+			<div id="outer-cont">
+				<div id="outer" ><img src="./img/lottery/activity-lottery5-23.png"></div>
+			</div>
+			<div id="inner-cont">
+				<div id="inner"><img src="./img/lottery/activity-lottery-05.png"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div id="check-my">
+				查看我的奖品
+			</div>
+			<div class="message-box">
+				<P class="me-top">奖项说明</p>
+				<p class="prize-rank"><span>一等奖:</span> 三网通1G 流量</p>
+				<p class="prize-rank"><span>二等奖:</span> 三网通500M 流量</p>
+				<p class="prize-rank"><span>三等奖:</span> 三网通100M 流量</p>
+				<br>
+				<p class="me-top">活动规则</p>
+				<p>1.美骑会员每天拥有三次抽奖机会，</P>
+				<p>每个手机号码只能参加一次。</p>
+				<p>2.验证手机号码后，流量奖直接充值到手机</p>
+				<p>（月末两天抽到流量，将在下月充值）</p>
+				<p>到手机，请留意运营商短信通知。</p>
+				<P>3.如遇到抽奖问题，请在美骑App里面反馈</p>
+				<p>并留下联系方式，我们将第一时间处理。</p>
+				
+			</div>
+		</div>
+		<div class="foot-bg"></div>
+		<div id="shadow">
+			<div id="my-prize" class="shadow-box">
+				<div class="response-text">
+					<?php if(!empty($data)){ ?>
+						<p>您获得</p>
+						<?php foreach($data as $val){ ?>
+							<p><?=$val['praisename']?> : <?=$val['prizecontent']?></p>
+						<?php } ?>
+					<?php }else{ ?>
+						<p>您暂时还没有</p>
+						<p>获得奖品</p>
+					<?php } ?>
+				</div>
+				<div class="btn-confirm">确定</div>
+			</div>
+			<div id="no-time" class="shadow-box">
+				<div class="response-text">
+					<p>您今天抽奖机会已用完啦！</p>
+					<p>请明天再来吧!</p>
+				</div>
+				<div class="btn-confirm">好的</div>
+			</div>
+			<div id="xiexie" class="shadow-box ">
+				<div class="response-xiexie">
+				</div>
+				<div class="btn-confirm">确定</div>
+			</div>
+			<div id="get-prize" class="shadow-box">
+				<div class="response-prize">
+					<p id="prize-name">一等奖 </p>
+				</div>
+				<div class="btn-get-prize">立即领取</div>
+			</div>
+			<div id="response-box" class="shadow-box">
+				<div class="response-text">
+					<p>您今天抽奖机会已用完啦！</p>
+				</div>
+				<div class="btn-confirm">确定</div>
+			</div>
+			<div id="contact" class="shadow-box">
+				<div class="text-title">
+					<p>留下你的联系方式<br>客服将会与你联系</p>
+				</div>
+				<div class="contact-group">
+					<form id="contact-form" action="app.php?m=welfare&a=turntable&sign=<?=$sign?>" method="post">
+						<input class="input-box" name="name" value="输入姓名" type="text" onfocus="this.value=='输入姓名'?this.value='':1" onblur="this.value?1:this.value='输入姓名'">
+						<br>
+						<input class="input-box" name="phone" value="输入手机号" type="text" onfocus="this.value=='输入手机号'?this.value='':1" onblur="this.value?1:this.value='输入手机号'">
+						<br>
+						<input class="input-box" name="address" value="输入收货地址" type="text" onfocus="this.value=='输入收货地址'?this.value='':1" onblur="this.value?1:this.value='输入收货地址'">
+					</form>
+				</div>
+				<div class="info-confirm ">确定</div>
+			</div>
+			<div id="activity-ending" class="shadow-box">
+				<div class="ending-text">
+					<p>亲爱的车友：</p>
+					<br>
+					<p>这一期的抽奖活动已经结束拉，后续有更好玩的活动等着您参与，祝您生活愉快！</p>
+					<br>
+					<p style="text-align:right">美骑君（上）</p>
+				</div>
+			
+				<div class="btn-confirm">确定</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(function () {
+		var html=document.getElementsByTagName("html")[0];
+            var wrap=document.getElementById("wrap");
+            var width=html.clientWidth;
+            var percent=width/640.0;
+            html.style.fontSize=40*percent+"px";		
+		
+		//滚动效果
+		function autoText(){
+			var h = $(".auto-box-container").height();
+			var top = $(".auto-box-container")[0].offsetTop;
+			if(h <= Math.abs(top)){
+				$(".auto-box-container").css({"top":"50px"});
+				return;
+			}
+			$(".auto-box-container").css({"top":(top-10)+"px"});
+		}
+		//setInterval(autoText,100); 
+		$("#check-my").click(function(){
+			// if(!<?=$islogin?>){
+			// 	response("请登录后再进行抽奖");
+			// 	return;
+			// }
+			// window.location.href='/app.php?m=welfare&a=flow';
+			// showBox();
+			// $("#my-prize").addClass("active");
+		})
+		$(".btn-confirm").click(function(){
+			$("#shadow").hide();
+			$("#shadow div").removeClass("active")
+			$(".main").css("height","50rem");
+			// <?php if(!$islogin){ ?>
+			// 	window.location.href="<?=BIKETO_UCENTER_LOGIN?>";return;
+			// <?php } ?>	
+			
+		})
+		//立即领取后跳转另外新页面填写信息
+		
+		$(".btn-get-prize").click(function(){
+			
+			window.location.href='/app.php?m=welfare&a=flow';
+			//$("#shadow div").removeClass("active");	
+			//$("#contact").addClass("active");
+		})
+		$(".info-confirm").click(function(){
+			var inputDom = $(".contact-group").find("input");
+			if(inputDom[0].value!="输入姓名"&&inputDom[1].value!="输入手机号"&&inputDom[2].value!="输入收货地址"){
+				$("#shadow").hide();
+				$(".main").css("height","50rem");
+				$("#contact-form").submit();
+			}
+			return;
+		})
+		
+		function showBox(){
+			$("#shadow").show();
+			var h = document.documentElement.clientHeight;
+			$(".main").css("height",h+"px");
+		}
+
+		var totalDeg = 360 * 3 + 0;
+		var steps = [];
+		var lostDeg = [310,320];
+		var prize, prizecontent;
+		var count = 0 //<?=($count?$count:0)?>;
+		var outter, inner, timer, running = false;
+
+		function start(deg){
+			running = true;
+			deg = deg || lostDeg[parseInt(lostDeg.length * Math.random())];
+			$("#outer").stopRotate();
+			$("#outer").rotate({
+				angle:0, 
+				duration: 6000, 
+				animateTo: deg+2160,
+				//回调函数
+				callback:function(){
+					running = false;
+					setTimeout(function () {
+						if (prize != null && prize != 4 && prize != 0) {
+							var type = "";
+							if (prize == 1) {
+								type = "一等奖"
+							} else if (prize == 2) {
+								type = "二等奖"
+							} else if (prize == 3) {
+								type = "三等奖"
+							}
+							setTimeout(function(){
+								showBox();
+								$("#prize-name")[0].innerHTML = type;
+								$("#get-prize").addClass("active");
+							},100)
+							var textDom=$("#my-prize .response-text p");
+							if(textDom[0].innerHTML!="您获得"){
+								textDom[0].innerHTML="您获得";
+								textDom[1].innerHTML=type+" : "+prizecontent;
+							}else{
+								var p=document.createElement("p");
+								p.innerHTML=type+" : "+prizecontent;
+								$("#my-prize .response-text").append(p);
+							}
+						} else {
+							setTimeout(function(){
+								showBox();
+								$("#xiexie").addClass("active");
+							}, 100)
+						}
+					}, 100)
+				}
+			});			
+		}
+			
+		function response(message){//根据返回信息 改变提示
+			$("#response-box .response-text p")[0].innerHTML=message;
+			showBox();
+			$("#response-box").addClass("active");
+		}
+		window.start = start;
+		outter = document.getElementById('outer');
+		inner = document.getElementById('inner');
+		
+		$("#inner").rotate({
+			bind: {
+				click: function(){
+					if(false){
+						response("请登录后再进行抽奖");
+						return;
+					}
+					
+					if (running) return;
+					if (count >= 3) {
+						
+						showBox();
+						$("#no-time").addClass("active");
+						return
+					}
+					$.ajax({
+						type: 'POST',
+						url: "app.php?m=welfare&a=run&sign=<?=$sign?>",
+						dataType: "json",
+						success: function (data) {
+							if (data.state == "start") {
+								response(data.message)
+								return;
+							}
+							if (data.state == "end") {
+								showBox();
+								$("#activity-ending").addClass("active");
+								return;
+							}
+							if (data.state == '1') {
+								prize = data.prizetype;
+								prizecontent = data.prizecontent;
+								start(parseInt(data.angle));
+							} 
+							else if (data.state == '0'){
+								response(data.message)
+								return;
+							}
+							else {
+								prize = null;
+								start();
+								running = false;
+							}
+							count++
+						},
+						error: function () {
+							prize = null;
+							start();
+							running = false;
+							count++;
+							
+						},
+						timeout: 4000
+					})
+				}				
+			}
+		});
+		
+	});
+	</script>
+	<div style="display:none;">
+	<script>
+		// var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		// document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fdafa5b6f1421186b22c564180031bfd2' type='text/javascript'%3E%3C/script%3E"));
+		// document.write(unescape("%3Cscript src='http://s122.cnzz.com/stat.php?id=547230&amp;web_id=547230&amp;show=pic' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	</div>
+	</body>
+</html>

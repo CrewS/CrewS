@@ -6,13 +6,11 @@
 var Vue = require('vue');
 var App = require('./app.vue');
 var Router = require('vue-router');
-var CompA =require('./comp/a.vue')
-var CompB =require('./comp/b.vue')
-
-// import CompA from './comp/a.vue'
-// import CompB from './comp/b.vue'
-// import Counter from './comp/counter.vue'
-
+var CompA =require('./comp/a.vue');
+var CompB =require('./comp/b.vue');
+var Index = require('./views/index.vue')
+var Home = require('./views/home.vue')
+var Center = require('./views/center.vue')
 Vue.use(Router);
 
 // new Vue({
@@ -34,11 +32,15 @@ var router = new Router({
 router.map({
 	'/index':{
 		name:'index',
-		component:CompA
+		component:Index
 	},
-	'/user':{
-		name:'user',
-		component:CompB
+	'/home':{
+		name:'home',
+		component:Home
+	},
+	'center':{
+		name:'center',
+		component:Center
 	}
 })
 router.start(App, '#app')
