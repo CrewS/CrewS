@@ -12,7 +12,7 @@
     <div class="screen">
         <!-- Content goes here -->
 
-        <iframe src="dist/static/index.html" width="320" height="569" frameborder="no " scrolling="no"></iframe>
+        <iframe id="if1" src="dist/static/index.html" width="320" height="569" frameborder="no " scrolling="no"></iframe>
     </div>
     <div class="home">
         

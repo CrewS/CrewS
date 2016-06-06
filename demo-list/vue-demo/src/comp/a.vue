@@ -14,10 +14,10 @@
 
 <template>
   <div class="container">
-    <a v-link="'user'" class="btn">A => B</a> 
+    <a v-link="'b'" class="btn">A => B</a> 
     <h2 class="red" @click="getData">{{msg}}</h2>
     <cat :title="title"></cat>
-    <input type="text">
+    <!-- <input type="text"> -->
     <li v-for="item in list " track-by="$index">
       {{item}}
     </li>
@@ -66,19 +66,29 @@ export default {
         // tmp.concat(data);
         // this.list=tmp;
         this.list = this.list.concat(data);
-        console.log(this.list);
+        // console.log(this.list);
       // this.list = [1,2,3,4,5,6,7,8,9,10,1,1,1,1,1,1,1,1,11,1,1,1,11,1,1,1,1,1,1,1,1];
     }
   },
   route: {
+    // canReuse:false,
     data(){
-      console.log(this.list);
-      this.list=[];
+      // console.log(this.list);
+      // this.list=[];
       // console.log('data');
       // $(window).on('scroll', () => {
       //     this.getData();
       //     console.log('data');
       // });
+    },
+    canReuse:function(transition){
+      console.log('hook-example canReuse!')
+      // console.log(transition,'545454');
+      return false;
+    },
+    canActivate:function(transition){
+      console.log('hook-example canActivate!')
+      transition.next()
     },
     activate: function (transition) {
       console.log('hook-example activated!')
@@ -86,6 +96,9 @@ export default {
     },
     deactivate: function (transition) {
       console.log('hook-example deactivated!')
+      transition.next()
+    },
+    canDeactivate:function(transition){
       transition.next()
     }
   }

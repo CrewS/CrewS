@@ -14,7 +14,7 @@ h2 {
 
 <template>
   <div class="container">
-  	<a v-link="'index'" class="btn">B => A</a> 
+  	<a v-link="'a'" class="btn">B => A</a> 
     <h2>Hello from Component B!</h2>
     <cat :title="title"></cat>
   </div>

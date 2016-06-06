@@ -41,6 +41,14 @@ router.map({
 	'center':{
 		name:'center',
 		component:Center
+	},
+	'a':{
+		name:'a',
+		component:CompA
+	},
+	'b':{
+		name:'a',
+		component:CompB
 	}
 })
 router.start(App, '#app')

@@ -1,11 +1,15 @@
 <template>
 	<div>{{title}}</div>
+	<input type="text">
 </template>
 
 
 
 <script>
 	export default{
-		props:['title']
+		props:['title'],
+		route: {
+			// canReuse:false
+		}
 	}
 </script>
