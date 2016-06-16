@@ -1,4 +1,4 @@
-<style scoped>
+<style>
 .container {
   border: 1px solid #f00;
 }
@@ -20,17 +20,18 @@ h2 {
   </div>
 </template>
 <script>
+// require('../assets/css/b.css');
 import cat from './c.vue'
 
 export default {
-	name:'user',
+	name: 'user',
 	data(){
-		return{
-			title:'i am b to c'
+		return {
+			title: 'i am b to c'
 		}
 	},
 	components: {
-    	cat
-  	}
+			cat
+    }
 }
 </script>

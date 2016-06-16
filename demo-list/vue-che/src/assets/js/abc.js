@@ -1,0 +1,2 @@
+//	abc
+console.log('abc')
