@@ -42,17 +42,23 @@
 </template>
 
 <script>
+// itab组件说明
+// 需要传递参数: show
+// 自身显隐控制: loading
+// 方法: getData是派发到父组件
+// 事件: 监听closeTab广播事件
 export default{
 	props: ['show'],
 	data(){
 		return {
-			loading: true
+			loading: false
 		}
 	},
 	methods: {
 		getData: function (){
 			this.show = false
-			this.$dispatch('tab-more')
+			this.loading = true
+			this.$dispatch('tabMore')
 		}
 	},
 	events: {

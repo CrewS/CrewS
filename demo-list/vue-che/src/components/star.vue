@@ -11,6 +11,18 @@
 		overflow: hidden;
 	}
 }
+.big-star{
+	// margin-top: 0.249597rem;
+	height: 0.338164rem;
+	line-height: 0.249597rem;
+	span{
+		display: inline-block;
+		margin-right: 0.096618rem;
+		width: 0.338164rem;
+		height: 0.338164rem;
+		overflow: hidden;
+	}
+}
 .star-fail{
 	background: url('../assets/images/icon/icon_home_littlestars_gray@3x.png') no-repeat;
 	background-size: 100%;
@@ -27,7 +39,7 @@ span.star-on{
 </style>
 
 <template>
-	<div class="star">
+	<div :class="{'star': this.star.type == undefined, 'big-star': this.star.type!= undefined}">
 		<span v-for="n in 5" :class="{'star-fail': true,'star-on': n < star.star}"></span>
 	    <div class="last-time">{{star.score}}</div>
 	</div>
@@ -35,10 +47,8 @@ span.star-on{
 
 <script>
 export default{
-	props: ['star'],
-	ready(){
-		// console.log(this.star)
-	}
+	//	star:{'star', 'score'}
+	props: ['star']
 }
 
 </script>

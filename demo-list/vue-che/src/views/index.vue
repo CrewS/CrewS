@@ -57,11 +57,12 @@
 
 <template>
 	<iheader></iheader>
-	<div class="content-wrap content-padding">
+	<isearch :show-search-block="showSerchBlock"></isearch>
+	<div class="content-wrap content-padding">	
 		<div class="index-nav">
 	        <a v-link="{name: 'index'}" class="menu che-list active">列表</a>
-	        <a href="#" class="menu">地图</a>
-	        <a href="javascript:show_search();" class="ui-icon search-icon"></a>
+	        <a v-link="{name: 'map'}" class="menu">地图</a>
+	        <a href="javascript:;" @click="tabSearch" class="ui-icon search-icon"></a>
     	</div>
 		<div class="index-banner mui-slider">
 			<div class="mui-slider-group mui-slider-loop">
@@ -89,7 +90,7 @@
                 <div class="mui-indicator"></div>
             </div>
         </div>
-		<station></station>
+		<istation :list="list" :itab-show.sync="show"></istation>
 	</div>
 	<imask :mask.sync="mask"></imask>
 </template>
@@ -98,18 +99,22 @@
 /*global mui:true*/
 import '../vendors/css/mui.css'
 
-import iheader from '../components/index-header.vue'
-import station from '../components/station-list.vue'
+import iheader from '../components/header-index.vue'
+import istation from '../components/list-station.vue'
 import imask from '../components/mask-bg.vue'
-
+import isearch from '../components/search-history.vue'
 export default{
 	name: 'index',
 	components: {
-		iheader, station, imask
+		iheader, istation, imask, isearch
 	},
 	data(){
 		return {
-			mask: false
+			params: {'city_id': 42, 'lat': 23.127995, 'lon': 113.372071, 'start': 0},
+			mask: false,
+			showSerchBlock: false,
+			list: [],
+			show: false
 		}
 	},
 	ready() {
@@ -118,6 +123,48 @@ export default{
 		gallery.slider({
 			interval: 5000//	自动轮播周期，若为0则不自动播放，默认为0；
 		})
+		this.getData()
+	},
+	attached(){
+		this.mask = false
+	},
+	methods: {
+		getData: function (){
+			var params = this.params
+			this.$http.get('/app/che', null, {'params': params}).then((response) => {
+				var data = response.data.data
+				this.list = this.list.concat(data.list)
+				this.params.start = data.index
+				this.show = true
+				if (data.is_finish === '1'){
+					this.show = false
+					this.$broadcast('closeTab')
+				}
+			}, (response) => {
+			})
+		},
+		tabSearch: function(){
+			this.$broadcast('tabSearch')
+		}
+	},
+	events: {
+		//	遮罩事件
+		'toggleMask': function(){
+			this.mask = !this.mask
+		},
+		//	城市选择事件
+		'selectCity': function(cityID){
+			//	this.$broadcast('selectCity', cityID)
+			//	初始化params
+			this.params.city_id = cityID
+			this.list = []
+			this.params.start = 0
+			this.getData()
+		},
+		'tabMore': function (){
+			// this.show = false
+			this.getData()
+		}
 	}
 }
 

@@ -115,7 +115,7 @@
 <template>
 <ul class="shop-list">
 	<!-- <h1 @click="btn">123</h1> -->
-	<li v-for="item of list" v-link="{name: 'a', params: {id: item.station_id}}" >
+	<li v-for="item of list" v-link="{name: 'view', params: {id: item.station_id}}" >
 	    <img :src="item.mini_photo" alt="item.photo" class="shop-img">
 	    <div class="shop-info">
 	        <h2 class="shop-name">{{item.station_name}}</h2>
@@ -126,7 +126,7 @@
 	    </div>
 	</li>
 </ul>
-<itab :show.sync="show"></itab>
+<itab :show.sync="itabShow"></itab>
 	
 </template>
 
@@ -134,54 +134,13 @@
 import itab from './tab-more.vue'
 import istar from './star.vue'
 export default{
-	data(){
-		return {
-			list: [],
-			city_id: 42,
-			coordinate: {'lat': 23.127995, 'lon': 113.372071},
-			index: 0,
-			show: false
-		}
-	},
-	ready(){
-		this.getData()
-	},
-	methods: {
-		getData: function (){
-			// var param = $.param({'city_id': this.city_id, 'lat': this.lat, 'lon': this.lon, 'start': this.index})
-			// let _this = this//	回调函数内this指针不是指向Vue
-			console.log(this.index)
-			let params = {'city_id': this.city_id, 'lat': this.coordinate.lat, 'lon': this.coordinate.lon, 'start': this.index}
-			console.log(params)
-			this.$http({url: '/app/che?', method: 'GET', param: params, headers: {'Cache-Control': 'no-cache'}}).then((response) => {
-				var data = response.data.data
-				this.list = this.list.concat(data.list)
-				this.index = data.index
-				this.show = true
-				if (data.is_finish === '1'){
-					this.show = false
-					this.$broadcast('closeTab')
-				}
-				console.log(response.data)
-			}, (response) => {
-			})
-		},
-		btn: function (){
-			this.getData()
-
-			// console.log(this.list, this.index)
-		}
-	},
-	events: {
-		//	加载更多的触发器
-		'tab-more': function (){
-			// this.show = false
-			this.getData()
-		}
-	},
+	props: ['list', 'itab-show'],
 	components: {
 		itab, istar
+	},
+	data(){
+		return {
+		}
 	}
 }
-
 </script>

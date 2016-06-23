@@ -5298,3 +5298,37 @@ select:focus
 .mui-popup-out{
     z-index: -1;
 }
+
+.normal-fs{
+    font-size: 16px;
+}
+[data-dpr="2"] .normal-fs{
+    font-size: 30px;
+}
+[data-dpr="3"] .normal-fs{
+    font-size: 48px;
+}
+.sm-fs{
+    font-size: 12px;
+}
+[data-dpr="2"] .sm-fs{
+    font-size: 24px;
+}
+[data-dpr="3"] .sm-fs{
+    // font-size: 42px;
+    font-size: 36px;
+}
+
+.big-fs{
+    font-size: 24px;
+}
+[data-dpr="2"]  .big-fs{
+    font-size: 48px;
+}
+[data-dpr="3"]  .big-fs{
+    font-size: 70px;
+}
+#allmap img {
+  width: 100%;
+  height: 100%;
+}
