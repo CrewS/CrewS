@@ -1,0 +1,16 @@
+1.home-page 排名信息不需要
+2.history-page
+3.share-page
+4.bet-page
+5.官庄选手下注页面
+6 选手开盘口下注页面 一个列表
+7 投注组件
+8 做庄page
+
+components:
+header.vue
+footer.vue
+rule.vue 弹出层
+list-rank.vue
+list-history.vue
+bet-option.vue
