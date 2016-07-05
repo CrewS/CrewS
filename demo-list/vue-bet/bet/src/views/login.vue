@@ -12,12 +12,32 @@
 export default{
 	data(){
 		return {
+			token: window.access_token,
+			domain: window.api_domain,
+			nickname: 'default',
+			mobile: 'default'
 		}
 	},
 	methods: {
+		getData: function(){
+			var url = this.domain + '/api/member/info'
+			var params = {
+				'token': this.token
+			}
+			this.$http.jsonp(url, params).then((response) => {
+				console.log(response.data.data)
+				this.data = response.data.data
+			}, (response) => {
+			})
+		},
 		login: function(){
-			var url = 'http://bet.biketo.com.cn/api/member/save-info?token=1dea089bc7928921e045c5e93_25'
-			this.$http.jsonp(url, {'nickname': 'aabbcc', 'mobile': '13580349964', 'jsonp': 'callback'}).then((response) => {
+			var url = this.domain + '/api/member/save-info'
+			var params = {
+				'token': this.token,
+				'nickname': this.nickname,
+				'mobile': this.mobile
+			}
+			this.$http.jsonp(url, params).then((response) => {
 				console.log(response.data)
 				this.data = response.data.data
 			}, (response) => {

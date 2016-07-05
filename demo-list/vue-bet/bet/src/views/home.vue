@@ -17,7 +17,16 @@ export default{
 	},
 	data(){
 		return {
-			data: []
+			data: [],
+			token: window.access_token,
+			domain: window.api_domain
+		}
+	},
+	vuex: {
+		getters: {
+			// user: function(state){
+			// 	console.log(state)
+			// }
 		}
 	},
 	ready(){
@@ -25,10 +34,17 @@ export default{
 	},
 	methods: {
 		getData: function(){
-			var url = 'http://bet.biketo.com.cn/api/member/info?token=1dea089bc7928921e045c5e93_25'
-			this.$http.jsonp(url, {'jsonp': 'callback'}).then((response) => {
-				console.log(response.data.data)
-				this.data = response.data.data
+			var url = this.domain + '/api/member/info'
+			var params = {
+				'token': this.token
+			}
+			this.$http.jsonp(url, params).then((response) => {
+				if (response.data.status !== '0'){
+					console.log(response.data)
+					this.data = response.data.data
+				} else if (response.data.status === '1000'){
+					console.log(response.data)
+				}
 			}, (response) => {
 			})
 		}

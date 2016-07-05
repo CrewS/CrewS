@@ -6,7 +6,9 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const state = {
-  user: false
+  user: true,
+  token: '1dea089bc7928921e045c5e93_25',
+  count: 1
 }
 
 const mutations = {

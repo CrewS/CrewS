@@ -12,12 +12,19 @@
 export default{
 	data(){
 		return {
+			token: window.access_token,
+			domain: window.api_domain
 		}
+	},
+	ready(){
 	},
 	methods: {
 		share: function(){
-			var url = 'http://bet.biketo.com.cn/api/member/share?token=1dea089bc7928921e045c5e93_25'
-			this.$http.jsonp(url, {'jsonp': 'callback'}).then((response) => {
+			var url = this.domain + '/api/member/share'
+			var params = {
+				'token': this.token
+			}
+			this.$http.jsonp(url, params).then((response) => {
 				console.log(response.data)
 				this.data = response.data.data
 			}, (response) => {

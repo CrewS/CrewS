@@ -4,6 +4,7 @@
 
 <template>
 <div>
+aaaaaabbbbbbbbbbcccccccccc
 </div>
 </template>
 
@@ -11,6 +12,13 @@
 export default{
 	data(){
 		return {
+		}
+	},
+	vuex: {
+		getters: {
+			// user: function(state){
+			// 	console.log(state)
+			// }
 		}
 	},
 	methods: {
