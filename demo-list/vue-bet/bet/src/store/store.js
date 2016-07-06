@@ -12,8 +12,13 @@ const state = {
 }
 
 const mutations = {
+	
 	LOGIN (state) {
-		state.true
+		state.token.true
+	},
+
+	ADD_COUNT(state){
+		state.count++
 	}
 }
 

@@ -24,7 +24,7 @@ export default{
 	},
 	vuex: {
 		getters: {
-			// user: function(state){
+			// token: function(state){
 			// 	console.log(state)
 			// }
 		}

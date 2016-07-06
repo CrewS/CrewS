@@ -4,7 +4,10 @@ var Vue = require('vue')
 var VueRouter = require('vue-router')
 var VueResource = require('vue-resource')
 var routerMap = require('./routes/routers')
-
+// var store = require('./store/store')
+import { sync } from 'vuex-router-sync'
+import store from './store/store'
+import 'assets/css/common.css'
 
 
 Vue.use(VueRouter)
@@ -20,7 +23,9 @@ var router = new VueRouter({
 })
 
 var app = Vue.extend({
+	store
 })
+sync(store, router)
 
 
 

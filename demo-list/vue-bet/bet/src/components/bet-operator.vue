@@ -30,10 +30,18 @@
   padding: 0 10px;
   // opacity: 0;
 }
+
+.shadow-transition{
+	transition: opacity .4s ease;
+	opacity: 1;
+}
+.shadow-enter, .shadow-leave{
+	opacity: 0;
+}
 </style>
 
 <template>
-<div class="page-shadow" v-show="show" @click="tap">
+<div id="page-shadow" class="page-shadow" v-show="show" @click="tap" transition="shadow">
 	<div class="operator" transition="expand" v-show="show">
 		赛段冠军 {{activeHandicap.player}} 赔率 {{activeHandicap.odds}}
 		可投金币 {{}}
@@ -77,12 +85,12 @@ export default{
 			})
 		},
 		tap: function(event){
-			var type = event.target.className
+			var type = event.target.id
 			if (type === 'page-shadow'){
 				this.show = false
-				console.log(event.target.className)
+				console.log(event.target.id)
 			} else {
-				console.log(event.target.className)
+				console.log(event.target.id)
 			}
 		}
 	}
