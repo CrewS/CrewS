@@ -2,13 +2,19 @@
 // import Store from '../store/store'
 module.exports = function(router){
     router.map({
+            '/index':{
+                name:'index',
+                component: function(resolve){
+                    // console.log(Store.state.user)
+                    require(['../views/index.vue'],resolve);
+                }
+            },
             '/home':{
                 name:'home',
                 component: function(resolve){
                     // console.log(Store.state.user)
                     require(['../views/home.vue'],resolve);
-                },
-                auth: 'user'
+                }
             },
             '/history':{
                 name:'history',
@@ -34,7 +40,7 @@ module.exports = function(router){
                     require(['../views/handicap.vue'],resolve);
                 }
             },
-            '/manipulation/:stage_id':{
+            '/manipulation':{
                 name:'manipulation',
                 component: function(resolve){
                     require(['../views/manipulation.vue'],resolve);

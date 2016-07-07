@@ -1,4 +1,12 @@
 <style lang="less" scoped>
+.page-wrap{
+	min-height: 100%;
+	width: 100%;
+	background: url('../assets/images/app-bg.jpg');
+	padding:0.32rem;
+	box-sizing: border-box;
+	padding-bottom: 2.666667rem;
+}
 .tz{
 	color: #de0010;
 	cursor: pointer;
@@ -6,21 +14,13 @@
 </style>
 
 <template>
-<div @click="getTop">
+<!-- <div @click="getTop">
 获取排名前60用户
 </div>
 <div @click="getOfficialHandicap">
 获取官方博彩盘
 </div>
-<div @click="tabView(true)">---------官方博彩-----------</div>
-<ul v-show="show">
-	<li v-for="item in data">
-		{{item.player}}
-		<span class="tz" @click="selectPlayer(item)">
-			投注
-		</span>
-	</li>
-</ul>
+
 
 
 <div @click="tabView(false)">---------庄家盘口-----------</div>
@@ -32,8 +32,18 @@
 			投注
 		</span>
 	</li>
+</ul> -->
+<div class="page-wrap">
+<div @click="tabView(true)">---------官方博彩-----------</div>
+<ul v-show="show">
+	<li v-for="item in data">
+		{{item.player}}
+		<span class="tz" @click="selectPlayer(item)">
+			投注
+		</span>
+	</li>
 </ul>
-
+</div>
 <ioperator :active-handicap="active_handicap" :show.sync="show_operator">
 </ioperator>
 
@@ -52,7 +62,7 @@ export default{
 			stage_id: '1',
 			data: [],
 			active_handicap: [],
-			show_operator: false,
+			show_operator: true,
 			show: true
 		}
 	},

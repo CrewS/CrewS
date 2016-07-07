@@ -7,7 +7,7 @@ var projectRoot = path.resolve(__dirname, '../')
 module.exports = {
   entry: {
     app: './src/main.js',
-    vendors: ['flexible']
+    vendors: ['flexible', '_prompt']
   },
   output: {
     path: config.build.assetsRoot,
@@ -21,9 +21,8 @@ module.exports = {
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
       'components': path.resolve(__dirname, '../src/components'),
-      'zepto':path.resolve(__dirname,'../src/vendors/js/zepto.js'),
       'flexible':path.resolve(__dirname,'../src/vendors/js/flexible.js'),
-      'mui': path.resolve(__dirname,'../src/vendors/js/mui.min.js')
+      '_prompt': path.resolve(__dirname,'../src/vendors/js/prompt.min.js')
     }
   },
   resolveLoader: {

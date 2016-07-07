@@ -3,6 +3,7 @@
 	height: 100%;
 	width: 100%;
 	background: url('../assets/images/app-bg.jpg');
+	overflow: hidden;
 }
 .app-logo{
 	width: 8.653333rem;
@@ -96,12 +97,12 @@
 		<div class="user-img">
 			<img src="../assets/images/noavatar_middle.gif">
 		</div>
-		<h1>欢迎！发呆的小子</h1>
+		<h1>欢迎！</h1>
 		<label>先给自己起一个看起来很好运的名字</label>
-		<input type="text" class="input-box" placeholder="请输入名字">
+		<input type="text" class="input-box" placeholder="请输入名字" v-model="nickname">
 		<label>为了方便领取奖品，请留下正确的手机号码</label>
-		<input type="text" class="input-box" placeholder="请输入手机号码">
-		<button class="btn-submit">领取第一桶金</button>
+		<input type="text" class="input-box" placeholder="请输入手机号码" v-model="mobile">
+		<button class="btn-submit" @click="login()">领取第一桶金</button>
 		<div class="ricer">
 			<img src="../assets/images/ricer.png">
 		</div>
@@ -112,7 +113,9 @@
 </template>
 
 <script>
+/*global _Prompt:true*/
 import ifooter from '../components/footer.vue'
+
 export default{
 	components: {
 		ifooter
@@ -121,8 +124,13 @@ export default{
 		return {
 			token: window.access_token,
 			domain: window.api_domain,
-			nickname: 'default',
-			mobile: 'default'
+			nickname: '',
+			mobile: ''
+		}
+	},
+	route: {
+		activate(){
+			// this.getData()
 		}
 	},
 	methods: {
@@ -132,12 +140,18 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
-				this.data = response.data.data
+				console.log(response.data)
+				//	判断是否第一次登陆 通过能否获取info 返回值 如果为1000 则是第一次登陆 需要填写资料
+				if (response.data.status === 0){
+					this.$router.go('home')
+				}
 			}, (response) => {
 			})
 		},
 		login: function(){
+			if (!this.checkInput()){
+				return false
+			}
 			var url = this.domain + '/api/member/save-info'
 			var params = {
 				'token': this.token,
@@ -147,8 +161,24 @@ export default{
 			this.$http.jsonp(url, params).then((response) => {
 				console.log(response.data)
 				this.data = response.data.data
+				var oTest = new _Prompt(130, 60, 0.7, 1500, 'middle', response.data.msg)
+				oTest.start()
+				if (response.data.staus === '0'){
+					this.$router.go('home')
+				}
+				// this.$router.go('home')
 			}, (response) => {
 			})
+		},
+		checkInput: function(){
+			if (this.nickname === '' || this.mobile === ''){
+				console.log(22222)
+				var oTest = new _Prompt(130, 60, 0.7, 1500, 'middle', '名字或电话不能为空')
+				oTest.start()
+				return false
+			} else {
+				return true
+			}
 		}
 	}
 }

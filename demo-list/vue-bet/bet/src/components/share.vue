@@ -4,7 +4,6 @@
 
 <template>
 <div @click="share">
-1111111111
 </div>
 </template>
 

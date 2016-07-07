@@ -1,9 +1,153 @@
 <style lang="less" scoped>
+.page-wrap{
+	min-height: 100%;
+	width: 100%;
+	background: url('../assets/images/app-bg.jpg');
+	padding:0.32rem;
+	box-sizing: border-box;
+	padding-bottom: 2.666667rem;
+}
+.history-container{
+	width: 100%;
+	background: #fff;
+	min-height: 8.0rem;
+	border-radius:4px;
+	padding: 0 0.36rem;
+	box-sizing: border-box;
+	padding-bottom: 0.266667rem;
+	.user-info-header{
+		height: 2.386667rem; //179px
+		border-bottom: 1px solid #ffdc00;
+		padding:0.186667rem 0;//0.186667rem 
+		box-sizing: border-box;
+		.user-img{
+				height: 100%;
+				// height: 2.0rem;
+				// width: 2.533333rem;
+				box-sizing: border-box;
+				padding-top: 0.133333rem;
+				text-align: center;
+				font-size: 0.32rem;
+				float: left;
+			img{
+				height: 1.36rem;
+				width: 1.36rem;
+				border-radius: 100%;
+				display: block;
+				// margin: 0 auto;
+				margin-bottom: 0.133333rem;
+			}
+		}
+		.user-name{
+			height: 100%;
+			float: left;
+			padding-left: 0.266667rem;
+			line-height: 2.013333rem;//179-28
+			font-weight: bold; 
+		}
+		.rule-icon{
+			height: 1.36rem;
+			width: 1.36rem;
+			float: right;
+			margin-top: 0.133333rem;
+		}
+	}
+	.bet-history{
+		.section-title{
+			height: 0.866667rem;
+			text-indent: 1em;
+			line-height: 0.866667rem;
+			color: #434343;
+			font-size: 0.266667rem;
+		}
+	}
+}
+.bet-list{
+	li{
+		margin-bottom: 0.24rem;
+	}
+	.item-header{
+		height: 0.693333rem;
+		background: #ffdc00;
+		font-size: 0.266667rem;
+		line-height: 0.693333rem;
+		text-indent: 1em;
+		.item-type{
+			color: #7d7d7d;
+			text-indent: 1em;
+		}
+		.item-date{
+			float: right;
+			padding-right: 0.533333rem;
+		}
+	}
+}
+.bet-info{
+	height: 2.0rem;
+	background: #eeeeee;
+	padding: 0.266667rem;
+	box-sizing: border-box;
+	.player-info{
+		height: 1.466667rem;
+		width: 3.333333rem;
+		float: left;
+		.player-name{
+			font-size: 0.48rem;
+			font-weight: bold;
+			height: 0.48rem;
+			overflow: hidden;
+			line-height: 0.48rem;
+		}
+		.player-info-item{
+			padding-top: 0.066667rem;
+			.item-type{
+				color: #7d7d7d;
+			}
+			.is-win{
+				color: #ff6767;
+			}
+		}
+	}
+	.type-info{
+		width: 2.4rem;
+		height: 1.466667rem;
+		float: left;
+		text-align: center;
+		.item-type{
+			color: #7d7d7d;
+			padding-top: 0.133333rem;
+			display: block;
+			padding-bottom: 0.133333rem;
+		}
+		.beting-number{
+			font-size: 0.48rem;
+			font-weight: bold;
+		}
+	}
+	.result-info{
+		width: 2.3rem;
+		height: 1.466667rem;
+		float: left;
+		text-align: center;
+		.item-type{
+			color: #7d7d7d;
+			padding-top: 0.133333rem;
+			display: block;
+			padding-bottom: 0.133333rem;
+		}
+		.beting-number{
+			font-size: 0.48rem;
+			font-weight: bold;
+		}
+	}
+	.type-info, .result-info {
 
+	}
+}
 </style>
 
 <template>
-<div class="tab">
+<!-- <div class="tab">
 	<span @click="tabView(true)">博彩记录</span>
 	<span @click="tabView(false)">坐庄记录</span>
 </div>
@@ -20,11 +164,62 @@
 		投注时间:
 		{{item.create_at}}
 	</div>
+</div> -->
+<div class="page-wrap">
+	<div class="history-container">
+		<div class="user-info-header">
+			<div class="user-img">
+				<img src="../assets/images/noavatar_middle.gif">
+			</div>
+			<h1 class="user-name">发呆的小豆子</h1>
+			<img src="../assets/images/icon/rule-text.png" class="rule-icon">
+		</div>
+		<div class="bet-history">
+			<h1 class="section-title">投注记录</h1>
+			<ul class="bet-list">
+				<li v-for="i in 5">
+					<div class="item-header">
+						<span class="item-type">投注项目: </span>第三赛段冠军（Stage3-223.5km）
+						<span class="item-date">2016-7-16</span>
+					</div>
+					<div class="bet-info">
+						<div class="player-info">
+							<h1 class="player-name">
+								彼得-萨甘
+							</h1>
+							<div class="player-info-item">
+								<span class="item-type">赔率:</span> 3.75
+							</div>
+							<div class="player-info-item">
+								<span class="item-type">状态:</span> <span class="is-win">赢</span>
+							</div>
+						</div>
+						<div class="type-info">
+							<span class="item-type">投注:</span>
+							<span class="beting-number">1000</span>
+						</div>
+						<div class="result-info">
+							<span class="item-type">返奖:</span>
+							<span class="beting-number">1000</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>
+<ifooter></ifooter>
+
+
+
 </template>
 
 <script>
+import ifooter from '../components/footer.vue'
 export default{
+	components: {
+		ifooter
+	},
 	data(){
 		return {
 			betData: [],

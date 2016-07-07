@@ -22,7 +22,7 @@ export default{
 	},
 	ready(){
 		//	初始化赛段ID
-		this.stage_id = this.$route.params.stage_id
+		// this.stage_id = this.$route.params.stage_id
 		this.getCurrent()
 		console.log(1111)
 	},
