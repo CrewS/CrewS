@@ -13,23 +13,23 @@
 </template>
 
 <script>
-import {addCount} from '../store/action'
+// import {addCount} from '../store/action'
 export default{
 	data(){
 		return {
 		}
 	},
-	vuex: {
-		getters: {
-			// token: function(state){
-			// 	console.log(state)
-			// }
-			count: state => state.count
-		},
-		actions: {
-			addCount
-		}
-	},
+	// vuex: {
+	// 	getters: {
+	// 		// token: function(state){
+	// 		// 	console.log(state)
+	// 		// }
+	// 		count: state => state.count
+	// 	},
+	// 	actions: {
+	// 		addCount
+	// 	}
+	// },
 	methods: {
 	}
 }

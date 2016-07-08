@@ -173,13 +173,13 @@
 
 <template>
 <div id="page-shadow" class="page-shadow" v-show="show" @click="tap" transition="shadow">
-	<div class="operator" transition="expand" v-show="show">
+	<div class="operator" transition="expand" v-show="show" v-if="activeHandicap.length != 0">
 		<div class="op-header">
-			<span>菠菜投注单</span>
-			<!-- <span class="close-btn">X</span> -->
-			<span class="avl">可用金币: 1000</span>
+			<span v-if="type === 0">菠菜投注单</span>
+			<span v-else>庄家投注单</span>
+			<span class="avl">可用金币: {{account}}</span>
 		</div>
-		<div class="handicaper">
+		<div class="handicaper" v-if="type === 1">
 			<div class="handicaper-item">
 				庄家
 			</div>
@@ -187,50 +187,51 @@
 				<img src="../assets/images/noavatar_middle.gif">
 			</div>
 			<div class="user-name">
-				魔神赵日天
+				{{activeHandicap.bankerInfo.nickname}}
 			</div>
 			<div class="user-moneny">
-				可投金币数:360000
+				可投金币数:{{activeHandicap.available}}
 			</div>
 		</div>
 		<div class="bet-info">
 			<div class="match-info">
-				<h1 class="match-stage">第八赛段 瑞士站    赛段冠军</h1>
-				<h1 class="player-name">彼得-萨甘</h1>
+				<h1 class="match-stage">{{title}}    赛段冠军</h1>
+				<h1 class="player-name">{{activeHandicap.player}}</h1>
 				<div class="player-info-item">
-					<span class="item-type">赔率:</span> 3.75
+					<span class="item-type">赔率:</span> {{activeHandicap.odds}}
 				</div>
 			</div>
 			<div class="input-container">
-				<input type="text" placeholder="输入金币">
-				<h1 class="predit">预计还回: <span class="red">0</span></h1>
+				<input type="text" placeholder="输入金币" v-model="invent">
+				<h1 class="predit">预计还回: <span class="red">{{predit}}</span></h1>
 			</div>
 		</div>
 		<div class="submit-container">
-			<div class="btn-submit">
+			<div class="btn-submit" @click="betAdd">
 			提交
 			</div>
 		</div>
 	</div>
-	<!-- <div class="operator" transition="expand" v-show="show">
-		赛段冠军 {{activeHandicap.player}} 赔率 {{activeHandicap.odds}}
-		可投金币 {{}}
-		<input type="text" v-model="integral">
-		<h1 @click="betAdd">提交</h1>
-	</div> -->
 </div>
 
 </template>
 
 <script>
 export default{
-	props: ['activeHandicap', 'show'],
+	props: ['activeHandicap', 'show', 'type', 'title'],
 	data(){
 		return {
 			token: window.access_token,
 			domain: window.api_domain,
 			handicap_id: '1',
-			integral: '100'
+			integral: '100',
+			predit: 0,
+			invent: ''
+		}
+	},
+	vuex: {
+		getters: {
+			account: state => state.account
 		}
 	},
 	ready(){
@@ -261,6 +262,16 @@ export default{
 				console.log(event.target.id)
 			} else {
 				console.log(event.target.id)
+			}
+		}
+	},
+	computed: {
+		//	计算返回金币
+		'predit': function(){
+			if (this.invent === ''){
+				return 0
+			} else {
+				return this.activeHandicap.odds * this.invent
 			}
 		}
 	}

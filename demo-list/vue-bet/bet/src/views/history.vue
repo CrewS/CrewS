@@ -60,6 +60,23 @@
 			color: #434343;
 			font-size: 0.266667rem;
 		}
+		.tab-header{
+			height: 0.826667rem;
+			padding-bottom: 0.373333rem;
+			display: flex;
+			justify-content:space-between;
+			div{
+				height: 0.826667rem;
+				flex-grow:1;
+				text-align: center;
+				line-height: 0.826667rem;
+				background: #dcdcdc;
+				font-size: 0.4rem;
+			}
+			div.active{
+				background: #fff;
+			}
+		}
 	}
 }
 .bet-list{
@@ -147,24 +164,6 @@
 </style>
 
 <template>
-<!-- <div class="tab">
-	<span @click="tabView(true)">博彩记录</span>
-	<span @click="tabView(false)">坐庄记录</span>
-</div>
-<div v-show="show">
-	<div v-for="item in betData">
-		{{item.is_win_str}}
-		投注时间:
-		{{item.create_at}}
-	</div>
-</div>
-<div v-show="!show">
-	<div v-for="item in handicapData">
-		{{item.banker_win_str}}
-		投注时间:
-		{{item.create_at}}
-	</div>
-</div> -->
 <div class="page-wrap">
 	<div class="history-container">
 		<div class="user-info-header">
@@ -175,23 +174,56 @@
 			<img src="../assets/images/icon/rule-text.png" class="rule-icon">
 		</div>
 		<div class="bet-history">
-			<h1 class="section-title">投注记录</h1>
-			<ul class="bet-list">
-				<li v-for="i in 5">
+			<!-- <h1 class="section-title">投注记录</h1> -->
+			<div class="tab-header">
+				<div :class="{'active': show}" @click="tabView(true)">菠菜投注记录</div>
+				<div :class="{'active': !show}" @click="tabView(false)">庄家投注记录</div>
+			</div>
+			<ul class="bet-list" v-show="show">
+				<li v-for="item in betData">
 					<div class="item-header">
-						<span class="item-type">投注项目: </span>第三赛段冠军（Stage3-223.5km）
-						<span class="item-date">2016-7-16</span>
+						<span class="item-type">投注项目: </span>{{item.handicap.stage}}
+						<span class="item-date">{{item.create_at.split(' ')[0]}}</span>
 					</div>
 					<div class="bet-info">
 						<div class="player-info">
 							<h1 class="player-name">
-								彼得-萨甘
+								{{item.handicap.player}}
 							</h1>
 							<div class="player-info-item">
-								<span class="item-type">赔率:</span> 3.75
+								<span class="item-type">赔率:</span> {{item.handicap.odds}}
 							</div>
 							<div class="player-info-item">
-								<span class="item-type">状态:</span> <span class="is-win">赢</span>
+								<span class="item-type">状态:</span> <span class="is-win">{{item.is_win_str}}</span>
+							</div>
+						</div>
+						<div class="type-info">
+							<span class="item-type">投注:</span>
+							<span class="beting-number">{{item.integral}}</span>
+						</div>
+						<div class="result-info">
+							<span class="item-type">返奖:</span>
+							<span class="beting-number">1000</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="bet-list" v-show="!show">
+				<li v-for="item in handicapData">
+					<div class="item-header">
+						<span class="item-type">投注项目: </span>{{item.stage}}
+						<span class="item-date">{{item.create_at.split(' ')[0]}}</span>
+					</div>
+					<div class="bet-info">
+						<div class="player-info">
+							<h1 class="player-name">
+								{{item.player}}
+							</h1>
+							<div class="player-info-item">
+								<span class="item-type">赔率:</span> {{item.odds}}
+							</div>
+							<div class="player-info-item">
+								<span class="item-type">状态:</span> <span class="is-win">{{item.banker_win_str}}</span>
 							</div>
 						</div>
 						<div class="type-info">
@@ -224,14 +256,21 @@ export default{
 		return {
 			betData: [],
 			handicapData: [],
+			renderData: [],
 			token: window.access_token,
 			domain: window.api_domain,
 			show: true
 		}
 	},
 	ready(){
-		this.getBetData()
-		this.getHandicapData()
+		// this.getBetData()
+		// this.getHandicapData()
+	},
+	route: {
+		activate(){
+			this.getBetData()
+			this.getHandicapData()
+		}
 	},
 	methods: {
 		//	获取投注的历史战绩

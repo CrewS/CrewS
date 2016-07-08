@@ -239,9 +239,15 @@
 <script>
 import ishare from '../components/share.vue'
 import ifooter from '../components/footer.vue'
+import {setIntegral} from '../store/action.js'
 export default{
 	components: {
 		ishare, ifooter
+	},
+	vuex: {
+		actions: {
+			setIntegral
+		}
 	},
 	data(){
 		return {
@@ -252,8 +258,14 @@ export default{
 		}
 	},
 	ready(){
-		this.getData()
-		this.getTop()
+		// this.getData()
+		// this.getTop()
+	},
+	route: {
+		activate(){
+			this.getData()
+			this.getTop()
+		}
 	},
 	methods: {
 		getData: function(){
@@ -265,6 +277,7 @@ export default{
 				if (response.data.status !== '0'){
 					console.log(response.data)
 					this.data = response.data.data
+					this.setIntegral(this.data.integral)
 				} else if (response.data.status === '1000'){
 					console.log(response.data)
 				}

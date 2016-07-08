@@ -2,10 +2,40 @@
 .page-wrap{
 	height: 100%;
 	width: 100%;
-	background: url('../assets/images/index.jpg') no-repeat #ffdc00;;
+	background: url('../assets/images/index.jpg') no-repeat #ffdc00;
 	overflow: hidden;
 	background-position: center center;
 	background-size: 100%;
+	// display: table-cell;
+	// vertical-align: middle;
+	.lets-icon{
+		width: 3.826667rem;
+		height: 0.64rem;
+		background: url('../assets/images/icon/lets-icon.png') no-repeat;
+		background-size: 100%;
+		position: absolute;
+		bottom: 0.266667rem;
+		left: 50%;
+		margin-left: -1.913333rem;
+	}
+	.index-page{
+		// width: 10.0rem;
+		width: 100%;
+		height: 15.12rem;
+		// display: inline-block;
+		position: absolute;
+		top: 50%;
+		margin-top: -7.56rem;
+		.rule-text{
+			width: 1.36rem;
+			height: 1.36rem;
+			background: url('../assets/images/icon/index-rule-text.png') no-repeat;
+			background-size: 100%;
+			position: absolute;
+			right: 0.4rem;
+			top: 1.6rem;
+		}
+	}
 
 }
 // .index-page{
@@ -21,6 +51,9 @@
 <template>
 <div class="page-wrap">
 	<div class="index-page">
+		<div class="lets-icon" @click="letsGo"></div>
+		<div class="rule-text">
+		</div>
 	</div>
 </div>
 <!-- <div @click="letsGo">

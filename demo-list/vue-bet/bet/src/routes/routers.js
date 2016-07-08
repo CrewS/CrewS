@@ -45,12 +45,6 @@ module.exports = function(router){
                 component: function(resolve){
                     require(['../views/manipulation.vue'],resolve);
                 }
-            },
-            '/test':{
-                name:'test',
-                component: function(resolve){
-                    require(['../views/test.vue'],resolve);
-                }
             }
     })
     // router.beforeEach(({to, next}) => {manipulation
