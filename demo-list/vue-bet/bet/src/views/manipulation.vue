@@ -115,15 +115,12 @@
 		<div class="submit-btn" @click="userManipulation">提交</div>
 	</div>
 </div>
-<!-- <ifooter></ifooter> -->
-<!-- <div @click="userManipulation">
-我要做庄啦
-</div> -->
+
 </template>
 
 <script>
+/*global _Prompt:true*/
 import iheader from '../components/stage-header.vue'
-// import ifooter from '../components/footer.vue'
 export default{
 	components: {
 		iheader
@@ -181,6 +178,9 @@ export default{
 		},
 		//	用户坐庄
 		userManipulation: function(){
+			if (!this.checkOdds()){
+				return false
+			}
 			var url = this.domain + '/api/handicap/add'
 			var params = {
 				'token': this.token,
@@ -190,11 +190,22 @@ export default{
 			}
 			this.$http.jsonp(url, params).then((response) => {
 				console.log(response.data)
+				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', response.data.msg)
+				oTest.start()
 			}, (response) => {
 			})
 		},
 		select: function(index){
 			this.active = index
+		},
+		checkOdds: function(){
+			if (isNaN(this.odds)){
+				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '请输入数字')
+				oTest.start()
+				return false
+			} else {
+				return true
+			}
 		}
 	}
 }

@@ -6,8 +6,11 @@
     <title>bet</title>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
   </head>
+	<!--   <input type="hidden" name="platform_token" value="{$platform_token}" /> -->
   <body>
+  	<!-- <input type="hidden" value="{$platform_token}" id="access-token"> -->
   	<input type="hidden" value="1dea089bc7928921e045c5e93_25" id="access-token">
+  	
     <div id="app">
 		  <router-view v-ref:list keep-alive ></router-view>
     </div>

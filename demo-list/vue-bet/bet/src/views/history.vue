@@ -168,10 +168,15 @@
 	<div class="history-container">
 		<div class="user-info-header">
 			<div class="user-img">
-				<img src="../assets/images/noavatar_middle.gif">
+				<template v-if="headimgurl == ''">
+					<img src="../assets/images/noavatar_middle.gif">
+				</template>
+				<template v-else>
+					<img :src="headimgurl">
+				</template>
 			</div>
-			<h1 class="user-name">发呆的小豆子</h1>
-			<img src="../assets/images/icon/rule-text.png" class="rule-icon">
+			<h1 class="user-name">{{nickname}}</h1>
+			<img src="../assets/images/icon/rule-text.png" class="rule-icon" v-link="{name:'rule'}">
 		</div>
 		<div class="bet-history">
 			<!-- <h1 class="section-title">投注记录</h1> -->
@@ -203,7 +208,14 @@
 						</div>
 						<div class="result-info">
 							<span class="item-type">返奖:</span>
-							<span class="beting-number">1000</span>
+							<span class="beting-number">
+								<template v-if="item.is_win == 1">
+									{{item.integral * item.handicap.odds}}
+								</template>
+								<template v-else>
+									0
+								</template>
+							</span>
 						</div>
 					</div>
 				</li>
@@ -227,12 +239,25 @@
 							</div>
 						</div>
 						<div class="type-info">
-							<span class="item-type">投注:</span>
-							<span class="beting-number">1000</span>
+							<span class="item-type">坐庄:</span>
+							<span class="beting-number">{{item.investment}}</span>
 						</div>
 						<div class="result-info">
 							<span class="item-type">返奖:</span>
-							<span class="beting-number">1000</span>
+							<span class="beting-number">
+								<template v-if="item.banker_win == 1">
+									{{item.investment + item.bet_amount}}
+								</template>
+								<template v-else>
+									<template v-if="item.banker_win == 0">
+										0
+									</template>
+									<template v-else>
+										{{item.investment - item.bet_amount * item.odds}}
+									</template>
+									<!-- {{item.investment - item.bet_amount * item.odds}} -->
+								</template>
+							</span>
 						</div>
 					</div>
 				</li>
@@ -251,6 +276,12 @@ import ifooter from '../components/footer.vue'
 export default{
 	components: {
 		ifooter
+	},
+	vuex: {
+		getters: {
+			nickname: state => state.user.nickname,
+			headimgurl: state => state.user.headimgurl
+		}
 	},
 	data(){
 		return {

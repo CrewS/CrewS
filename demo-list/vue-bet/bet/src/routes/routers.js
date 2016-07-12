@@ -2,6 +2,13 @@
 // import Store from '../store/store'
 module.exports = function(router){
     router.map({
+            '/':{
+                name:'index',
+                component: function(resolve){
+                    // console.log(Store.state.user)
+                    require(['../views/index.vue'],resolve);
+                }
+            },
             '/index':{
                 name:'index',
                 component: function(resolve){
@@ -44,6 +51,12 @@ module.exports = function(router){
                 name:'manipulation',
                 component: function(resolve){
                     require(['../views/manipulation.vue'],resolve);
+                }
+            },
+            '/rule':{
+                name:'rule',
+                component: function(resolve){
+                    require(['../views/rule.vue'],resolve);
                 }
             }
     })

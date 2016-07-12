@@ -173,18 +173,23 @@
 		<div class="user-info-container">
 			<div class="user-info-header">
 				<div class="user-img">
-					<img src="../assets/images/noavatar_middle.gif">
+					<template v-if="data.headimgurl == ''">
+						<img src="../assets/images/noavatar_middle.gif">
+					</template>
+					<template v-else>
+						<img :src="data.headimgurl">
+					</template>
 					{{data.nickname}}
 				</div>
 				<div class="item-box" v-link="{name :'history'}">
 					<img src="../assets/images/icon/item-history.png">
 					<span>历史战绩</span>
 				</div>
-				<div class="item-box">
+				<div class="item-box" @click="showShare">
 					<img src="../assets/images/icon/item-salary.png">
 					<span>领取日薪</span>
 				</div>
-				<div class="item-box">
+				<div class="item-box" v-link="{name :'rule'}">
 					<img src="../assets/images/icon/item-rule.png">
 					<span>规则奖励</span>
 				</div>
@@ -233,20 +238,20 @@
 		
 	</div>
 	<ifooter></ifooter>
-	<ishare></ishare>
+	<ishare :show.sync="share"></ishare>
 </template>
 
 <script>
 import ishare from '../components/share.vue'
 import ifooter from '../components/footer.vue'
-import {setIntegral} from '../store/action.js'
+import {setUser} from '../store/action.js'
 export default{
 	components: {
 		ishare, ifooter
 	},
 	vuex: {
 		actions: {
-			setIntegral
+			setUser
 		}
 	},
 	data(){
@@ -254,7 +259,8 @@ export default{
 			data: [],
 			token: window.access_token,
 			domain: window.api_domain,
-			top_member: []
+			top_member: [],
+			share: false
 		}
 	},
 	ready(){
@@ -277,7 +283,7 @@ export default{
 				if (response.data.status !== '0'){
 					console.log(response.data)
 					this.data = response.data.data
-					this.setIntegral(this.data.integral)
+					this.setUser(this.data)
 				} else if (response.data.status === '1000'){
 					console.log(response.data)
 				}
@@ -296,6 +302,9 @@ export default{
 				console.log(response.data)
 			}, (response) => {
 			})
+		},
+		showShare: function(){
+			this.share = true
 		}
 	}
 }

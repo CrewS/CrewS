@@ -52,13 +52,10 @@
 <div class="page-wrap">
 	<div class="index-page">
 		<div class="lets-icon" @click="letsGo"></div>
-		<div class="rule-text">
+		<div class="rule-text" v-link="{name: 'rule'}">
 		</div>
 	</div>
 </div>
-<!-- <div @click="letsGo">
-aaaaaabbbbbbbbbbcccccccccc
-</div> -->
 </template>
 
 <script>

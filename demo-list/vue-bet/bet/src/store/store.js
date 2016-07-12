@@ -7,14 +7,17 @@ Vue.use(Vuex)
 
 const state = {
   token: '1dea089bc7928921e045c5e93_25',
-  account: 0,
+  user: {},
 }
 
 const mutations = {
 	
-	SET_INTEGRAL (state ,account) {
-		state.account = account
+	SET_USER (state ,user) {
+		state.user = user
 	},
+	SET_ACCOUNT(state ,account) {
+		state.user.integral = account
+	}
 }
 
 export default new Vuex.Store({

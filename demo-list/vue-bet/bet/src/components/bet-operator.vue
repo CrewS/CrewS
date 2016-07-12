@@ -1,19 +1,20 @@
 <style lang="less" scoped>
 .page-shadow{
-	position:absolute;
+	position:fixed;
 	height: 100%;
 	width:100%;
-	width: 10.0rem;
+	// width: 10.0rem;
 	top:0;
 	left: 0;
 	background: rgba(0, 0, 0, 0.5);
 	box-sizing: border-box;
 	padding: 0 0.32rem;
+	padding-bottom: 2.666667rem;
 	
 }
 .operator{
 	min-height: 0.666667rem;
-	position: absolute;
+	position: fixed;
 	width: 9.36rem;
 	box-sizing: border-box;
 	// bottom: 0;
@@ -217,6 +218,8 @@
 </template>
 
 <script>
+/*global _Prompt:true*/
+import {setAccount} from '../store/action.js'
 export default{
 	props: ['activeHandicap', 'show', 'type', 'title'],
 	data(){
@@ -231,44 +234,71 @@ export default{
 	},
 	vuex: {
 		getters: {
-			account: state => state.account
+			account: state => state.user.integral
+		},
+		actions: {
+			setAccount
 		}
 	},
 	ready(){
 		this.$watch('activeHandicap', function(){
-			console.log(this.activeHandicap)
+			// console.log(this.activeHandicap)
 			this.handicap_id = this.activeHandicap.handicap_id
 		})
 	},
 	methods: {
 		//	投注
 		betAdd: function(){
+			if (!this.checkInvent()){
+				return false
+			}
 			var url = this.domain + '/api/bet/add'
 			var params = {
 				'token': this.token,
 				'handicap_id': this.handicap_id,
-				'integral': this.integral
+				'integral': this.invent
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
-				this.data = response.data.data
+				// console.log(response.data)
+				if (response.status === 0){
+					this.setAccount(this.account - this.invent)//	更新拥有金币数量
+				}
+				var oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', response.data.msg)
+				oTest.start()
 			}, (response) => {
 			})
+		},
+		checkInvent: function(){
+			if (this.invent <= 0){
+				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '投注金额不能小于0')
+				oTest.start()
+				return false
+			} else if (this.invent > this.account){
+				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '金额超出自身拥有上限')
+				oTest.start()
+				return false
+			} else if (isNaN(this.invent)) {
+				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '请输入数字')
+				oTest.start()
+				return false
+			} else {
+				return true
+			}
 		},
 		tap: function(event){
 			var type = event.target.id
 			if (type === 'page-shadow'){
 				this.show = false
-				console.log(event.target.id)
+				// console.log(event.target.id)
 			} else {
-				console.log(event.target.id)
+				// console.log(event.target.id)
 			}
 		}
 	},
 	computed: {
 		//	计算返回金币
 		'predit': function(){
-			if (this.invent === ''){
+			if (this.invent === '' || isNaN(this.invent)){
 				return 0
 			} else {
 				return this.activeHandicap.odds * this.invent

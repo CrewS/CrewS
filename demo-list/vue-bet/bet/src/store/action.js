@@ -1,5 +1,9 @@
 'use strict'
 
-export const setIntegral = ({ dispatch }, account) => {
-  dispatch('SET_INTEGRAL', account)
+export const setUser = ({ dispatch }, user) => {
+  dispatch('SET_USER', user)
+}
+
+export const setAccount = ({ dispatch }, account) => {
+  dispatch('SET_USER', account)
 }

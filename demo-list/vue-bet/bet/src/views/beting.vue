@@ -36,6 +36,7 @@
 }
 .player-list{
 	padding: 0 0.44rem;
+	padding-bottom: 0.266667rem;
 	box-sizing: border-box;
 	li{
 		height: 1.12rem;
@@ -83,6 +84,7 @@
 .handicap-player-list{
 	padding: 0 0.44rem;
 	box-sizing: border-box;
+	padding-bottom: 0.266667rem;
 	li{
 		height: 1.12rem;
 		width: 100%;
