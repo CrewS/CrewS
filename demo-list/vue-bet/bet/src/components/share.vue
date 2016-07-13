@@ -1,6 +1,6 @@
 <style lang="less" scoped>
 .page-shadow{
-	position:absolute;
+	position:fixed;
 	height: 100%;
 	width:100%;
 	width: 10.0rem;
@@ -57,12 +57,13 @@ export default{
 			let title = '如果你们还不来，那19999元的单车就是我的了'
 			let desc = '玩环法竞猜，赢万元骑行装备，还有更多好礼等你来拿！'
 			let link = window.location.origin + '/wap/bet/'
+			let imgUrl = 'http://api.racing.biketo.com/Public/img/2016_france_share.jpg'
 			// let img = ''
-			console.log(link)
+			// console.log(link)
 			wx.onMenuShareTimeline({
 				title: title, // 分享标题
 				link: link, // 分享链接
-				imgUrl: '', // 分享图标
+				imgUrl: imgUrl, // 分享图标
 				success: function () {
 					// 用户确认分享后执行的回调函数
 					that.callback()
@@ -78,7 +79,7 @@ export default{
 				title: title, // 分享标题
 				desc: desc, // 分享描述
 				link: link, // 分享链接
-				imgUrl: '', // 分享图标
+				imgUrl: imgUrl, // 分享图标
 				type: '', // 分享类型,music、video或link，不填默认为link
 				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 				success: function () {
@@ -99,7 +100,7 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				this.data = response.data.data
 			}, (response) => {
 			})

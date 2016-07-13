@@ -1,5 +1,7 @@
 <style lang="less" scoped>
 .footer{
+	display: block;
+	text-decoration: none;
 	width: 100%;
 	height: 1.893333rem;
 	background: #000;
@@ -9,13 +11,15 @@
 	line-height: 1.893333rem;
 	position: fixed;
 	bottom: 0;
+	background: url('../assets/images/banner.jpg');
+	background-size: 100%;
 }
 </style>
 
 <template>
-<div class="footer">
-	上兔子骑行app，骑线上环法，踩出大奖
-</div>
+<a class="footer" href="http://www.rabbitcycling.com/m/download/index.html">
+	<!-- 上兔子骑行app，骑线上环法，踩出大奖 -->
+</a>
 </template>
 
 <script>

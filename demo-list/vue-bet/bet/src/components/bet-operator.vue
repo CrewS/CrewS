@@ -68,6 +68,8 @@
 		.player-name{
 			font-size: 0.426667rem;
 			padding: 0.066667rem 0;
+			height: 0.426667rem;
+			overflow: hidden;
 			font-weight: bold;
 		}
 		.item-type{
@@ -279,7 +281,7 @@ export default{
 				oTest.start()
 				return false
 			} else if (this.invent - this.account > 0){
-				console.log(this.invent, this.account, this.invent > this.account)
+				// console.log(this.invent, this.account, this.invent > this.account)
 				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '金额超出自身拥有上限')
 				oTest.start()
 				return false
@@ -301,15 +303,32 @@ export default{
 			}
 		}
 	},
+	watch: {
+		'invent': function(){
+			// console.log(this.invent)
+			if (this.invent - 0 > this.account){
+				this.invent = this.account
+			} else {
+				// console.log('-----')
+			}
+		}
+	},
 	computed: {
 		//	计算返回金币
 		'predit': function(){
 			if (this.invent === '' || isNaN(this.invent)){
 				return 0
 			} else {
-				return this.activeHandicap.odds * this.invent
+				return Math.round(this.activeHandicap.odds * this.invent)
 			}
-		}
+		}//	,
+		// 'invent': function(val){
+		// 	if (val > this.account){
+		// 		this.invent = this.account
+		// 	} else {
+		// 		console.log('----')
+		// 	}
+		// }
 	}
 }
 

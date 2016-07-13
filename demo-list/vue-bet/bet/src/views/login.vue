@@ -140,7 +140,7 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				//	判断是否第一次登陆 通过能否获取info 返回值 如果为1000 则是第一次登陆 需要填写资料
 				if (response.data.status === 0){
 					this.$router.go('home')
@@ -159,7 +159,7 @@ export default{
 				'mobile': this.mobile
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				this.data = response.data.data
 				var oTest = new _Prompt(130, 60, 0.7, 1500, 'middle', response.data.msg)
 				oTest.start()
@@ -174,7 +174,7 @@ export default{
 		},
 		checkInput: function(){
 			if (this.nickname === '' || this.mobile === ''){
-				console.log(22222)
+				// console.log(22222)
 				var oTest = new _Prompt(130, 60, 0.7, 1500, 'middle', '名字或电话不能为空')
 				oTest.start()
 				return false

@@ -314,7 +314,7 @@ export default{
 				'num': 233
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
+				// console.log(response.data.data)
 				this.betData = response.data.data.list
 			}, (response) => {
 			})
@@ -329,7 +329,7 @@ export default{
 				'num': 233
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
+				// console.log(response.data.data)
 				this.handicapData = response.data.data.list
 			}, (response) => {
 			})

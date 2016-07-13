@@ -167,7 +167,7 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				// this.data = response.data.data
 				this.stage_id = response.data.data.id
 				this.current_stage_data = response.data.data
@@ -183,7 +183,7 @@ export default{
 				'player_id': this.player_id
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				this.data = response.data.data
 			}, (response) => {
 			})

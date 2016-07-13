@@ -73,6 +73,7 @@
 			width: 2.0rem;
 			font-size: 0.4rem;
 			line-height: 0.693333rem;
+			overflow: hidden;
 		}
 		.offical-info{
 			width: 1.333333rem;
@@ -140,11 +141,22 @@ export default{
 	ready(){
 		//	初始化赛段ID
 		// this.stage_id = this.$route.params.stage_id
-		this.getCurrent()
-		this.$watch('stage_id', function(){
-			//	stage_id获取后请求数据
-			this.getOfficialHandicap()
-		})
+		// this.getCurrent()
+		// this.$watch('stage_id', function(){
+		// 	//	stage_id获取后请求数据
+		// 	this.getOfficialHandicap()
+		// })
+	},
+	route: {
+		activate(){
+			//	初始化赛段ID
+			// this.stage_id = this.$route.params.stage_id
+			this.getCurrent()
+			this.$watch('stage_id', function(){
+				//	stage_id获取后请求数据
+				this.getOfficialHandicap()
+			})
+		}
 	},
 	methods: {
 		//	获取当前赛段
@@ -154,10 +166,15 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				// this.data = response.data.data
-				this.stage_id = response.data.data.id
-				this.info = {'title': response.data.data.title, 'time': response.data.data.stage_start_at}
+				if (response.data.status === 404){
+					// console.log('111')
+					this.current_stage = []
+				} else {
+					this.stage_id = response.data.data.id
+					this.info = {'title': response.data.data.title, 'time': response.data.data.stage_start_at}
+				}
 				// this.current_stage = response.data
 			}, (response) => {
 			})
@@ -170,7 +187,7 @@ export default{
 				'stage_id': this.stage_id
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
+				// console.log(response.data.data)
 				this.current_stage = response.data.data
 				this.active = this.current_stage[0].player_id
 			}, (response) => {
@@ -189,9 +206,12 @@ export default{
 				'odds': this.odds
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', response.data.msg)
 				oTest.start()
+				if (response.data.status === 0){
+					this.$router.go('home')
+				}
 			}, (response) => {
 			})
 		},

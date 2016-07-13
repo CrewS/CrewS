@@ -52,6 +52,7 @@
 			text-indent: 1em;
 			font-size: 0.4rem;
 			font-weight: bold;
+			overflow: hidden;
 		}
 		.player-odds{
 			width: 2.653333rem;
@@ -99,6 +100,7 @@
 			text-indent: 1em;
 			font-size: 0.4rem;
 			font-weight: bold;
+			overflow: hidden;
 		}
 		.player-odds{
 			width: 4.08rem;
@@ -270,10 +272,16 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 				// this.data = response.data.data
-				this.stage_id = response.data.data.id
-				this.current_stage_data = response.data.data
+				if (response.data.status === 404){
+					// console.log('111')
+					this.stage_id = 'default'
+					this.current_stage = []
+				} else {
+					this.stage_id = response.data.data.id
+					this.current_stage_data = response.data.data
+				}
 			}, (response) => {
 			})
 		},
@@ -285,7 +293,7 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data)
+				// console.log(response.data)
 			}, (response) => {
 			})
 		},
@@ -297,7 +305,7 @@ export default{
 				'stage_id': this.stage_id
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
+				// console.log(response.data.data)
 				this.data = response.data.data
 			}, (response) => {
 			})
@@ -310,7 +318,7 @@ export default{
 				'stage_id': this.stage_id
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				console.log(response.data.data)
+				// console.log(response.data.data)
 				this.player = response.data.data
 			}, (response) => {
 			})
