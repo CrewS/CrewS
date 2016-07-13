@@ -94,7 +94,12 @@
 		<ul class="list">
 			<li v-for="item in data.list">
 				<div class="user-img">
-					<img src="../assets/images/noavatar_middle.gif">
+					<template v-if="item.bankerInfo.headimgurl == ''">
+						<img src="../assets/images/noavatar_middle.gif">
+					</template>
+					<template v-else>
+						<img :src="item.bankerInfo.headimgurl">
+					</template>
 				</div>
 				<div class="manipulation-info">
 					<h1 class="user-name">{{item.bankerInfo.nickname}}</h1>

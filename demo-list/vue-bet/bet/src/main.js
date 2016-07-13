@@ -33,7 +33,7 @@ var dom  = document.getElementById('access-token')
 // console.log(dom.value)
 // 获取后台load的accesstoken
 window.access_token = dom.value
-window.api_domain ='http://bet.biketo.com.cn'
+window.api_domain ='http://api.bm.biketo.com/2016france/web'
 
 
 routerMap(router)

@@ -163,8 +163,10 @@ export default{
 				this.data = response.data.data
 				var oTest = new _Prompt(130, 60, 0.7, 1500, 'middle', response.data.msg)
 				oTest.start()
-				if (response.data.staus === '0'){
+				// console.log(response.data.status === 601)
+				if (response.data.status === 0){
 					this.$router.go('home')
+					// console.log(response.data.status, 'init')
 				}
 				// this.$router.go('home')
 			}, (response) => {

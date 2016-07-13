@@ -222,7 +222,12 @@
 						{{$index+1}}
 					</div>
 					<div class="user-img">
-						<img src="../assets/images/noavatar_middle.gif">
+						<template v-if="item.headimgurl == ''">
+							<img src="../assets/images/noavatar_middle.gif">
+						</template>
+						<template v-else>
+							<img :src="item.headimgurl">
+						</template>
 					</div>
 					<div class="user-name">
 						{{item.nickname}}
@@ -281,11 +286,11 @@ export default{
 			}
 			this.$http.jsonp(url, params).then((response) => {
 				if (response.data.status !== '0'){
-					console.log(response.data)
+					// console.log(response.data)
 					this.data = response.data.data
 					this.setUser(this.data)
 				} else if (response.data.status === '1000'){
-					console.log(response.data)
+					// console.log(response.data)
 				}
 			}, (response) => {
 			})
@@ -299,12 +304,13 @@ export default{
 			}
 			this.$http.jsonp(url, params).then((response) => {
 				this.top_member = response.data.data
-				console.log(response.data)
+				// console.log(response.data)
 			}, (response) => {
 			})
 		},
 		showShare: function(){
 			this.share = true
+			// this.$broadcast('initShare')
 		}
 	}
 }

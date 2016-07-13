@@ -256,7 +256,11 @@ export default{
 				this.getOfficialHandicap()
 				this.getOfficialPlayer()
 			}
-		}
+		}//	,
+		// deactivate(transition){
+		// 	this.show_operator = false
+		// 	setTimeout(transition.next, 300)
+		// }
 	},
 	methods: {
 		//	获取当前赛段

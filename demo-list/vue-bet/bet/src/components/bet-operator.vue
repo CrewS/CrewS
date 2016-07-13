@@ -185,7 +185,12 @@
 				庄家
 			</div>
 			<div class="user-img">
-				<img src="../assets/images/noavatar_middle.gif">
+				<template v-if="activeHandicap.bankerInfo.headimgurl == ''">
+					<img src="../assets/images/noavatar_middle.gif">
+				</template>
+				<template v-else>
+					<img :src="activeHandicap.bankerInfo.headimgurl">
+				</template>
 			</div>
 			<div class="user-name">
 				{{activeHandicap.bankerInfo.nickname}}
@@ -273,7 +278,8 @@ export default{
 				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '投注金额不能小于0')
 				oTest.start()
 				return false
-			} else if (this.invent > this.account){
+			} else if (this.invent - this.account > 0){
+				console.log(this.invent, this.account, this.invent > this.account)
 				let oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', '金额超出自身拥有上限')
 				oTest.start()
 				return false

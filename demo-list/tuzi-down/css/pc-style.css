@@ -14,7 +14,7 @@ body{
 }
     .header{
         height: 1010px;
-        background:url("../images/header-bg.jpg") no-repeat;
+        background:url("../images/header-bg.png") no-repeat;
         background-position: center center;
     }
         .logo{
@@ -50,8 +50,11 @@ body{
             top: 240px;
             position: absolute;
         }
+        .slogan P{
+            color: #87642e;
+        }
         .slogan .slogan-title{
-            color: #fff;
+            color: #87642e;
             font-size: 100px;
             font-weight: 100;
         }

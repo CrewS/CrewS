@@ -49,35 +49,41 @@ export default{
 		}
 	},
 	ready(){
+		this.share()
 	},
 	methods: {
 		share: function(){
 			let that = this
 			let title = '如果你们还不来，那19999元的单车就是我的了'
 			let desc = '玩环法竞猜，赢万元骑行装备，还有更多好礼等你来拿！'
+			let link = window.location.origin + '/wap/bet/'
 			// let img = ''
+			console.log(link)
 			wx.onMenuShareTimeline({
 				title: title, // 分享标题
-				link: '/wap/bet/', // 分享链接
+				link: link, // 分享链接
 				imgUrl: '', // 分享图标
 				success: function () {
 					// 用户确认分享后执行的回调函数
-					that.callback
+					that.callback()
+					// alert('取消分享朋友圈')
 				},
 				cancel: function () {
 					// 用户取消分享后执行的回调函数
+					// window.alert('取消分享朋友圈')
 				}
 			})
+			// console.log('2222')
 			wx.onMenuShareAppMessage({
 				title: title, // 分享标题
 				desc: desc, // 分享描述
-				link: '/wap/bet/', // 分享链接
+				link: link, // 分享链接
 				imgUrl: '', // 分享图标
 				type: '', // 分享类型,music、video或link，不填默认为link
 				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
 				success: function () {
 					// 用户确认分享后执行的回调函数
-					that.callback
+					that.callback()
 				},
 				cancel: function () {
 					// 用户取消分享后执行的回调函数
