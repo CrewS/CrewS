@@ -11,7 +11,7 @@
 	.lets-icon{
 		width: 3.826667rem;
 		height: 0.64rem;
-		background: url('../assets/images/icon/lets-icon.png') no-repeat;
+		background: url('../assets/images/icon/lets-icon.gif') no-repeat;
 		background-size: 100%;
 		position: absolute;
 		bottom: 0.266667rem;
@@ -63,11 +63,15 @@ export default{
 	data(){
 		return {
 			token: window.access_token,
-			domain: window.api_domain
+			domain: window.api_domain,
+			status: 'default'
 		}
 	},
+	ready(){
+		this.getInfo()
+	},
 	methods: {
-		letsGo: function(){
+		getInfo: function(){
 			var url = this.domain + '/api/member/info'
 			var params = {
 				'token': this.token
@@ -75,13 +79,21 @@ export default{
 			this.$http.jsonp(url, params).then((response) => {
 				// console.log(response.data)
 				//	判断是否第一次登陆 通过能否获取info 返回值 如果为1000 则是第一次登陆 需要填写资料
-				if (response.data.status === 0){
-					this.$router.go('home')
-				} else {
-					this.$router.go('login')
-				}
+				// if (response.data.status === 0){
+				// 	this.$router.go('home')
+				// } else {
+				// 	this.$router.go('login')
+				// }
+				this.status = response.data.status
 			}, (response) => {
 			})
+		},
+		letsGo: function(){
+			if (this.status === 0){
+				this.$router.go('home')
+			} else {
+				this.$router.go('login')
+			}
 		}
 	}
 }

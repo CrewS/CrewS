@@ -89,7 +89,7 @@
 </style>
 
 <template>
-<div class="page-wrap">
+<div class="page-wrap" id="page-wrap-login">
 	<div class="app-logo">
 		
 	</div>
@@ -99,9 +99,9 @@
 		</div>
 		<h1>欢迎！</h1>
 		<label>先给自己起一个看起来很好运的名字</label>
-		<input type="text" class="input-box" placeholder="请输入名字" v-model="nickname">
+		<input type="text" class="input-box" placeholder="请输入名字" @focus="toggle" @blur="toggle" v-model="nickname">
 		<label>为了方便领取奖品，请留下正确的手机号码</label>
-		<input type="text" class="input-box" placeholder="请输入手机号码" v-model="mobile">
+		<input type="text" class="input-box" placeholder="请输入手机号码" @focus="toggle" @blur="toggle" v-model="mobile">
 		<button class="btn-submit" @click="login()">领取第一桶金</button>
 		<div class="ricer">
 			<img src="../assets/images/ricer.png">
@@ -181,6 +181,13 @@ export default{
 			} else {
 				return true
 			}
+		},
+		toggle: function(event){
+			// console.log(event.target.offsetTop)
+			// var wrap = document.getElementById('page-wrap-login')
+			// console.log(wrap.style)
+			// wrap.style.marginBottom = '-' + event.target.offsetTop + 'px'
+			this.$broadcast('toggle')
 		}
 	}
 }

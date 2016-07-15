@@ -210,7 +210,7 @@
 							<span class="item-type">返奖:</span>
 							<span class="beting-number">
 								<template v-if="item.is_win == 1">
-									{{item.integral * item.handicap.odds}}
+									{{parseInt(item.integral * item.handicap.odds)}}
 								</template>
 								<template v-else>
 									0
@@ -253,7 +253,7 @@
 										0
 									</template>
 									<template v-else>
-										{{item.investment - item.bet_amount * item.odds}}
+										{{parseInt(item.investment - item.bet_amount * item.odds)}}
 									</template>
 									<!-- {{item.investment - item.bet_amount * item.odds}} -->
 								</template>

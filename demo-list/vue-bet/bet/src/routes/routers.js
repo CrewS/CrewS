@@ -18,10 +18,11 @@ module.exports = function(router){
             },
             '/home':{
                 name:'home',
-                component: function(resolve){
-                    // console.log(Store.state.user)
-                    require(['../views/home.vue'],resolve);
-                }
+                // component: function(resolve){
+                //     // console.log(Store.state.user)
+                //     require(['../views/home.vue'],resolve);
+                // }
+                component: require('../views/home.vue')
             },
             '/history':{
                 name:'history',

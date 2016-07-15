@@ -74,6 +74,8 @@
 			font-size: 0.4rem;
 			line-height: 0.693333rem;
 			overflow: hidden;
+			height: 0.693333rem;
+			
 		}
 		.offical-info{
 			width: 1.333333rem;

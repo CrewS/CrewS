@@ -267,8 +267,9 @@ export default{
 			}
 			this.$http.jsonp(url, params).then((response) => {
 				// console.log(response.data)
-				if (response.status === 0){
+				if (response.data.status === 0){
 					this.setAccount(this.account - this.invent)//	更新拥有金币数量
+					// console.log('init')
 				}
 				var oTest = new _Prompt(150, 60, 0.7, 1500, 'middle', response.data.msg)
 				oTest.start()

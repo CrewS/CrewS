@@ -28,9 +28,10 @@
 				width: 2.533333rem;
 				border-right: 1px solid #ffdc00;
 				box-sizing: border-box;
-				padding-top: 0.133333rem;
+				padding-top: 0.1rem;
 				text-align: center;
 				font-size: 0.32rem;
+				overflow: hidden;
 			img{
 				height: 1.36rem;
 				width: 1.36rem;
@@ -203,7 +204,7 @@
 					开始下注
 				</div>
 
-				<div v-if="data.integral > 3000" class="btn-operator fr " v-link="{name:'manipulation'}">
+				<div v-show="data.integral >= 3000" class="btn-operator fr " v-link="{name:'manipulation'}">
 					我要坐庄
 				</div>
 				<div v-else class="btn-operator fr dis-operator">
@@ -285,11 +286,11 @@ export default{
 				'token': this.token
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				if (response.data.status !== '0'){
-					// console.log(response.data)
+				if (response.data.status === 0){
+					console.log(response.data)
 					this.data = response.data.data
 					this.setUser(this.data)
-				} else if (response.data.status === '1000'){
+				} else if (response.data.status === 1000){
 					// console.log(response.data)
 				}
 			}, (response) => {

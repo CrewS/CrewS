@@ -17,7 +17,7 @@
 </style>
 
 <template>
-<a class="footer" href="http://www.rabbitcycling.com/m/download/index.html">
+<a v-show="show" class="footer" href="http://www.rabbitcycling.com/m/download/index-xiangguanwxwb.html">
 	<!-- 上兔子骑行app，骑线上环法，踩出大奖 -->
 </a>
 </template>
@@ -26,9 +26,15 @@
 export default{
 	data(){
 		return {
+			show: true
 		}
 	},
 	methods: {
+	},
+	events: {
+		'toggle': function(){
+			this.show = !this.show
+		}
 	}
 }
 

@@ -17,6 +17,7 @@ const mutations = {
 	},
 	SET_ACCOUNT(state ,account) {
 		state.user.integral = account
+		// console.log('success')
 	}
 }
 

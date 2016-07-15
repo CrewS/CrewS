@@ -5,5 +5,5 @@ export const setUser = ({ dispatch }, user) => {
 }
 
 export const setAccount = ({ dispatch }, account) => {
-  dispatch('SET_USER', account)
+  dispatch('SET_ACCOUNT', account)
 }

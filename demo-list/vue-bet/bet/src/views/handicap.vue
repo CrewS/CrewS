@@ -183,7 +183,7 @@ export default{
 				'player_id': this.player_id
 			}
 			this.$http.jsonp(url, params).then((response) => {
-				// console.log(response.data)
+				console.log(response.data)
 				this.data = response.data.data
 			}, (response) => {
 			})

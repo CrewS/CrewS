@@ -257,6 +257,9 @@ export default{
 			if (this.stage_id !== 'default'){
 				this.getOfficialHandicap()
 				this.getOfficialPlayer()
+			} else {
+				this.data = []
+				this.player = []
 			}
 		}//	,
 		// deactivate(transition){
