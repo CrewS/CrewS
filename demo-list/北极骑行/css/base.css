@@ -13,9 +13,25 @@ legend {
     color: #333;
     outline: 0;
 }
+
 em{
     font-style: normal;
 }
+#tophead{ width: 100%; height: 88px; position: fixed; top: 0px;  z-index: 1000; }
+#navbox{ width: 100%;  position:absolute; top: -0px; background: url("../images/nav.png") repeat-x bottom;  overflow: hidden ; height:auto; zoom: 1; padding-bottom: 5px;}
+/*#tophead:hover #navbox{  transform: translate(0,88px); -moz-transform: translate(0,88px); -ms-transform: translate(0,88px);-o-transform: translate(0,88px); -webkit-transform: translate(0,88px);}*/
+#nav{ width: 900px; overflow: hidden; margin: 15px auto ; transform-origin: 50%  0%; -o-transform-origin: 50%  0%; -moz-transform-origin: 50%  0%; -ms-transform-origin: 50%  0%;-webkit-transform-origin: 50%  0%;}
+#nav .navs{ float: left;  cursor: pointer; height: 30px; overflow: hidden; margin-left: 60px;}
+#nav .navs:nth-child(1){ margin-left: 0px;}
+#nav a{ width: 100%; height: 100%; display: block; position: relative;}
+#nav a img{ margin-top: -30px;  padding: 0 6px;}
+#nav1{background: url("../img/nav.jpg");background-position:0 0px;      }
+#nav2{background: url("../img/nav.jpg");background-position :-153px -52px; margin-left:55px; }
+#nav3{background: url("../img/nav.jpg");background-position :-307px -52px;  margin-left: 56px;}
+#nav4{background: url("../img/nav.jpg");background-position :-460px -52px;  margin-left: 55px;}
+#nav5{background: url("../img/nav.jpg");background-position :-614px -52px;  margin-left: 56px;}
+#nav6{background: url("../img/nav.jpg");background-position :-784px -52px; margin-left: 72px; }
+
 .section-bg{
     height: 100%;
     width: 100%;
@@ -78,7 +94,7 @@ em{
             .st-2-tool-bar .box.rule-info{
                 background: rgba(255,255,255,0.2);
             }
-            .st-2-tool-bar .box.plan-info{
+            .st-2-tool-bar .box.trip-info{
                 background: #00c1d8;
             }
             .st-2-tool-bar .box .icon{
@@ -115,7 +131,7 @@ em{
     color: #fff;
     line-height: 22px;
 }
-.activity-info-block .activity-info-border .activity-info-close-icon{
+.activity-info-block .activity-info-border .activity-info-close{
     position: absolute;
     right: 0;
     top: -100px;
@@ -242,12 +258,12 @@ em{
     color: #fff;
     padding: 0 12px;
 }
-/**ÐÐ³Ì½éÉÜ**/
+/**ï¿½Ð³Ì½ï¿½ï¿½ï¿½**/
 .trip-info-block{
     height: 100%;
     width: 100%;
     background: url('../images/activity-info.jpg') no-repeat center;
-    /*display: none;*/
+    display: none;
 }
 .trip-info-block .trip-info-container{
     width: 953px;
@@ -304,7 +320,17 @@ em{
     cursor: pointer;
     background: url("../images/icon/close-icon.png");
 }
-/*ÎÄ×ÖÉèÖÃ**/
+.trip-info-close{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: block;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background: url("../images/icon/close-icon.png");
+}
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½**/
 .trip-info-content{
     color: #fff;
     font-size: 14px;
@@ -339,6 +365,7 @@ em{
     color: #fff;
     display: inline-block;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 
@@ -555,7 +582,7 @@ em{
 }
 
 
-/**²å¼þ**/
+/**ï¿½ï¿½ï¿½ï¿½**/
 .unslider-nav ol {
     list-style: none;
     text-align: center;

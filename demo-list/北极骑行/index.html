@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
+    <div id="tophead">
+        <div id="navbox">
+            <div id="nav">
+                <!--<div id="nav1"><a  href="#page1"></a></div>
+                <div id="nav2"><a  href="#page2"></a></div>
+                <div id="nav3"><a  href="#page3"></a></div>
+                <div id="nav4"><a  href="#page4"></a></div>
+                <div id="nav5"><a  href="#page5"></a></div>
+                <div id="nav6"><a  href="#page6"></a></div>-->
+                <div class="navs" id="navxg1"><a href="#page1"><img src="img/nav0_1.jpg" style="margin-top: 0px;"></a> </div>
+                <div class="navs" id="navxg2"><a href="#page2"><img src="img/nav0_2.jpg" style="margin-top: -30px;"></a></div>
+                <div class="navs" id="navxg3"><a href="#page3"><img src="img/nav0_3.jpg" style="margin-top: -30px;"></a></div>
+                <div class="navs" id="navxg4"><a href="#page4"><img src="img/nav0_4.jpg" style="margin-top: -30px;"></a></div>
+                <div class="navs" id="navxg5"><a href="#page5"><img src="img/nav0_5.jpg" style="margin-top: -30px;"></a></div>
+                <div class="navs" id="navxg6"><a href="#page6"><img src="img/nav0_6.jpg" style="margin-top: -30px;"></a></div>
+                <div class="navs" id="navxg7"><a href="http://snowbeer.jd.com/"><img src="img/nav0_7.jpg" style="margin-top: -30px;"></a></div>
+
+            </div>
+        </div>
+    </div>
+   
     <div id="fullpage">
         <div class="section">
             <div class="section-bg-01 section-bg">
@@ -15,18 +36,18 @@
         </div>
         <div class="section">
             <div class="section-bg-02 section-bg">
-                <div class="st-2-title">
+                <div class="st-2-title show">
                     <img src="images/section-2-title.png">
                     <div class="st-2-tool-bar">
-                        <div class="box activity-info">
+                        <div data-target="activity-info-block" class="box activity-info">
                             <img src="images/icon/icon-1.png" class="icon">
                             <h1>活动介绍</h1>
                         </div>
-                        <div class="box rule-info">
+                        <div data-target="rule-info-block" class="box rule-info">
                             <img src="images/icon/icon-tips.png" class="icon">
                             <h1>规则介绍</h1>
                         </div>
-                        <div class="box plan-info">
+                        <div data-target="trip-info-block" class="box trip-info">
                             <img src="images/icon/bike-icon.png" class="icon">
                             <h1>行程介绍</h1>
                         </div>
@@ -35,7 +56,7 @@
                 </div>
                 <div class="activity-info-block">
                     <div class="activity-info-border">
-                        <i class="activity-info-close-icon"></i>
+                        <i data-target="activity-info-block" class="activity-info-close info-close"></i>
                         <p>2016“美骑带你去北极”活动介绍</p>
                         <p>“美骑带你去北极”是由广州美骑网络科技股份有限公司创办的品牌推广活动，也将是迄今为止首支中国骑行团队穿越北极的历史创举。</p>
                         <p>作为国内最具影响力的骑行领域互联网公司，美骑一直致力于推动骑行文化和骑行运动的普及与发展。通过此次“美骑带你去北极”活动的举办，美骑希望将“快乐、专业、创新、开放”的企业精神传递给更多的人。同时，通过帮助骑行爱好者实现骑行去北极的梦想，倡导骑行这种健康环保的生活方式，鼓励更多的人去探索未知、挑战自我、发现自我。让更多的人关注生态环境的变化，感受骑行的魅力，积极参与到骑行运动中来。</p>
@@ -46,7 +67,7 @@
                 <div class="rule-info-block">
                     <div class="rule-content-container">
                         <div class="rule-content-header">
-                            <i class="rule-info-close"></i>
+                            <i data-target="rule-info-block" class="rule-info-close info-close"></i>
                             <img src="images/icon/rule-title.png">
                             <p>    “美骑带你去北极”活动于7月20日正式启动！一同感受北极之美，还你旅行本该有的好心情，这对于所有热爱骑行的运动爱好者来说，将是一次美轮美奂的全新体验！你将成为首个中国骑行团队到北极的一员吗？快下载兔子骑行APP报名参与吧！</p>
                         </div>
@@ -170,18 +191,18 @@
                 </div>
                 <div class="trip-info-block">
                     <div class="trip-info-container">
-                        <div class="trip-info-container-main" style="display: none">
+                        <div class="trip-info-container-main">
                             <div class="trip-info-container-header">
                                 <div class="trip-info-title">
                                     <img src="images/icon/trip-title-icon.png">
                                 </div>
                                 行程介绍
-                                <i class="trip-info-close-icon"></i>
+                                <i data-target="trip-info-block" class="trip-info-close info-close"></i>
                             </div>
                             <div class="trip-info-container-nav">
-                                <span><img src="images/icon/trip-nav-icon-01.png">费用说明</span>
-                                <span><img src="images/icon/trip-nav-icon-02.png">出行须知</span>
-                                <span><img src="images/icon/trip-nav-icon-03.png">注意事项</span>
+                                <span data-target="cost"><img src="images/icon/trip-nav-icon-01.png">费用说明</span>
+                                <span data-target="attention"><img src="images/icon/trip-nav-icon-02.png">出行须知</span>
+                                <span data-target="outside"> <img src="images/icon/trip-nav-icon-03.png">注意事项</span>
                             </div>
                             <div class="trip-info-images">
                                 <img src="images/trip-info-s.png">
@@ -245,7 +266,7 @@
                                 <p><em class="tips">出入境常识：</em>入境加拿大每人可免税携带供自己在加拿大期间使用的私人物品，必须申明准备留在加拿大的礼物和其他东西的价值。每件礼物的价值不超过60加元。成年人可免税携带400支香烟或50支雪茄和400克烟草、1.14升的烈性酒或葡萄酒、24灌或瓶（各0.342升）的啤酒入境。礼品勿包装，以方便海关检查。</p>
                             </div>
                         </div>
-                        <div class="trip-info-container-outside">
+                        <div class="trip-info-container-outside" style="display:none">
                             <div class="trip-info-container-header">
                                 <div class="trip-info-title">
                                     <img src="images/icon/trip-title-icon.png">
@@ -293,9 +314,7 @@
                                 </div>
                             </div>
                             <div class="trip-info-tab">
-                                <span>上一页</span>
-                                <span>1</span>
-                                <span>2</span>
+                                <span class="active">上一页</span>
                                 <span>下一页</span>
                             </div>
                         </div>
@@ -439,6 +458,14 @@
             })
 
         });
+        $('.trip-info-tab').find('span').click(function(){
+            if ($(this).hasClass('active')){
+                return false
+            } else {
+                $('.trip-info-tab-page').toggleClass('active')
+                $('.trip-info-tab').find('span').toggleClass('active')
+            }
+        })
         $('.page-tool').find('span').click(function(){
             var active_index = $(this).parent().find('.number-hidden').text();
             var text = $(this).text();
@@ -470,12 +497,46 @@
                 dom.eq(next - 1).addClass('active');
             }
         }
-        function toggleSection2(){
-            $('.st-2-title').toggleClass('show')
-        }
+        //  隐藏section2
         function closeTab(){
-            toggleSection2()
+           $('.st-2-title').addClass('show')
+            // toggleSection2()
         }
+        function showTab(){
+            $('.st-2-title').removeClass('show')
+        }
+
+
+
+
+        //  行程须知的3个tab内容
+        $('.trip-info-container-nav').find('span').click(function(){
+            var _target = $(this).attr('data-target')
+            console.log($(this).attr('data-target'))
+            $('.trip-info-container-main').hide()
+            $('.trip-info-container-'+_target).show()
+        })
+        //  行程需知3个tab关闭返回导航页
+        $('.trip-info-close-icon').click(function(){
+            // console.log($(this).parent().parent())
+            $(this).parent().parent().hide()
+            $('.trip-info-container-main').show()
+        })
+        //
+        $('.st-2-tool-bar').find('.box').click(function(){
+            var _target = $(this).attr('data-target')
+            // console.log($(this))
+            showTab()
+            $('.'+_target).show()
+        })
+        //  section-2的3个介绍tab close按钮
+        $('.info-close').click(function(){
+            var _target = $(this).attr('data-target')
+            console.log(11)
+            $('.'+_target).hide();
+            closeTab()
+        })
+
     });
 </script>
 </body>
